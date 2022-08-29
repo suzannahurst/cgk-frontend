@@ -18,13 +18,13 @@ function initMap() {
   const icons = {
     fair: {
       icon: {
-        url: iconBase + "map-fair.png",
+        url: iconBase + "fair-marker.png",
         scaledSize: new google.maps.Size(40, 60),
       },
     },
     adventure: {
       icon: {
-        url: iconBase + "map-door.png",
+        url: iconBase + "adventure-marker.png",
         scaledSize: new google.maps.Size(40, 60),
       },
     },

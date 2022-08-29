@@ -62,3 +62,11 @@ footer {
   color: #fff;
   text-align: right;
 }
+
+/* INFO WINDOW */
+
+.infoContent {
+  background-color: var(--color-mint);
+  overflow: scroll;
+  padding: 1.5rem;
+}

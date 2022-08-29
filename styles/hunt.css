@@ -10,3 +10,8 @@ p.clessa {
   font-size: 3rem;
   font-family: "Dancing Script";
 }
+
+body {
+  text-align: center;
+  font-weight: 600;
+}

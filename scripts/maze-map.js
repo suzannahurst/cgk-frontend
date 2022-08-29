@@ -18,13 +18,13 @@ function initMap() {
   const icons = {
     fair: {
       icon: {
-        url: iconBase + "map-fair.png",
+        url: iconBase + "fair-marker.png",
         scaledSize: new google.maps.Size(40, 60),
       },
     },
     adventure: {
       icon: {
-        url: iconBase + "map-door.png",
+        url: iconBase + "adventure-marker.png",
         scaledSize: new google.maps.Size(40, 60),
       },
     },
@@ -56,7 +56,7 @@ function initMap() {
       position: new google.maps.LatLng(51.51335645826938, -0.08959207632630892),
       type: "adventure",
       content:
-        '<div id="content">' +
+        '<div id="content" class="infoContent">' +
         "<h3>Suffragette Adventure</h3>" +
         "<p>Family Friendly</p>" +
         "<p>Wheelchair accessible</p>" +
