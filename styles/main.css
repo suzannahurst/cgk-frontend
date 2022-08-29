@@ -84,7 +84,7 @@ h2.title {
 }
 
 h3.subtitle {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 600;
   margin-block-end: 1.5rem;
   font-family: var(--font-headings);
@@ -111,11 +111,12 @@ img.hero {
   /* margin-block-end: 3rem; */
 }
 
-span.fair-tag {
+span.tag {
   border: #fff solid 1px;
   padding: 1rem;
   background-color: var(--accent-color-secondary);
   font-size: 1.3rem;
+  font-weight: 800;
   margin-inline-end: 1rem;
 }
 

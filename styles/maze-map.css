@@ -66,7 +66,15 @@ footer {
 /* INFO WINDOW */
 
 .infoContent {
-  background-color: var(--color-mint);
+  /* background-color: var(--color-mint); */
   overflow: scroll;
   padding: 1.5rem;
 }
+
+/* .gm-style-iw.gm-style-iw-c {
+  background-color: var(--color-mint);
+}
+
+div.gm-style-iw-d {
+  background-color: var(--color-mint);
+} */

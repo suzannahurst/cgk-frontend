@@ -45,7 +45,7 @@ function initMap() {
       position: new google.maps.LatLng(51.51596415654087, -0.10630967216174751),
       type: "adventure",
       content:
-        '<div id="content">' +
+        '<div id="content" class="infoContent">' +
         "<h3>Tudor Adventure</h3>" +
         "<p>Family Friendly</p>" +
         "<p>Wheelchair accessible</p>" +
@@ -60,14 +60,14 @@ function initMap() {
         "<h3>Suffragette Adventure</h3>" +
         "<p>Family Friendly</p>" +
         "<p>Wheelchair accessible</p>" +
-        `<a href="../adventures/roman.html"><strong>Find out more</strong></a>` +
+        `<a href="../adventures/suffragette.html"><strong>Find out more</strong></a>` +
         "</div>",
     },
     {
       position: new google.maps.LatLng(51.51984594260593, -0.10259542547264745),
       type: "adventure",
       content:
-        '<div id="content">' +
+        '<div id="content" class="infoContent">' +
         "<h3>Roman Adventure</h3>" +
         "<p>Family Friendly</p>" +
         "<p>Wheelchair accessible</p>" +

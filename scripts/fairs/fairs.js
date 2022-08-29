@@ -82,7 +82,7 @@ export const displayFair = (fair) => {
   tags.data.map((tg) => {
     if (tg.name) {
       tag = document.createElement("span");
-      tag.classList.add("fair-tag");
+      tag.classList.add("tag");
       tag.innerHTML = tg.name;
 
       fairTags.appendChild(tag);

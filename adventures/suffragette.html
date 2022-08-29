@@ -16,14 +16,16 @@
 </head>
 
 <!-- our styles -->
-<link rel="stylesheet" href="styles/generics.css">
-<link rel="stylesheet" href="styles/main.css">
-<link rel="stylesheet" href="styles/adventures/adventures.css">
+<link rel="stylesheet" href="/styles/generics.css">
+<link rel="stylesheet" href="/styles/main.css">
+<link rel="stylesheet" href="/styles/adventures/adventures.css">
 
 
 <!-- our scripts -->
-<!-- <script src="" type="module"></script> -->
-<title>Suffragette</title>
+<script src="./../scripts/adventures/adventures.js" type="module"></script>
+<script src="./../scripts/adventures/suffragette.js" type="module"></script>
+
+<title>Suffragette Adventure</title>
 </head>
 
 <body>
@@ -49,27 +51,36 @@
     </div>
   </header>
   <main>
+    <div id="not-found">
+      <p id="err-msg" class="page-subtitle"></p>
+    </div>
     <section>
-      <h2 class="title">Suffragette Adventure</h2>
-      <h3 class="subtitle">Location: <a href="#">Door 1</a></h3>
-      <p>Adipiscing at in tellus integer feugiat. Tortor at auctor urna nunc id cursus. Ut morbi tincidunt augue
-        interdum velit euismod. Tincidunt vitae semper quis lectus nulla at volutpat diam ut.</p>
-      <h3 class="subtitle">Key info:</h3>
-      <ul>
-        <li>
-          <p>Family Friendly</p>
-        </li>
-        <li>
-          <p>Wheelchair accessible</p>
-        </li>
-      </ul>
-    </section>
-    <section class="begin-adventure">
-      <h3 class="subtitle">Found the password?</h3>
-      <button><a href="#">
-          <p>Begin adventure</p>
-        </a></button>
-    </section>
+      <section>
+        <h2 class="title" id="fairTitle">Suffragette Adventure</h2>
+        <div id="adventureInfoMount"></div>
+      </section>
+      <section>
+        <div id="tagsMount"></div>
+      </section>
+      <section>
+        <div id="locationMount"></div>
+      </section>
+
+      <section>
+        <div id="keyInfoMount"></div>
+      </section>
+
+
+      <section class="begin-adventure">
+        <h3 class="subtitle">Found the password?</h3>
+        <button><a href="#">
+            <p>Begin adventure</p>
+          </a></button>
+      </section>
+      <section>
+        <p>Back to <span><a href="./../maze-map.html" class="highlighted">The Maze of Adventures</a>. </span>
+        </p>
+      </section>
   </main>
   <footer class="footer-outer">
     <div class="footer-container">
@@ -77,21 +88,21 @@
         <a href="../map.html" class="footer-item">
           <p>Map of activities</p>
         </a>
-        <a href="#" class="footer-item">
+        <a href="./../info/how-to-get-there.html" class="footer-item">
           <p>How to get there</p>
         </a>
-        <a href="#" class="footer-item">
+        <a href="./../info/accessiblity.html" class="footer-item">
           <p>Accessibility</p>
         </a>
       </div>
       <div class="footer-wrapper">
-        <a href="#" class="footer-item">
+        <a href="./../info/faq.html" class="footer-item">
           <p>FAQs</p>
         </a>
-        <a href="#" class="footer-item">
+        <a href="./../info/about-coney.html" class="footer-item">
           <p>About Coney</p>
         </a>
-        <a href="#" class="footer-item">
+        <a href="./../info/partners.html" class="footer-item">
           <p>Partners</p>
         </a>
       </div>
@@ -107,6 +118,9 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
     crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/2.1.0/showdown.min.js"
+    integrity="sha512-LhccdVNGe2QMEfI3x4DVV3ckMRe36TfydKss6mJpdHjNFiV07dFpS2xzeZedptKZrwxfICJpez09iNioiSZ3hA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
 
 </html>
