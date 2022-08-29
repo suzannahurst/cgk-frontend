@@ -43,6 +43,16 @@ main {
   width: 100%;
 }
 
+main.landing {
+  justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+}
+
 section {
   margin-block-end: 4rem;
   width: 100%;
