@@ -55,27 +55,28 @@ export const displayFair = (fair) => {
   console.log(fair.data.attributes);
   const { name, location, description, content, artists, tags, image } =
     fair.data.attributes;
-  const { url } = image.data.attributes;
+  // const { url } = image.data.attributes;
   const fairInfoMount = document.getElementById("fairInfoMount");
   const travelInfoMount = document.getElementById("travelInfoMount");
   const programmeInfoMount = document.getElementById("programmeInfoMount");
   const artistFeaturedMount = document.getElementById("artistFeaturedMount");
 
-  fairInfoMount.innerHTML = `<h2 class="title" id="fairTitle">${name}</h2>
-      <img id="fairImg" class="fair-img hero" src="https://res.cloudinary.com/dcwl3hold/image/upload/v1661765161/${url}"/>
-      <h3 class="location">Location: ${location}
-      </h3>
-      <p id="fairDescription" class="description">${description}</p>
-      <div id="fairTags"></div>
-   `;
-
+  // TODO add image
   // fairInfoMount.innerHTML = `<h2 class="title" id="fairTitle">${name}</h2>
-
+  //     <img id="fairImg" class="fair-img hero" src="https://res.cloudinary.com/dcwl3hold/image/upload/v1661765161/${url}"/>
   //     <h3 class="location">Location: ${location}
   //     </h3>
   //     <p id="fairDescription" class="description">${description}</p>
   //     <div id="fairTags"></div>
   //  `;
+
+  fairInfoMount.innerHTML = `<h2 class="title" id="fairTitle">${name}</h2>
+
+      <h3 class="location">Location: ${location}
+      </h3>
+      <p id="fairDescription" class="description">${description}</p>
+      <div id="fairTags"></div>
+   `;
 
   let fairTags = document.getElementById("fairTags");
   let tag;

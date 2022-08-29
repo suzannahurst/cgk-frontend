@@ -1,15 +1,17 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,200;0,300;0,600;0,700;1,200&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Alatsi&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,400;0,600;0,700;0,900;1,300;1,400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@500&display=swap");
+
+@font-face {
+  font-family: "Big John";
+  src: url("/assets/fonts/bigjohn.otf") format("opentype");
+}
 
 :root {
   --main-bg-color: #db4d59;
   --accent-colour-primary: yellow;
   --accent-colour-secondary: #756bff;
-  --font-headings: "Kiwi Maru", serif;
-  --font-body: "Noto Sans", sans-serif;
+  --font-headings: "Big John", serif;
+  --font-body: "Space Grotesk", sans-serif;
   --font-color: #fff;
   --padding: 1.5rem;
 }
@@ -74,6 +76,10 @@ p {
   font-size: 1.6rem;
 }
 
+strong {
+  font-weight: 600;
+}
+
 p.description {
   margin-block-end: 3rem;
 }
@@ -84,7 +90,7 @@ a.highlighted {
 
 img.hero {
   width: 100%;
-  margin-block-end: 3rem;
+  /* margin-block-end: 3rem; */
 }
 
 span.fair-tag {
@@ -104,6 +110,12 @@ header {
 }
 
 /* FOOTER  */
+.footer-outer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
 .footer-container {
   display: flex;
   justify-content: space-between;
@@ -116,6 +128,17 @@ header {
 
 .footer-wrapper:last-child {
   text-align: right;
+}
+
+.social-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.socialicon {
+  width: 2rem;
+  margin-inline-start: 0.5rem;
 }
 
 /* HAMBURGER MENU */

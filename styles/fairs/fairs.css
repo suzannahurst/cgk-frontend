@@ -52,3 +52,19 @@ h4.artist-name {
   font-weight: 700;
   font-size: 1.8rem;
 }
+
+.programme-item {
+  margin-block-end: 4rem;
+}
+
+h3.location {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.show-item {
+  margin-block-end: 2rem;
+}
+
+.show-item > p {
+  margin-block-end: 0;
+}
