@@ -107,7 +107,8 @@ a.highlighted {
 }
 
 a:active,
-a:focus {
+a:focus,
+a:hover {
   color: #e8d7a4;
 }
 
