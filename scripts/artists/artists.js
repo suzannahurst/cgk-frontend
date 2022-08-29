@@ -56,6 +56,7 @@ export const displayArtist = (artist) => {
     fair,
     biog,
     slug,
+    tags,
     showlocation,
   } = artist.data.attributes;
   const fairName = fair.data.attributes.name;
@@ -89,17 +90,21 @@ export const displayArtist = (artist) => {
       <p id="artistBiog">${biog}</p>`;
   // add if we implement artist tags
 
-  // let artistTags = document.getElementById("artistTags");
-  // let tag;
+  const tagsMount = document.getElementById("tagsMount");
 
-  // artist.tags.forEach((tg) => {
-  //   if (tg.name) {
-  //     tag = document.createElement("span");
-  //     tag.classList.add("artist-tag");
-  //     tag.innerHTML = tg.name;
-  //     artistTags.appendChild(tag);
-  //   }
-  // });
+  let tag;
+  console.log(tags);
+
+  tags.data.map((tg) => {
+    console.log(tg);
+    if (tg.attributes.name) {
+      tag = document.createElement("span");
+      tag.classList.add("tag");
+      tag.innerHTML = tg.attributes.name;
+
+      tagsMount.appendChild(tag);
+    }
+  });
   const fairMount = document.getElementById("fairMount");
   fairMount.innerHTML = ` <p>Back to <span><a href="./../fairs/${fairSlug}.html" class="highlighted">${fairName}</a>. </span>
       </p>`;
