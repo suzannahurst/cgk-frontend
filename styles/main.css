@@ -72,7 +72,7 @@ h1 {
 h1.title {
   font-weight: 700;
   font-size: 4rem;
-  margin-block-end: 3rem;
+  margin-block-end: 2.5rem;
   font-family: var(--font-headings);
 }
 
@@ -240,5 +240,11 @@ button > a > p {
 
   img.hero {
     width: 300px;
+  }
+  .dropdown {
+    z-index: 999999;
+  }
+  .dropdown-toggle > img {
+    max-width: 40px;
   }
 }
