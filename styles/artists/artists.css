@@ -1,5 +1,7 @@
-.artist-img {
-  max-width: 80%;
+img.artist-img {
+  margin-left: -3rem;
+  margin-right: -3rem;
+  max-width: 120%;
 }
 
 @media screen and (min-width: 400px) {

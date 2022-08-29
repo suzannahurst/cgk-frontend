@@ -48,15 +48,24 @@ export const showMissingArtistMsg = (msg) => {
 };
 
 export const displayArtist = (artist) => {
-  const { name, showname, description, shows, fair, biog, slug } =
-    artist.data.attributes;
+  const {
+    name,
+    showname,
+    showtimes,
+    description,
+    fair,
+    biog,
+    slug,
+    showlocation,
+  } = artist.data.attributes;
   const fairName = fair.data.attributes.name;
   const fairSlug = fair.data.attributes.slug;
+  const fairGm = fair.data.attributes.gm;
   console.log(artist.data.attributes);
   console.log(fair.data.attributes);
   // TODO check why this [0] is different to another collection
 
-  const showInfoMount = document.getElementById("showInfo");
+  const showInfoMount = document.getElementById("showInfoMount");
   // showInfoMount.innerHTML = `<h2 class="title" id="artistTitle">${name}</h2>
   //     <img id="artistImg" class="artist-img hero" src=https://coney-golden-key.herokuapp.com/api/${artist.img[0].url}>
 
@@ -66,13 +75,14 @@ export const displayArtist = (artist) => {
   //     <p>Fair: <span id="artistFair"><a href="./../fairs/${fair.slug}.html" class="highlighted">${fair.title}</a> </span>
   //     </p>`;
 
-  showInfoMount.innerHTML = `<h2 class="title" id="artistTitle">${name}</h2>
-
+  showInfoMount.innerHTML = `
       <h3 class="subtitle" id="showName">${showname}</h3>
+      <p>Times: <span >${showtimes}</span></p>
+      <p>Location: <span><a href="${fairGm}" target="_blank" class="highlighted">${showlocation} </a></span></p>
+      <p>Fair: <span><a href="./../fairs/${fairSlug}.html" class="highlighted">${fairName}</a> </span>
+      </p>
       <p id="showDescription">${description}</p>
-      <p>Times: <span id="showTimes">${shows}</p>
-      <p>Fair: <span id="artistFair"><a href="./../fairs/${fairSlug}.html" class="highlighted">${fairName}</a> </span>
-      </p>`;
+      `;
 
   const artistInfoMount = document.getElementById("artistInfo");
   artistInfoMount.innerHTML = ` <h3 class="subtitle">About <span id="aboutArtistTitle">${name}</span></h3>
@@ -90,6 +100,9 @@ export const displayArtist = (artist) => {
   //     artistTags.appendChild(tag);
   //   }
   // });
+  const fairMount = document.getElementById("fairMount");
+  fairMount.innerHTML = ` <p>Back to <span><a href="./../fairs/${fairSlug}.html" class="highlighted">${fairName}</a>. </span>
+      </p>`;
 };
 
 // const showdown = window.showdown;

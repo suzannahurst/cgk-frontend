@@ -1,3 +1,3 @@
 import { getFair } from "./fairs.js";
 
-getFair(1);
+getFair(2);

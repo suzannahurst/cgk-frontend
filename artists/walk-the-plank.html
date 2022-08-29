@@ -22,8 +22,8 @@
 
 
 <!-- our scripts -->
-<script src="./../scripts/artists/artist1.js" type="module"></script>
-<title>Artist 1</title>
+<script src="./../scripts/artists/walkPlank.js" type="module"></script>
+<title>Walk the Plank</title>
 </head>
 
 <body>
@@ -31,20 +31,17 @@
     <div class="dropdown">
       <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown"
         aria-expanded="false">
-        <img src="../assets/img/keyhole-circle.png">
+        <img src="/assets/img/keyhole-circle.png">
       </button>
       <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-        <li><button class="dropdown-item" type="button"><a href="../fairs/st-pauls.html">St Paul’s Cathedral
-              Fair</a></button></li>
-        <li><button class="dropdown-item" type="button"><a href="../fairs/guildhall.html">Guildhall Fair</a></button>
+        <li><button class="dropdown-item" type="button"><a href="/fairs/st-pauls.html">St Paul’s Fair</a></button></li>
+        <li><button class="dropdown-item" type="button"><a href="/fairs/guildhall.html">Guildhall Fair</a></button></li>
+        <li><button class="dropdown-item" type="button"><a href="/fairs/london-wall.html">London Wall Fair</a></button>
         </li>
-        <li><button class="dropdown-item" type="button"><a href="../fairs/london-wall.html">London Wall
-              Fair</a></button>
+        <li><button class="dropdown-item" type="button"><a href="../maze.html">The Maze of Adventures</a></button>
         </li>
-        <li><button class="dropdown-item" type="button"><a href="../maze-map.html">The Maze of Adventures</a></button>
-        </li>
-        <li><button class="dropdown-item" type="button"><a href="#">The Hunt</a></button></li>
-        <li><button class="dropdown-item" type="button"><a href="../map.html">Start your adventure</a></button></li>
+        <li><button class="dropdown-item" type="button"><a href="./hunt.html">The Hunt</a></button></li>
+        <li><button class="dropdown-item" type="button"><a href="../info.html">Practical details</a></button></li>
       </ul>
     </div>
 
@@ -56,21 +53,19 @@
     <div id="not-found">
       <p id="err-msg" class="page-subtitle"></p>
     </div>
-    <section id="showInfo">
-      <h2 class="title" id="artistTitle"></h2>
-      <img id="artistImg" class="artist-img hero">
-
-      <h3 class="subtitle" id="showName"></h3>
-      <p id="showDescription"></p>
-      <p>Times: <span id="showTimes"></p>
-      <p>Fair: <span id="artistFair"></span>
-      </p>
-
+    <section>
+      <h2 class="title" id="artistTitle">Walk the Plank</h2>
+      <div id="showInfoMount"></div>
     </section>
-    <section id="artistInfo">
-
+    <section>
+      <div id="artistInfo"></div>
     </section>
-
+    <section>
+      <img id="artistImg" class="artist-img" src="./../assets/img/palm-tree.jpg">
+    </section>
+    <section>
+      <div id="fairMount"></div>
+    </section>
   </main>
   <footer class="footer-container">
     <div class="footer-wrapper">

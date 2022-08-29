@@ -1,8 +1,9 @@
 // let showdown = require("showdown");
+const showdown = window.showdown;
+const converter = new showdown.Converter();
 
 import { fetchArtists } from "../artists/artists.js";
 
-// scripts/index.js
 export const fetchFairs = () => {
   const fairsReq = new Request(
     "https://coney-golden-key.herokuapp.com/api/fairs?populate=*",
@@ -11,11 +12,6 @@ export const fetchFairs = () => {
   fetch(fairsReq)
     .then((response) => response.json())
     .then((fairs) => {
-      // let fairList = document.getElementById("fair-list");
-
-      // fairs.forEach((fair) => {
-      //   fairList.appendChild(createArticleCard(fair));
-      // });
       console.log(fairs);
       return fairs;
     })
@@ -53,13 +49,15 @@ export const showMissingFairMsg = (msg) => {
 
 export const displayFair = (fair) => {
   console.log(fair.data.attributes);
-  const { name, location, description, content, artists, tags, image } =
+  const { name, location, description, tags, programme, tube, gm } =
     fair.data.attributes;
   // const { url } = image.data.attributes;
   const fairInfoMount = document.getElementById("fairInfoMount");
   const travelInfoMount = document.getElementById("travelInfoMount");
   const programmeInfoMount = document.getElementById("programmeInfoMount");
-  const artistFeaturedMount = document.getElementById("artistFeaturedMount");
+  // const artistFeaturedMount = document.getElementById("artistFeaturedMount");
+
+  // DISPLAY INFO
 
   // TODO add image
   // fairInfoMount.innerHTML = `<h2 class="title" id="fairTitle">${name}</h2>
@@ -70,9 +68,8 @@ export const displayFair = (fair) => {
   //     <div id="fairTags"></div>
   //  `;
 
-  fairInfoMount.innerHTML = `<h2 class="title" id="fairTitle">${name}</h2>
-
-      <h3 class="location">Location: ${location}
+  fairInfoMount.innerHTML = `
+      <h3 class="location"> ${location}
       </h3>
       <p id="fairDescription" class="description">${description}</p>
       <div id="fairTags"></div>
@@ -93,37 +90,32 @@ export const displayFair = (fair) => {
   });
   // DISPLAY TRAVEL
   travelInfoMount.innerHTML = `<h3 class="subtitle">How to get there</h3>
-      <p>Nearest tube: Bank </p>
-      <p>Show on <a href="https://goo.gl/maps/ybYRGqWUe6Em8EBVA" target="_blank" class="highlighted">Google Maps</a></p>`;
+      <p>Nearest tube: ${tube} </p>
+      <p>Show on <a href="${gm}" target="_blank" class="highlighted">Google Maps</a></p>`;
 
   // DISPLAY PROGRAMME
-  programmeInfoMount.innerHTML = ` <h3 class="subtitle">Programme</h3>
-        <p>${content}</p>`;
-
-  // DISPLAY ARTISTS
-
-  // TODO MAP OVER ARTISTS
-  console.log(artists);
-  const artistsToDisplay = [];
-  artists.map((artist) => {
-    artistsToDisplay.push(artist);
-    const li = document.createElement("li");
-    li.innerHTML = ` <li class="artist-item">
-          <a href="#">
-            <h4 class="artist-name">${artist.name}</h4>
-          </a>
-          <p class="artist-time">${artist.shows}</p>
-          <p>${artist.showname}</p>
-          <p><a href="./../artists/${artist.slug}.html" class="highlighted">
-              More info
-            </a></p>
-        </li>`;
-    artistFeaturedMount.append(li);
-  });
+  //   programmeInfoMount.innerHTML = converter.makeHtml(programme);
 };
+//TODO - display dynamically  with markdown conversion
 
-// const showdown = window.showdown;
-// const converter = new showdown.Converter();
-// document.getElementById("fair-content").innerHTML = converter.makeHtml(
-//   fair.content,
-// );
+// DISPLAY ARTISTS
+
+// TODO MAP OVER PROGRAMME?
+
+//   const artistsToDisplay = [];
+//   artists.map((artist) => {
+//     artistsToDisplay.push(artist);
+//     const li = document.createElement("li");
+//     li.innerHTML = ` <li class="artist-item">
+//           <a href="#">
+//             <h4 class="artist-name">${artist.name}</h4>
+//           </a>
+//           <p class="artist-time">${artist.shows}</p>
+//           <p>${artist.showname}</p>
+//           <p><a href="./../artists/${artist.slug}.html" class="highlighted">
+//               More info
+//             </a></p>
+//         </li>`;
+//     artistFeaturedMount.append(li);
+//   });
+// };

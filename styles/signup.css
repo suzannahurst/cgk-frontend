@@ -3,9 +3,18 @@ body {
 }
 
 #mc_embed_signup {
-  background: #fff;
+  /* background: #fff; */
   clear: left;
   /* font: 14px Helvetica, Arial, sans-serif; */
-  color: black;
+  color: #fff;
   border-radius: 5px;
+  padding: 0.5rem;
+}
+
+.mclogo {
+  display: none;
+}
+
+label {
+  font-size: 1.5rem;
 }
