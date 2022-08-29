@@ -106,6 +106,11 @@ a.highlighted {
   text-decoration: underline;
 }
 
+a:active,
+a:focus {
+  color: #e8d7a4;
+}
+
 img.hero {
   width: 250px;
   /* margin-block-end: 3rem; */
@@ -240,7 +245,7 @@ button > a > p {
   }
 
   img.hero {
-    width: 300px;
+    width: 200px;
   }
   .dropdown {
     z-index: 999999;

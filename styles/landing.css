@@ -5,3 +5,8 @@ body {
 p {
   font-size: 1.6rem;
 }
+
+h1.title,
+h2.title {
+  margin-bottom: 5px;
+}
