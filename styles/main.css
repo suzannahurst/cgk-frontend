@@ -229,7 +229,7 @@ header {
   border: 2px solid rgb(255, 255, 255);
   background-color: #ea9e25;
   padding: 2rem;
-  width: 90%;
+  width: fit-content;
   position: absolute;
   inset: 0px auto auto 0px;
   margin: 0px;
@@ -257,6 +257,23 @@ header {
   color: #fff;
 }
 
+@media screen and (min-width: 450px) {
+  .dropdown-menu,
+  .dropdown-menu.show {
+    width: fit-content;
+  }
+
+  .dropdown-toggle {
+    max-width: 80px;
+  }
+  .dropdown {
+    z-index: 999999;
+  }
+  .dropdown-toggle > img {
+    max-width: 40px;
+  }
+}
+
 /* BUTTONS */
 button {
   padding: 10px;
@@ -276,10 +293,6 @@ button > a > p {
     padding: 20px;
   }
 
-  .dropdown-toggle {
-    max-width: 80px;
-  }
-
   main {
     justify-content: center;
     align-items: center;
@@ -291,11 +304,5 @@ button > a > p {
 
   img.hero {
     width: 200px;
-  }
-  .dropdown {
-    z-index: 999999;
-  }
-  .dropdown-toggle > img {
-    max-width: 40px;
   }
 }

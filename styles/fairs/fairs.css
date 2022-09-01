@@ -55,6 +55,13 @@ h4.artist-name {
 
 /* OTHER STYLES */
 
+.fair-img-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: var(--padding);
+}
+
 .programme-item {
   margin-block-end: 4rem;
 }
@@ -69,4 +76,7 @@ h3.location {
 
 .show-item > p {
   margin-block-end: 0;
+}
+
+@media screen and (min-width: 450px) {
 }
