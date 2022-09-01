@@ -5,3 +5,128 @@ body {
 section.info > .hero {
   max-width: 80%;
 }
+
+section.contents {
+  /* display: flex;
+  flex-direction: column; */
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-rows: repeat(3, minmax(0, 1fr));
+  grid-template-areas:
+    "a a a"
+    "b c d"
+    "e e e"
+    "f f f";
+  gap: var(--padding);
+}
+
+section.contents > * {
+  min-width: 0;
+}
+
+.contents-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  /* border: 1px solid #fff;
+  border-radius: 5px; */
+  padding: 10px;
+  background-color: rgba(225, 225, 225, 0.3);
+  border-radius: 10px;
+}
+.maze {
+  grid-area: a;
+}
+
+.maze > .wrapper,
+.hunt > .wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.fair > .wrapper > h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0;
+}
+
+.maze > a > img,
+.hunt > a > img {
+  max-width: 50%;
+}
+
+.stpauls {
+  grid-area: b;
+}
+
+.guildhall {
+  grid-area: c;
+}
+
+.londonwall {
+  grid-area: d;
+}
+
+.hunt {
+  grid-area: e;
+}
+
+.practical {
+  grid-area: f;
+}
+
+.fair-item > img {
+  /* width: 50px; */
+}
+
+@media screen and (min-width: 800px) {
+  section > p,
+  p.blurb {
+    max-width: 75%;
+    margin: auto auto 15px auto;
+  }
+  section.contents {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+    grid-template-areas:
+      "a a b c d e e "
+      "a a f f f  e e";
+    gap: var(--padding);
+  }
+
+  .maze > .wrapper,
+  .hunt > .wrapper {
+    flex-direction: column;
+  }
+
+  .maze {
+    grid-area: a;
+  }
+
+  .stpauls {
+    grid-area: b;
+  }
+
+  .guildhall {
+    grid-area: c;
+  }
+
+  .londonwall {
+    grid-area: d;
+  }
+
+  .hunt {
+    grid-area: e;
+  }
+  .practical {
+    grid-area: f;
+  }
+
+  .contents-item > a > img {
+    max-width: 50%;
+  }
+}

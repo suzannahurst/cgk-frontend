@@ -30,6 +30,7 @@ body {
   font-size: 10px;
   background-color: var(--main-bg-color);
   padding: var(--padding);
+  padding-top: 0;
   /* font-family: "IBM Plex Mono", monospace; */
   font-family: var(--font-body);
 

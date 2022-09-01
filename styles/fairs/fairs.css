@@ -71,11 +71,15 @@ h3.location {
   margin-block-end: 0;
 }
 
+.section-image {
+  display: flex;
+  justify-content: center;
+}
+
 .fair-image {
-  position: fixed;
-  opacity: 20%;
+  /* position: fixed; */
+  /* opacity: 20%; */
   right: -60px;
   top: 30px;
   transform-origin: top;
-  z-index: -999999;
 }

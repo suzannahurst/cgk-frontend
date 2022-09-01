@@ -27,7 +27,27 @@
 </head>
 
 <body>
-
+  <header>
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown"
+        aria-expanded="false">
+        <img src="./../assets/img/keyhole-circle.png">
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+        <li><button class="dropdown-item" type="button"><a href="/fairs/st-pauls.html">St Paul’s Fair</a></button></li>
+        <li><button class="dropdown-item" type="button"><a href="/fairs/guildhall.html">Guildhall Fair</a></button></li>
+        <li><button class="dropdown-item" type="button"><a href="/fairs/london-wall.html">London Wall Fair</a></button>
+        </li>
+        <li><button class="dropdown-item" type="button"><a href="../maze.html">The Maze of Adventures</a></button>
+        </li>
+        <li><button class="dropdown-item" type="button"><a href="../hunt.html">The Hunt</a></button></li>
+        <li><button class="dropdown-item" type="button"><a href="../info.html">Practical details</a></button></li>
+      </ul>
+    </div>
+    <div>
+      <!-- <h1><a href="../home.html">The Golden Key</a></h1> -->
+    </div>
+  </header>
   <main>
     <section class="info">
       <h1 class="title">The Golden Key</h1>
@@ -43,26 +63,69 @@
         conjured up from the past and future.</p>
     </section>
     <section class="contents">
-      <h2><a href="fairs/st-pauls.html">St Paul’s Cathedral Fair</a></h2>
-      <h2><a href="fairs/guildhall.html">Guildhall Fair</a></h2>
-      <h2><a href="fairs/london-wall.html">London Wall Fair</a></h2>
-      <h2><a href="maze.html">The Maze of Adventures</a></h2>
-      <h2><a href="#">The Hunt</a></h2>
-      <h2><a href="info.html">Practical Details</a></h2>
+      <div class="contents-item maze">
+        <a href="maze.html" class="wrapper">
+          <h2>The Maze of Adventures</h2>
+          <img src="./assets/img/illustrations/mazebarbican.png">
+        </a>
+      </div>
+
+      <div class="contents-item stpauls fair"><a href="fairs/st-pauls.html" class="wrapper">
+          <h2>St Paul’s Cathedral Fair</h2>
+          <img src="./assets/img/illustrations/stpaulsfair.png">
+        </a>
+      </div>
+      <div class="contents-item guildhall fair"><a href="fairs/guildhall.html" class="wrapper">
+          <h2>Guildhall Fair</h2>
+          <img src="./assets/img/illustrations/guildhall.png">
+        </a>
+      </div>
+      <div class="contents-item londonwall fair"><a href="fairs/london-wall.html" class="wrapper">
+          <h2>London Wall Fair</h2>
+          <img src="./assets/img/illustrations/londonwallfairtower.png">
+        </a>
+      </div>
+      <div class="contents-item hunt"><a href="hunt.html" class="wrapper">
+          <h2>The Hunt</h2>
+          <img src="./assets/img/illustrations/thehunt.png">
+        </a>
+      </div>
+      <div class="contents-item practical"><a href="info.html" class="wrapper">
+          <h2>Practical Details</h2>
+        </a>
+      </div>
     </section>
     <section class="info">
-      <p>Event highlights include <strong>three Fire Fairs</strong>, colourful family-friendly festivals of performance
-        in Guildhall,
-        alongside
-        the London Wall Highwalks and around St Paul’s Cathedral; the <strong>Maze of Adventures</strong>, twelve
-        smartphone-led
-        adventures
-        leading to immersive experiences in some of the City’s best-kept secret locations; and <strong>The
-          Hunt</strong>: a secret quest
-        to find
-        the Heart of the City, and a treasure hunt, for real.</p>
+      <p>Event highlights include:
+      <ul>
+        <li>
+          <p class="blurb">
+            <strong>Three Fire Fairs</strong>, colourful family-friendly festivals of performance
+            in Guildhall,
+            alongside
+            the London Wall Highwalks and around St Paul’s Cathedral;
+            </>
+        </li>
+        <li>
+          <p class="blurb">
+            The <strong>Maze of Adventures</strong>, twelve
+            smartphone-led
+            adventures
+            leading to immersive experiences in some of the City’s best-kept secret locations;
+          </p>
+        </li>
+        <li>
+          <p class="blurb">
+            and <strong>The
+              Hunt</strong>: a secret quest
+            to find
+            the Heart of the City, and a treasure hunt, for real.
+          </p>
+          </p>
 
-      <p>The Golden Key is brought to you by <a href="https://coneyhq.org/" target="_blank"
+        </li>
+      </ul>
+      <p class="blurb">The Golden Key is brought to you by <a href="https://coneyhq.org/" target="_blank"
           class="highlighted">Coney</a> &
         Friends and the City of London Corporation.</p>
 
