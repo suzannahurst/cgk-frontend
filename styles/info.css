@@ -1,3 +1,24 @@
 h3.subtitle {
   font-size: 2rem;
 }
+
+.otrl-iframe-widget {
+  width: 90vw;
+  height: 550px;
+  border: none;
+  max-width: 375px;
+  background: transparent;
+  overflow: hidden;
+}
+
+.htgt-list > li {
+  margin-block-end: 2rem;
+}
+@media screen and (min-width: 450px) {
+  .train-wrapper {
+    display: flex;
+  }
+  .train-item > p {
+    max-width: 80%;
+  }
+}

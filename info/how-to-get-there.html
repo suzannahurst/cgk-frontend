@@ -29,7 +29,7 @@
 <body>
   <header>
     <div class="dropdown">
-      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown"
+      <button class="btn btn-secondary dropdown-toggle " type="button" id="dropdownMenu2" data-bs-toggle="dropdown"
         aria-expanded="false">
         <img src="/assets/img/keyhole-circle.png">
       </button>
@@ -50,14 +50,53 @@
   <main>
     <section>
       <h2 class="title">How to get there</h2>
-      <h3 class="subtitle">Subtitle </h3>
-      <p> How to get to the city. Nearest tube stations to the three fairs. </p>
+      <ul class="htgt-list">
+        <li class="train-wrapper">
+          <div class="train-item">
+            <h3 class="subtitle">By train </h3>
+            <p class="maintext">It couldn’t be easier to visit the City by train with Southeastern, so you can sit back
+              and
+              relax as you travel into the
+              heart of London. Southeastern offer a variety of ticket options and fares, plus there are no booking fees
+              when
+              you book
+              direct with Southeastern.</p>
 
-      <h3 class="subtitle">Boats </h3>
-      <p> Insert obligatory copy
-        about tube and thames boats.</p>
+            <p class="maintext">
+              Advance
+              Southeastern offer Advance tickets which are available on selected routes as single tickets at specific
+              times
+              and a
+              great way to save on train travel. Book early for cheaper fares.
+            </p>
 
+            <p class="maintext">
+              Kids for a Quid
+              An adult with a valid ticket can travel with up to 4 kids (aged 5-15) for just £1 each on off-peak
+              Southeastern
+              services, all year round. Under 5s go free.
+            </p>
 
+            <p class="maintext"> GroupSave
+              Save up to 34% on the price of individual adult tickets when groups of 3-9 adults travel together
+              off-peak.
+              Plus, any
+              kids travelling in addition to the group of adults will be eligible for Kids for a Quid tickets. </p>
+          </div>
+          <div class="train-item">
+            <iframe allow="geolocation" id="otrl-jp-widget"
+              src="https://widgets.otrl.io/jp-widget/?id=iframe&brand=SE&redirectUrl=https://ticket.southeasternrailway.co.uk&apiUrl=https://api.southeasternrailway.co.uk&stylesheetUrl=https://widgets.otrl.io/jp-widget/brands/southeastern.css&vertical=true&enableModalHeightResize=true&disabledTabs=OTHER,FAVOURITES"
+              class="otrl-iframe-widget" scrolling="no" title="JP widget"
+              onload="(function () { var widget = event.target; window.addEventListener('message', function (event) { if (event.data.action === 'iframe-otrl-jp-widget__resize') { widget.style.height = Math.round(event.data.height) + 'px'; } })})();">
+            </iframe>
+          </div>
+        </li>
+        <li>
+          <h3 class="subtitle">Boats </h3>
+          <p class="maintext"> Insert obligatory copy
+            about tube and thames boats.</p>
+
+        </li>
       </ul>
     </section>
   </main>
@@ -65,24 +104,24 @@
     <div class="footer-container">
       <div class="footer-wrapper">
         <a href="../map.html" class="footer-item">
-          <p>Map of activities</p>
+          <span>Map of activities</span>
         </a>
         <a href="./../info/how-to-get-there.html" class="footer-item">
-          <p>How to get there</p>
+          <span>How to get there</span>
         </a>
         <a href="./../info/accessiblity.html" class="footer-item">
-          <p>Accessibility</p>
+          <span>Accessibility</span>
         </a>
       </div>
       <div class="footer-wrapper">
         <a href="./../info/faq.html" class="footer-item">
-          <p>FAQs</p>
+          <span>FAQs</span>
         </a>
         <a href="./../info/about-coney.html" class="footer-item">
-          <p>About Coney</p>
+          <span>About Coney</span>
         </a>
         <a href="./../info/partners.html" class="footer-item">
-          <p>Partners</p>
+          <span>Partners</span>
         </a>
       </div>
     </div>

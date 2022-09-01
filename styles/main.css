@@ -127,6 +127,33 @@ span.tag {
   margin-inline-end: 1rem;
 }
 
+section.info > img {
+  max-width: 80%;
+  margin-bottom: 1.5rem;
+}
+
+@media screen and (min-width: 450px) {
+  p.maintext {
+    max-width: 60%;
+  }
+  section.info {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  section.info > img {
+    max-width: 40%;
+    margin-bottom: 0;
+  }
+  section.info {
+    text-align: left;
+  }
+  section:last-child {
+    margin-bottom: 0;
+  }
+}
 /* HEADER  */
 header {
   width: 100%;
@@ -152,9 +179,10 @@ header {
   width: 100%;
   text-align: left;
 }
-.footer-item > p {
+.footer-item > span {
   font-size: 1.3rem;
   margin-bottom: 0;
+  display: block;
 }
 
 .footer-wrapper:last-child {
@@ -196,7 +224,18 @@ header {
 .dropdown-menu,
 .dropdown-menu.show {
   transform: translate3d(70.5px, 15px, 0px);
-  font-size: 1.6rem;
+  font-size: 1.8rem;
+  font-family: "Big John";
+  border: 2px solid rgb(255, 255, 255);
+  background-color: #ea9e25;
+  padding: 2rem;
+  width: 90%;
+  position: absolute;
+  inset: 0px auto auto 0px;
+  margin: 0px;
+  transform: translate3d(0px, 55.5px, 0px);
+  /* background-image: url("./../assets/img/illustrations/londonwallfairtower.png");
+  background-size: cover; */
 }
 
 .btn:hover {
@@ -212,6 +251,10 @@ header {
 .btn-check:focus + .btn,
 .btn:focus {
   box-shadow: none;
+}
+
+.dropdown-item > a {
+  color: #fff;
 }
 
 /* BUTTONS */

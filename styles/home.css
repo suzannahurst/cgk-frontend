@@ -49,7 +49,7 @@ section.contents > * {
 }
 
 .fair > .wrapper > h2 {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   margin-bottom: 0;
 }
 
@@ -76,10 +76,6 @@ section.contents > * {
 
 .practical {
   grid-area: f;
-}
-
-.fair-item > img {
-  /* width: 50px; */
 }
 
 @media screen and (min-width: 800px) {
