@@ -48,3 +48,10 @@ label {
   min-height: 0px;
   padding-bottom: 0px;
 }
+
+@media screen and (min-width: 450px) {
+  #mc_embed_signup {
+    width: 600px;
+    margin: auto;
+  }
+}
