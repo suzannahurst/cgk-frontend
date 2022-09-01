@@ -2,7 +2,7 @@ body {
   text-align: center;
 }
 
-header {
+header.signup {
   background: transparent;
 }
 
@@ -10,12 +10,12 @@ header {
   background: #fff;
   clear: left;
   /* font: 14px Helvetica, Arial, sans-serif; */
-  /* color: #fff; */
-  color: #000;
+  color: #fff;
+  /* color: #000; */
   border-radius: 5px;
   padding: 0.5rem;
-
-  background: #fff;
+  background: transparent;
+  /* background: #fff; */
   clear: left;
   /* font: 14px Helvetica, Arial, sans-serif; */
   /* width: 600px; */

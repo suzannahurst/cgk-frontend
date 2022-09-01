@@ -27,20 +27,36 @@
 </head>
 
 <body>
-  <header class="signup"></header>
+  <header>
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown"
+        aria-expanded="false">
+        <img src="/assets/img/keyhole-circle.png">
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+        <li><button class="dropdown-item" type="button"><a href="/fairs/st-pauls.html">St Paul’s Cathedral
+              Fair</a></button></li>
+        <li><button class="dropdown-item" type="button"><a href="/fairs/guildhall.html">Guildhall Fair</a></button></li>
+        <li><button class="dropdown-item" type="button"><a href="/fairs/london-wall.html">London Wall Fair</a></button>
+        </li>
+        <li><button class="dropdown-item" type="button"><a href="#">The Hunt</a></button></li>
+        <li><button class="dropdown-item" type="button"><a href="map.html">Start your adventure</a></button></li>
+      </ul>
+    </div>
+    <div>
+      <h1><a href="../home.html">The Golden Key</a></h1>
+    </div>
+  </header>
   <main>
     <section>
-      <h2 class="title">Before we continue...</h2>
-      <p>Would you like to be first to be notified when the full programme is announced?</p>
-
+      <h2 class="title">Keep in touch</h2>
       <div id="mc_embed_signup">
         <form
           action="https://coneyhq.us11.list-manage.com/subscribe/post?u=3ed2eca54aa8835691860eb0b&amp;id=5e35500c2e&amp;f_id=003b8de0f0"
           method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
           target="_blank" novalidate>
           <div id="mc_embed_signup_scroll">
-            <h2>Subscribe</h2>
-            <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+
             <div class="mc-field-group">
               <label for="mce-EMAIL">Email Address <span class="asterisk">*</span>
               </label>
@@ -121,17 +137,45 @@
       </div>
 
     </section>
-    <button class="enter"><a href="home.html">
-        <p>Skip</p>
-      </a>
-    </button>
-
-
-
 
 
   </main>
-  <footer></footer>
+  <footer class="footer-outer">
+    <div class="footer-container">
+      <div class="footer-wrapper">
+        <a href="../map.html" class="footer-item">
+          <span>Map of activities</span>
+        </a>
+        <a href="./../info/how-to-get-there.html" class="footer-item">
+          <span>How to get there</span>
+        </a>
+        <a href="./../info/accessiblity.html" class="footer-item">
+          <span>Accessibility</span>
+        </a>
+      </div>
+      <div class="footer-wrapper">
+        <a href="./../info/faq.html" class="footer-item">
+          <span>FAQs</span>
+        </a>
+        <a href="./../info/about-coney.html" class="footer-item">
+          <span>About Coney</span>
+        </a>
+        <a href="./../info/partners.html" class="footer-item">
+          <span>Partners</span>
+        </a>
+        <a href="./../info/mailing-list.html" class="footer-item">
+          <span>Keep in touch</span>
+        </a>
+      </div>
+    </div>
+    <div class="footer-container social-wrapper">
+
+      <a href="https://twitter.com/agencyofconey" class="social-item"><img src="./../assets/img/socials/twitter.png"
+          class="socialicon"></a>
+      <a href="https://www.instagram.com/agencyofconey/" class="social-item"><img
+          src="./../assets/img/socials/insta.png" class="socialicon"></a>
+    </div>
+  </footer>
   <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
 
   <script
