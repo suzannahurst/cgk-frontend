@@ -11,31 +11,21 @@ function initMap() {
   map = new google.maps.Map(document.getElementById("mazeMap"), {
     center: { lat: 51.513743, lng: -0.0958325 },
     zoom: 13,
+    // zoomControl: true,
+    // mapTypeControl: boolean,
+    // scaleControl: boolean,
+    // streetViewControl: boolean,
+    // rotateControl: boolean,
+    // fullscreenControl: boolean,
   });
 
   let iconBase = "./../assets/img/markers/";
 
   const icons = {
-    fair: {
-      icon: {
-        url: iconBase + "fair-marker.png",
-        scaledSize: new google.maps.Size(40, 60),
-      },
-    },
     adventure: {
       icon: {
         url: iconBase + "adventure-marker.png",
         scaledSize: new google.maps.Size(40, 60),
-      },
-    },
-    hunt: {
-      icon: {
-        path: google.maps.SymbolPath.BACKWARD_CLOSED_ARROW,
-        fillColor: "green",
-        fillOpacity: 0.6,
-        strokeWeight: 0,
-        rotation: 0,
-        scale: 10,
       },
     },
   };
@@ -46,33 +36,48 @@ function initMap() {
       type: "adventure",
       content:
         '<div id="content" class="infoContent">' +
+        '<div class="contentItem">' +
+        '<img src="../assets/img/illustrations/info-door.png">' +
+        "</div>" +
+        '<div class="content-item">' +
         "<h3>Tudor Adventure</h3>" +
         "<p>Family Friendly</p>" +
         "<p>Wheelchair accessible</p>" +
         `<a href="../adventures/tudor.html"><strong>Find out more</strong></a>` +
-        "</div>",
+        "</div>" +
+        " </div>",
     },
     {
       position: new google.maps.LatLng(51.51335645826938, -0.08959207632630892),
       type: "adventure",
       content:
         '<div id="content" class="infoContent">' +
-        "<h3>Suffragette Adventure</h3>" +
+        '<div class="contentItem">' +
+        '<img src="../assets/img/illustrations/info-door.png">' +
+        "</div>" +
+        '<div class="content-item">' +
+        "<h3>Tudor Adventure</h3>" +
         "<p>Family Friendly</p>" +
         "<p>Wheelchair accessible</p>" +
-        `<a href="../adventures/suffragette.html"><strong>Find out more</strong></a>` +
-        "</div>",
+        `<a href="../adventures/tudor.html"><strong>Find out more</strong></a>` +
+        "</div>" +
+        " </div>",
     },
     {
       position: new google.maps.LatLng(51.51984594260593, -0.10259542547264745),
       type: "adventure",
       content:
         '<div id="content" class="infoContent">' +
-        "<h3>Roman Adventure</h3>" +
+        '<div class="contentItem">' +
+        '<img src="../assets/img/illustrations/info-door.png">' +
+        "</div>" +
+        '<div class="content-item">' +
+        "<h3>Tudor Adventure</h3>" +
         "<p>Family Friendly</p>" +
         "<p>Wheelchair accessible</p>" +
-        `<a href="../adventures/roman.html"><strong>Find out more</strong></a>` +
-        "</div>",
+        `<a href="../adventures/tudor.html"><strong>Find out more</strong></a>` +
+        "</div>" +
+        " </div>",
     },
   ];
 
@@ -83,6 +88,8 @@ function initMap() {
       activeMarkers = [];
     }
   };
+
+  let currentInfoWindow = null;
 
   const showAllMarkers = () => {
     locations.map((location) => {
@@ -95,12 +102,18 @@ function initMap() {
       const placewindow = new google.maps.InfoWindow({
         content: location.content,
       });
+
       marker.addListener("click", () => {
+        console.log("currentInfoWindow", currentInfoWindow);
+        if (currentInfoWindow != null) {
+          currentInfoWindow.close();
+        }
         placewindow.open({
           anchor: marker,
           map,
           shouldFocus: false,
         });
+        currentInfoWindow = placewindow;
       });
     });
   };
@@ -156,7 +169,14 @@ function initMap() {
       handleLocationError(false, infoWindow, map.getCenter());
     }
   });
+  google.maps.event.addListener(map, "click", function () {
+    if (currentInfoWindow != null) {
+      currentInfoWindow.close();
+    }
+  });
 }
+
+console.log(map);
 
 function handleLocationError(browserHasGeolocation, infoWindow, pos) {
   infoWindow.setPosition(pos);

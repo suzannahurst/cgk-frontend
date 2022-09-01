@@ -66,15 +66,24 @@ footer {
 /* INFO WINDOW */
 
 .infoContent {
-  /* background-color: var(--color-mint); */
-  overflow: scroll;
   padding: 1.5rem;
+  background-color: var(--accent-color-primary);
+  width: fit-content;
+  display: flex;
+}
+.contentItem > img {
+  max-width: 90%;
 }
 
-/* .gm-style-iw.gm-style-iw-c {
-  background-color: var(--color-mint);
+.gm-style-iw.gm-style-iw-c {
+  background-color: var(--accent-color-primary);
 }
 
 div.gm-style-iw-d {
-  background-color: var(--color-mint);
-} */
+  background-color: var(--accent-color-primary);
+  overflow: hidden !important;
+}
+
+.gm-style .gm-style-iw-tc::after {
+  background-color: var(--accent-color-primary);
+}
