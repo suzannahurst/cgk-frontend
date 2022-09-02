@@ -32,7 +32,7 @@ h2.title {
 .keyhole.black {
   z-index: -99999;
   transform: scale(0.1);
-  top: -15%;
+  top: -10%;
   left: 0;
 }
 
@@ -66,5 +66,6 @@ h2.title {
 
   .keyhole.black {
     left: inherit;
+    top: -15%;
   }
 }
