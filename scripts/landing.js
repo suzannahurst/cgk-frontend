@@ -11,13 +11,13 @@ landing.addEventListener("click", () => {
   });
   gsap.to(".scene", {
     delay: 0.5,
-    duration: 5,
+    duration: 9,
     scale: 1,
     opacity: 1,
   });
   gsap.to(".info-wrapper", {
-    delay: 3,
-    duration: 5,
+    delay: 1.5,
+    duration: 1.5,
     backgroundColor: "#EA9E25",
     border: " #fff 1px solid",
   });
