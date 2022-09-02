@@ -32,7 +32,7 @@ h2.title {
 .keyhole.black {
   z-index: -99999;
   transform: scale(0.1);
-  top: -20%;
+  top: -10%;
   left: 0;
 }
 
