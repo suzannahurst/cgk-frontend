@@ -119,6 +119,10 @@ img.hero {
   /* margin-block-end: 3rem; */
 }
 
+img {
+  cursor: url(./../assets/img/cursor/keycursor-09.png), auto;
+  /* cursor: help; */
+}
 span.tag {
   border: #fff solid 1px;
   padding: 1rem;
