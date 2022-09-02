@@ -19,23 +19,31 @@
 
 
   <!-- our scripts -->
-  <!-- <script src="" type="module"></script> -->
+  <script src="./scripts/landing.js" type="module"></script>
   <title>The Golden Key</title>
 </head>
 
 <body>
-  <main class="landing">
-    <img src="./assets/img/keyholecolor.png" class="hero" id="keyholeMount">
-    <h1 class="title">The Golden Key
-    </h1>
-    <h2 class="title">15th October 2022</h2>
-    <p>A free immersive takeover of the City of London by Coney & Friends</p>
+  <main class="landing" id="landing">
 
-    <!-- TODO add email invite -->
-    <button class="enter"><a href="signup.html">
-        <p>Enter</p>
-      </a></button>
+    <!-- <div class="keyhole-wrapper" class=""> -->
+    <img src="./assets/img/keyhole3.png" class="black keyhole" id="keyholeBlack">
+    <img src="./assets/img/keyhole4.png" class="scene keyhole" id="scene">
+    <!-- </div> -->
+    <div class="info-wrapper">
+      <h1 class="title">The Golden Key
+      </h1>
+      <h2 class="title">15th October 2022</h2>
+      <p>A free immersive takeover of the City of London by Coney & Friends</p>
+      <button class="enter"><a href="signup.html">
+          <p>Enter</p>
+        </a></button>
+    </div>
+
+
   </main>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+
 </body>
 
 </html>
