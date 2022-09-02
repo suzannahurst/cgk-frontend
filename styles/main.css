@@ -111,6 +111,7 @@ a:active,
 a:focus,
 a:hover {
   color: #e8d7a4;
+  /* cursor: url("./../assets/img/fair.png"), pointer; */
 }
 
 img.hero {
@@ -238,6 +239,14 @@ header {
   background-size: cover; */
 }
 
+.dropdown-item:focus,
+.dropdown-item:hover {
+  background-color: inherit;
+}
+.dropdown-item:focus,
+.dropdown-item:hover > a {
+  color: #1c8f93;
+}
 .btn:hover {
   background-color: inherit;
   border: inherit;

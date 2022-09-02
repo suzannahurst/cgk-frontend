@@ -1,9 +1,58 @@
 // MAP
 
+export const fetchAdventures = () => {
+  const adventuresReq = new Request(
+    "https://coney-golden-key.herokuapp.com/api/adventures?populate=*",
+  );
+
+  fetch(adventuresReq)
+    .then((resp) => {
+      if (resp.ok) {
+        return resp.json();
+      } else {
+        throw new Error(resp.statusText);
+      }
+    })
+    .then((adventures) => {
+      initLocations(adventures);
+    })
+    // .then(initLocations(adventures))
+    .catch((error) => {
+      console.error("Error:", error);
+    });
+};
 // Note: This example requires that you consent to location sharing when
 // prompted by your browser. If you see the error "The Geolocation service
 // failed.", it means you probably did not give permission for the browser to
 // locate you.
+let locationsToShow = [];
+const initLocations = (adventures) => {
+  console.log(adventures);
+  const data = adventures.data;
+  data.map((adventure) => {
+    const { name, oneline, tags, latitude, longitude, slug } =
+      adventure.attributes;
+    const location = {
+      name: name,
+      online: oneline,
+      tags: tags,
+      latitude: latitude,
+      longitude: longitude,
+      slug: slug,
+    };
+    locationsToShow.push(location);
+  });
+};
+
+fetchAdventures();
+console.log("locationstoshow", locationsToShow);
+
+const showMissingAdventureMsg = (msg) => {
+  document.getElementById("not-found").style =
+    "display: flex; display: -webkit-box; display: -ms-flexbox;";
+  document.getElementById("err-msg").innerHTML = msg;
+  // console.log("fair not found");
+};
 
 let map, infoWindow;
 
@@ -30,6 +79,33 @@ function initMap() {
       },
     },
   };
+
+  // TODO Trying to dynamically populate map
+  // let locations = [];
+
+  // locationsToShow.map((location) => {
+  //   console.log("hi");
+  //   console.log("location from fetch", location, locationsToShow);
+  //   const { name, oneline, tags, latitude, longitude, slug } = location;
+  //   const glocation = {
+  //     position: new google.maps.LatLng(latitude, longitude),
+  //     type: "adventure",
+  //     content:
+  //       '<div id="content" class="infoContent">' +
+  //       '<div class="contentItem">' +
+  //       '<img src="../assets/img/illustrations/info-door.png">' +
+  //       "</div>" +
+  //       '<div class="content-item">' +
+  //       `<h3>${name}</h3>` +
+  //       `<p>${oneline}</p>` +
+  //       "<p>Family Friendly</p>" +
+  //       "<p>Wheelchair accessible</p>" +
+  //       `<a href="../adventures/${slug}.html"><strong>Find out more</strong></a>` +
+  //       "</div>" +
+  //       " </div>",
+  //   };
+  //   locations.push(glocation);
+  // });
 
   const locations = [
     {
@@ -176,8 +252,6 @@ function initMap() {
     }
   });
 }
-
-console.log(map);
 
 function handleLocationError(browserHasGeolocation, infoWindow, pos) {
   infoWindow.setPosition(pos);

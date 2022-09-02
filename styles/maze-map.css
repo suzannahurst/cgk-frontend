@@ -67,7 +67,7 @@ footer {
 
 .infoContent {
   padding: 1.5rem;
-  background-color: var(--accent-color-primary);
+  background-color: var(--color-mint);
   width: fit-content;
   display: flex;
 }
@@ -76,14 +76,14 @@ footer {
 }
 
 .gm-style-iw.gm-style-iw-c {
-  background-color: var(--accent-color-primary);
+  background-color: var(--color-mint);
 }
 
 div.gm-style-iw-d {
-  background-color: var(--accent-color-primary);
+  background-color: var(--color-mint);
   overflow: hidden !important;
 }
 
 .gm-style .gm-style-iw-tc::after {
-  background-color: var(--accent-color-primary);
+  background-color: var(--color-mint);
 }

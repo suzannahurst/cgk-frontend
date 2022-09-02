@@ -24,22 +24,16 @@ h2.title {
 }
 
 .keyhole.scene {
-  /* display: none; */
   z-index: -99999;
-  transform: scale(5);
+  transform: scale(8);
   opacity: 0;
 }
 
 .keyhole.black {
-  /* position: relative; */
-  /* transform: scale(1.5); */
-  /* width: 150px; */
   z-index: -99999;
-}
-
-.keyhole.scene {
-  /* position: relative; */
-  /* width: 150px; */
+  transform: scale(0.1);
+  top: -20%;
+  left: 0;
 }
 
 .keyhole-wrapper {
@@ -68,5 +62,9 @@ h2.title {
 
   .info-wrapper {
     max-width: 300px;
+  }
+
+  .keyhole.black {
+    left: inherit;
   }
 }

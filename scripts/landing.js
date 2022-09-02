@@ -4,13 +4,14 @@ const scene = document.getElementById("scene");
 landing.addEventListener("click", () => {
   // scene.addClass("show");
   gsap.to(".black", {
+    y: -400,
     duration: 5,
     scale: 8,
     opacity: 0,
   });
   gsap.to(".scene", {
-    delay: 1,
-    duration: 3,
+    delay: 0.5,
+    duration: 5,
     scale: 1,
     opacity: 1,
   });
