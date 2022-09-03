@@ -1,51 +1,29 @@
 // MAP
 
-export const fetchAdventures = () => {
-  const adventuresReq = new Request(
-    "https://coney-golden-key.herokuapp.com/api/adventures?populate=*",
-  );
+import { fetchAdventures } from "./adventures/adventures.js";
+let locationsToShow = [];
 
-  fetch(adventuresReq)
-    .then((resp) => {
-      if (resp.ok) {
-        return resp.json();
-      } else {
-        throw new Error(resp.statusText);
-      }
-    })
-    .then((adventures) => {
-      initLocations(adventures);
-    })
-    // .then(initLocations(adventures))
-    .catch((error) => {
-      console.error("Error:", error);
-    });
-};
+// const populateMap = async () => {
+//   let adventures = [];
+
+//   try {
+//     adventures = await fetchAdventures();
+//     // console.log(adventures);
+//   } catch (err) {
+//     console.error("Error:", error);
+//   }
+//   const data = adventures.data;
+//   data.map((adventure) => {
+//     locationsToShow.push(adventure);
+//   });
+//   // console.log("adventures", adventures);
+// };
+// populateMap();
+
 // Note: This example requires that you consent to location sharing when
 // prompted by your browser. If you see the error "The Geolocation service
 // failed.", it means you probably did not give permission for the browser to
 // locate you.
-let locationsToShow = [];
-const initLocations = (adventures) => {
-  console.log(adventures);
-  const data = adventures.data;
-  data.map((adventure) => {
-    const { name, oneline, tags, latitude, longitude, slug } =
-      adventure.attributes;
-    const location = {
-      name: name,
-      online: oneline,
-      tags: tags,
-      latitude: latitude,
-      longitude: longitude,
-      slug: slug,
-    };
-    locationsToShow.push(location);
-  });
-};
-
-fetchAdventures();
-console.log("locationstoshow", locationsToShow);
 
 const showMissingAdventureMsg = (msg) => {
   document.getElementById("not-found").style =
@@ -62,11 +40,11 @@ function initMap() {
     zoom: 13,
     mapId: "116b56ec96574c87",
     // zoomControl: true,
-    // mapTypeControl: boolean,
+    mapTypeControl: false,
     // scaleControl: boolean,
     // streetViewControl: boolean,
     // rotateControl: boolean,
-    // fullscreenControl: boolean,
+    // fullscreenControl: false,
   });
 
   let iconBase = "./../assets/img/markers/";
@@ -82,77 +60,207 @@ function initMap() {
 
   // TODO Trying to dynamically populate map
   // let locations = [];
-
-  // locationsToShow.map((location) => {
-  //   console.log("hi");
-  //   console.log("location from fetch", location, locationsToShow);
-  //   const { name, oneline, tags, latitude, longitude, slug } = location;
-  //   const glocation = {
-  //     position: new google.maps.LatLng(latitude, longitude),
-  //     type: "adventure",
-  //     content:
-  //       '<div id="content" class="infoContent">' +
-  //       '<div class="contentItem">' +
-  //       '<img src="../assets/img/illustrations/info-door.png">' +
-  //       "</div>" +
-  //       '<div class="content-item">' +
-  //       `<h3>${name}</h3>` +
-  //       `<p>${oneline}</p>` +
-  //       "<p>Family Friendly</p>" +
-  //       "<p>Wheelchair accessible</p>" +
-  //       `<a href="../adventures/${slug}.html"><strong>Find out more</strong></a>` +
-  //       "</div>" +
-  //       " </div>",
-  //   };
-  //   locations.push(glocation);
+  // locationsToShow.map(
+  //   (locationToShow) => {
+  //     console.log("hi", locationToShow);
+  //   },
+  // const { name, oneline, tags, latitude, longitude, slug } = locationToShow;
+  // const location = {
+  //   position: new google.maps.LatLng(latitude, longitude),
+  //   type: "adventure",
+  //   content:
+  //     '<div id="content" class="infoContent">' +
+  //     '<div class="contentItem">' +
+  //     '<img src="../assets/img/illustrations/info-door.png">' +
+  //     "</div>" +
+  //     '<div class="content-item">' +
+  //     `<h3>${name}</h3>` +
+  //     `<p>${oneline}</p>` +
+  //     "<p>Family Friendly</p>" +
+  //     "<p>Wheelchair accessible</p>" +
+  //     `<a href="../adventures/${slug}.html"><strong>Find out more</strong></a>` +
+  //     "</div>" +
+  //     " </div>",
+  // };
+  // locations.push(location);
   // });
+  // );
 
+  // console.log("locations", locations);
   const locations = [
     {
-      position: new google.maps.LatLng(51.51596415654087, -0.10630967216174751),
+      position: new google.maps.LatLng(51.51202, -0.09088),
       type: "adventure",
       content:
         '<div id="content" class="infoContent">' +
         '<div class="contentItem">' +
-        '<img src="../assets/img/illustrations/info-door.png">' +
+        "<h3>Animals in the City </h3>" +
+        '<p class="">Start at Bloomberg Arcade, on Cannon Street Side. </p>' +
+        '<div class="maptags"><span class="maptag">Just for families</span></div>' +
         "</div>" +
-        '<div class="content-item">' +
-        "<h3>Tudor Adventure</h3>" +
-        "<p>Family Friendly</p>" +
-        "<p>Wheelchair accessible</p>" +
-        `<a href="../adventures/tudor.html"><strong>Find out more</strong></a>` +
+        '<div class="contentItem">' +
+        '<a href="../adventures/door-1.html"><img src="../assets/img/illustrations/info-door.png"></a>' +
+        `<div><a href="../adventures/door-1.html"><strong>More info</strong></a></div>` +
         "</div>" +
         " </div>",
     },
     {
-      position: new google.maps.LatLng(51.51335645826938, -0.08959207632630892),
+      position: new google.maps.LatLng(51.51702, -0.09015),
       type: "adventure",
       content:
         '<div id="content" class="infoContent">' +
         '<div class="contentItem">' +
-        '<img src="../assets/img/illustrations/info-door.png">' +
+        "<h3>Epic Investment </h3>" +
+        '<p class="">Start at Coleman Street Gardens, in front of Girdler\'s Company </p>' +
+        '<div class="maptags"><span class="maptag">Just for adults</span></div>' +
         "</div>" +
-        '<div class="content-item">' +
-        "<h3>Tudor Adventure</h3>" +
-        "<p>Family Friendly</p>" +
-        "<p>Wheelchair accessible</p>" +
-        `<a href="../adventures/tudor.html"><strong>Find out more</strong></a>` +
+        '<div class="contentItem">' +
+        '<a href="../adventures/door-3.html"><img src="../assets/img/illustrations/info-door.png"></a>' +
+        `<div><a href="../adventures/door-3.html"><strong>More info</strong></a></div>` +
         "</div>" +
         " </div>",
     },
     {
-      position: new google.maps.LatLng(51.51984594260593, -0.10259542547264745),
+      position: new google.maps.LatLng(51.51449, -0.0803),
       type: "adventure",
       content:
         '<div id="content" class="infoContent">' +
         '<div class="contentItem">' +
-        '<img src="../assets/img/illustrations/info-door.png">' +
+        "<h3>Daniel Mendoza</h3>" +
+        '<p class="">Start at 30 St Mary\'s Axe (The Gerkin), on the east side. </p>' +
+        '<div class="maptags"><span class="maptag">Suitable for all</span></div>' +
         "</div>" +
-        '<div class="content-item">' +
-        "<h3>Tudor Adventure</h3>" +
-        "<p>Family Friendly</p>" +
-        "<p>Wheelchair accessible</p>" +
-        `<a href="../adventures/tudor.html"><strong>Find out more</strong></a>` +
+        '<div class="contentItem">' +
+        '<a href="../adventures/door-4.html"><img src="../assets/img/illustrations/info-door.png"></a>' +
+        `<div><a href="../adventures/door-4.html"><strong>More info</strong></a></div>` +
+        "</div>" +
+        " </div>",
+    },
+    {
+      position: new google.maps.LatLng(51.51424, -0.10332),
+      type: "adventure",
+      content:
+        '<div id="content" class="infoContent">' +
+        '<div class="contentItem">' +
+        "<h3>Moll Cutpurse and Ann Duck</h3>" +
+        '<p class="">Start across the road from City Thameslink </p>' +
+        '<div class="maptags"><span class="maptag">Suitable for all</span></div>' +
+        "</div>" +
+        '<div class="contentItem">' +
+        '<a href="../adventures/door-5.html"><img src="../assets/img/illustrations/info-door.png"></a>' +
+        `<div><a href="../adventures/door-5.html"><strong>More info</strong></a></div>` +
+        "</div>" +
+        " </div>",
+    },
+    {
+      position: new google.maps.LatLng(51.51705, -0.09275),
+      type: "adventure",
+      content:
+        '<div id="content" class="infoContent">' +
+        '<div class="contentItem">' +
+        "<h3>Ghost Hunting with Brian</h3>" +
+        '<p class="">Start at Aldermenbary Square </p>' +
+        '<div class="maptags"><span class="maptag">Suitable for all</span></div>' +
+        "</div>" +
+        '<div class="contentItem">' +
+        '<a href="../adventures/door-6.html"><img src="../assets/img/illustrations/info-door.png"></a>' +
+        `<div><a href="../adventures/door-6.html"><strong>More info</strong></a></div>` +
+        "</div>" +
+        " </div>",
+    },
+    {
+      position: new google.maps.LatLng(51.51349, -0.08808),
+      type: "adventure",
+      content:
+        '<div id="content" class="infoContent">' +
+        '<div class="contentItem">' +
+        "<h3>The Artful Dodges Again </h3>" +
+        '<p class="">Start in the square outside the main entrance of The Royal Exchange </p>' +
+        '<div class="maptags"><span class="maptag">Just for families</span></div>' +
+        "</div>" +
+        '<div class="contentItem">' +
+        '<a href="../adventures/door-7.html"><img src="../assets/img/illustrations/info-door.png"></a>' +
+        `<div><a href="../adventures/door-7.html"><strong>More info</strong></a></div>` +
+        "</div>" +
+        " </div>",
+    },
+    {
+      position: new google.maps.LatLng(51.52006, -0.09683),
+      type: "adventure",
+      content:
+        '<div id="content" class="infoContent">' +
+        '<div class="contentItem">' +
+        "<h3>The Smashing Rock Sisters </h3>" +
+        '<p class="">Start in the square opposite Barbican Tube at the entrance to Barbican Estate</p>' +
+        '<div class="maptags"><span class="maptag">Suitable for all</span></div>' +
+        "</div>" +
+        '<div class="contentItem">' +
+        '<a href="../adventures/door-8.html"><img src="../assets/img/illustrations/info-door.png"></a>' +
+        `<div><a href="../adventures/door-8.html"><strong>More info</strong></a></div>` +
+        "</div>" +
+        " </div>",
+    },
+    {
+      position: new google.maps.LatLng(51.51018, -0.08593),
+      type: "adventure",
+      content:
+        '<div id="content" class="infoContent">' +
+        '<div class="contentItem">' +
+        "<h3>A Resting Place </h3>" +
+        '<p class="">Start at the open square in front of Monument</p>' +
+        '<div class="maptags"><span class="maptag">Suitable for all</span></div>' +
+        "</div>" +
+        '<div class="contentItem">' +
+        '<a href="../adventures/door-9.html"><img src="../assets/img/illustrations/info-door.png"></a>' +
+        `<div><a href="../adventures/door-9.html"><strong>More info</strong></a></div>` +
+        "</div>" +
+        " </div>",
+    },
+    {
+      position: new google.maps.LatLng(51.50811, -0.07594),
+      type: "adventure",
+      content:
+        '<div id="content" class="infoContent">' +
+        '<div class="contentItem">' +
+        "<h3>Mariam the 2040 Tour Guide </h3>" +
+        '<p class="">Tower of London</p>' +
+        '<div class="maptags"><span class="maptag">Just for adults</span></div>' +
+        "</div>" +
+        '<div class="contentItem">' +
+        '<a href="../adventures/door-10.html"><img src="../assets/img/illustrations/info-door.png"></a>' +
+        `<div><a href="../adventures/door-10.html"><strong>More info</strong></a></div>` +
+        "</div>" +
+        " </div>",
+    },
+    {
+      position: new google.maps.LatLng(51.51785, -0.08643),
+      type: "adventure",
+      content:
+        '<div id="content" class="infoContent">' +
+        '<div class="contentItem">' +
+        "<h3>Phyllis Wheatley  </h3>" +
+        '<p class="">Start at Finsbury Circus Gardens</p>' +
+        '<div class="maptags"><span class="maptag">Suitable for all</span></div>' +
+        "</div>" +
+        '<div class="contentItem">' +
+        '<a href="../adventures/door-11.html"><img src="../assets/img/illustrations/info-door.png"></a>' +
+        `<div><a href="../adventures/door-11.html"><strong>More info</strong></a></div>` +
+        "</div>" +
+        " </div>",
+    },
+    {
+      position: new google.maps.LatLng(51.51909, -0.09028),
+      type: "adventure",
+      content:
+        '<div id="content" class="infoContent">' +
+        '<div class="contentItem">' +
+        "<h3>Mysteries of the City </h3>" +
+        '<p class="">Start at St Bartholemew\'s Gatehouse</p>' +
+        '<div class="maptags"><span class="maptag">Suitable for all</span></div>' +
+        "</div>" +
+        '<div class="contentItem">' +
+        '<a href="../adventures/door-12.html"><img src="../assets/img/illustrations/info-door.png"></a>' +
+        `<div><a href="../adventures/door-12.html"><strong>More info</strong></a></div>` +
         "</div>" +
         " </div>",
     },
@@ -170,7 +278,7 @@ function initMap() {
 
   const showAllMarkers = () => {
     locations.map((location) => {
-      console.log("location", location);
+      // console.log("location", location);
       const marker = new google.maps.Marker({
         position: location.position,
         icon: icons[location.type].icon,
@@ -181,7 +289,6 @@ function initMap() {
       });
 
       marker.addListener("click", () => {
-        console.log("currentInfoWindow", currentInfoWindow);
         if (currentInfoWindow != null) {
           currentInfoWindow.close();
         }

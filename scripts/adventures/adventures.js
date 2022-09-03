@@ -2,20 +2,36 @@
 const showdown = window.showdown;
 const converter = new showdown.Converter();
 
-export const fetchAdventures = () => {
-  const adventuresReq = new Request(
-    "https://coney-golden-key.herokuapp.com/api/adventures?populate=*",
-  );
+// export const fetchAdventures = () => {
+//   const adventuresReq = new Request(
+//     "https://coney-golden-key.herokuapp.com/api/adventures?populate=*",
+//   );
 
-  fetch(adventuresReq)
-    .then((response) => response.json())
-    .then((adventures) => {
-      console.log(adventures);
-      return adventures;
-    })
-    .catch((error) => {
-      console.error("Error:", error);
-    });
+//   fetch(adventuresReq)
+//     .then((response) => response.json())
+//     .then((adventures) => {
+//       console.log(adventures);
+//       return adventures;
+//     })
+//     .catch((error) => {
+//       console.error("Error:", error);
+//     });
+// };
+
+export const fetchAdventures = async () => {
+  try {
+    const response = await fetch(
+      "https://coney-golden-key.herokuapp.com/api/adventures?populate=*",
+    );
+    if (!response.ok) throw response;
+
+    const adventures = await response.json();
+    console.log(adventures);
+    return adventures;
+  } catch (error) {
+    console.log("error", error);
+    throw error;
+  }
 };
 
 export const getAdventure = (id) => {
