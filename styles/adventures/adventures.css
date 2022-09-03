@@ -5,3 +5,14 @@
   border-radius: 5px;
   text-align: center;
 }
+
+h3.adventure {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+@media screen and (min-width: 450px) {
+  section.begin-adventure {
+    max-width: 35%;
+    margin: 4rem auto;
+  }
+}

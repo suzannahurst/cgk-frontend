@@ -36,8 +36,8 @@ let map, infoWindow;
 
 function initMap() {
   map = new google.maps.Map(document.getElementById("mazeMap"), {
-    center: { lat: 51.513743, lng: -0.0958325 },
-    zoom: 13,
+    center: { lat: 51.51382754700306, lng: -0.09138173055736436 },
+    zoom: 14,
     mapId: "116b56ec96574c87",
     // zoomControl: true,
     mapTypeControl: false,

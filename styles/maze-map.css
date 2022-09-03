@@ -41,6 +41,8 @@ footer {
 .controls-container > h2 {
   font-size: 2rem;
   font-weight: 600;
+  margin-block-end: 0;
+  text-align: left;
 }
 
 .control-item {
@@ -54,6 +56,7 @@ footer {
 .control-item > span {
   color: #fff;
   font-weight: 600;
+  width: max-content;
 }
 .icon {
   max-height: 4.5vh;

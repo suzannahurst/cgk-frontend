@@ -63,7 +63,7 @@ export const showMissingAdventureMsg = (msg) => {
 
 export const displayAdventure = (adventure) => {
   console.log(adventure.data.attributes);
-  const { location, description, tags, tube, gm } = adventure.data.attributes;
+  const { description, keyinfo, tags, tube, gm } = adventure.data.attributes;
 
   // const { url } = image.data.attributes;
   const adventureInfoMount = document.getElementById("adventureInfoMount");
@@ -75,8 +75,8 @@ export const displayAdventure = (adventure) => {
   // DISPLAY INFO
 
   adventureInfoMount.innerHTML = `
-   
-      <p id="fairDescription" class="description">${description}</p>
+   <p id="fairDescription" class="description"> ${description}</p>
+      <p id="fairDescription" class="description"> ${keyinfo}</p>
       <div id="fairTags"></div>
    `;
 
