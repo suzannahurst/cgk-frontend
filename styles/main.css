@@ -184,6 +184,7 @@ header {
   justify-content: space-between;
   width: 100%;
   text-align: left;
+  align-items: flex-end;
 }
 .footer-item > span {
   font-size: 1.3rem;

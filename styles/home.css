@@ -24,6 +24,20 @@ section.contents > * {
   min-width: 0;
 }
 
+/* .date {
+  background-color: var(--color-orange);
+  padding: 1.5rem;
+  border-radius: 10px;
+  border: 1px solid #fff;
+  width: fit-content;
+} */
+.date > span {
+  font-size: 2rem;
+  display: block;
+  font-family: "Big John";
+  /* color: var(--color-orange); */
+}
+
 .contents-item {
   display: flex;
   justify-content: center;
