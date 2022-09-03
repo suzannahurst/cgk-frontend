@@ -8,9 +8,9 @@ export const fetchFaqs = () => {
     .then((response) => response.json())
     .then((faqs) => {
       let faqList = document.getElementById("faqList");
-
-      faqs.forEach((fair) => {
-        fairList.appendChild(displayFaq(faq));
+      let data = faqs.data;
+      data.map((faq) => {
+        faqList.appendChild(displayFaq(faq));
       });
       console.log(faqs);
       return faqs;
@@ -21,11 +21,10 @@ export const fetchFaqs = () => {
 };
 
 export const displayFaq = (faq) => {
-  const { question, answer } = faq.data.attributes;
-
-  console.log(faq.data.attributes);
-
+  const { question, answer } = faq.attributes;
+  console.log(faq.attributes);
   const li = document.createElement("li");
+  li.classList.add("faqItem", "listItem");
   li.innerHTML = `<h3 class="subtitle">${question} </h3>
           <p class="maintext"> ${answer}</p>
       `;

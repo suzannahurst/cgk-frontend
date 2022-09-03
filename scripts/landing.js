@@ -13,7 +13,7 @@ landing.addEventListener("click", () => {
   gsap.to(".scene", {
     delay: 0.5,
     duration: 9,
-    scale: 1,
+    scale: 5,
     opacity: 1,
     ease: "power1.out",
   });
