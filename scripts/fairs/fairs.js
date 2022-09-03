@@ -71,7 +71,7 @@ export const displayFair = (fair) => {
   fairInfoMount.innerHTML = `
       <h3 class="location"> ${location}
       </h3>
-      <p id="fairDescription" class="description">${description}</p>
+      <p id="fairDescription" >${description}</p>
       <div id="fairTags"></div>
    `;
 

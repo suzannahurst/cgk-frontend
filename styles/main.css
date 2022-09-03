@@ -141,6 +141,10 @@ section.info > img {
   p.maintext {
     max-width: 60%;
   }
+  section {
+    margin-block-end: 2rem;
+  }
+
   section.info {
     display: flex;
     flex-direction: row-reverse;
