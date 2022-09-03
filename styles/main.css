@@ -326,3 +326,8 @@ button > a > p {
 .listItem {
   margin-block-end: 2rem;
 }
+
+h3.subtitle.category {
+  /* color: rgba(255, 255, 255, 0.6); */
+  font-size: 1.7rem;
+}
