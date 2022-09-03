@@ -42,7 +42,7 @@ function initMap() {
     // zoomControl: true,
     mapTypeControl: false,
     // scaleControl: boolean,
-    // streetViewControl: boolean,
+    streetViewControl: false,
     // rotateControl: boolean,
     // fullscreenControl: false,
   });
