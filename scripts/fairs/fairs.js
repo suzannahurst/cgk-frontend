@@ -94,7 +94,7 @@ export const displayFair = (fair) => {
       <p>Show on <a href="${gm}" target="_blank" class="highlighted">Google Maps</a></p>`;
 
   // DISPLAY PROGRAMME
-  //   programmeInfoMount.innerHTML = converter.makeHtml(programme);
+  programmeInfoMount.innerHTML = converter.makeHtml(programme);
 };
 //TODO - display dynamically  with markdown conversion
 

@@ -1,3 +1,6 @@
+const showdown = window.showdown;
+const converter = new showdown.Converter();
+
 // scripts/index.js
 export const fetchFaqs = () => {
   const faqsReq = new Request(
@@ -25,9 +28,12 @@ export const displayFaq = (faq) => {
   console.log(faq.attributes);
   const li = document.createElement("li");
   li.classList.add("faqItem", "listItem");
-  li.innerHTML = `<h3 class="subtitle">${question} </h3>
-          <p class="maintext"> ${answer}</p>
-      `;
+  // li.innerHTML =
+  li.innerHTML = `<h3 class="subtitle">${question} </h3><p class="maintext"> ${converter.makeHtml(
+    answer,
+  )}</p>
+`;
+
   return li;
 };
 
