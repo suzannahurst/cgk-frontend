@@ -20,26 +20,27 @@ h2.title {
 }
 
 .keyhole {
-  position: fixed;
-}
-
-.keyhole.scene {
-  z-index: -99999;
-  transform: scale(8);
-  opacity: 0;
+  /* position: fixed; */
 }
 
 .keyhole.black {
   z-index: -99999;
   transform: scale(0.1);
-  top: -10%;
-  left: 0;
+  /* top: -10%;
+  left: 0; */
+}
+
+.keyhole.scene {
+  position: fixed;
+  top: 0;
+  z-index: -99999;
+  /* transform: scale(4); */
+  /* opacity: 0; */
 }
 
 .keyhole-wrapper {
-  background-color: aquamarine;
   width: 100%;
-  height: 50vh;
+  height: 10vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -53,6 +54,40 @@ h2.title {
 
 .enter {
   background-color: var(--color-orange);
+}
+
+.reveal {
+  background-image: url(./../assets/img/back-16.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0;
+  position: fixed;
+  width: 100vw;
+  height: 120vh;
+  margin-top: -2rem;
+  z-index: -999999;
+}
+
+/* FADE IN CSS */
+.fade-in {
+  animation-delay: 2s;
+  animation-name: fadeInOpacity;
+  /* animation-iteration-count: 0; */
+  animation-timing-function: linear;
+  animation-duration: 5s;
+
+  /* opacity: 1; */
+}
+
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+    transform: scale(4);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 @media screen and (min-width: 450px) {
