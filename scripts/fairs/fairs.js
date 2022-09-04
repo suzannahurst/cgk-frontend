@@ -49,7 +49,7 @@ export const showMissingFairMsg = (msg) => {
 
 export const displayFair = (fair) => {
   console.log(fair.data.attributes);
-  const { name, location, description, tags, programme, tube, gm } =
+  const { name, directions, description, tags, programme, tube, gm, date } =
     fair.data.attributes;
   // const { url } = image.data.attributes;
   const fairInfoMount = document.getElementById("fairInfoMount");
@@ -91,10 +91,9 @@ export const displayFair = (fair) => {
   // DISPLAY TRAVEL
   travelInfoMount.innerHTML = `
      <h3>When</h3>
-  <p>15 October, 12:00-9:30pm</p>
+  <p>${date}</p>
   <h3 >Where</h3>
-  <p>St Paul's Churchyard<br/>
-London <a href="${gm}" target="_blank" class="highlighted">EC4M 8AD</a></p>
+  ${directions}
    <h3>Nearest tubes</h3>
    <p class="maintext"> ${tube} </p>`;
 
