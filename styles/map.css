@@ -1,18 +1,24 @@
 body {
   padding: 0px;
   color: #000;
+  text-align: center;
 }
+#mazeMap,
 #map {
   width: 100vw;
-  height: 80vh;
+  height: 79vh;
   position: fixed !important;
-  top: 10vh;
+  top: 10.5vh;
   left: 0;
   margin-block-end: 30px;
 }
 header {
   padding: 1.5rem;
   z-index: 99999;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 footer {
   position: fixed;
@@ -23,14 +29,27 @@ footer {
   justify-content: center;
   align-items: center;
   height: 10vh;
+  color: #fff;
 }
+
 .controls-container {
   display: flex;
   grid-gap: 1rem;
-  padding: 1rem;
+  padding: var(--padding);
   width: 100%;
   justify-content: space-between;
   align-items: center;
+}
+
+.title-wrapper > h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-block-end: 0;
+  text-align: left;
+}
+.maze-subtitle {
+  font-size: 1rem;
+  /* color: rgba(255, 255, 255, 0.6); */
 }
 
 .control-item {
@@ -44,12 +63,79 @@ footer {
 .control-item > span {
   color: #fff;
   font-weight: 600;
+  width: max-content;
 }
 .icon {
   max-height: 4.5vh;
 }
 
+.broadcast-wrapper {
+  width: 85%;
+}
+
 .broadcast {
   color: #fff;
   text-align: right;
+}
+p.broadcast {
+  font-size: 1rem;
+  color: #fff;
+}
+
+.title-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  height: 100%;
+  width: 60%;
+}
+
+/* INFO WINDOW */
+
+.infoContent {
+  /* padding: 1.5rem; */
+  /* background-color: var(--color-mint); */
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contentItem > h3 {
+  /* margin-block-end: 0; */
+  text-align: left;
+}
+.contentItem > p {
+  margin-block-end: 10px;
+  text-align: left;
+}
+.contentItem > a > img {
+  max-width: 90%;
+  margin-block-end: 10px;
+}
+
+.maptag {
+  text-align: left;
+  border: #fff solid 1px;
+  padding: 6px;
+  background-color: var(--accent-color-secondary);
+  font-size: 1.3rem;
+  font-weight: 800;
+  margin-inline-end: 1rem;
+  color: #fff;
+}
+
+.maptags {
+  display: flex;
+}
+
+@media screen and (min-width: 450px) {
+  .infoContent {
+    max-width: 40vw;
+  }
+  p.broadcast {
+    font-size: 2rem;
+    color: #fff;
+  }
 }

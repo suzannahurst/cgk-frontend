@@ -9,8 +9,15 @@ let map, infoWindow;
 
 function initMap() {
   map = new google.maps.Map(document.getElementById("map"), {
-    center: { lat: 51.513743, lng: -0.0958325 },
-    zoom: 13,
+    center: { lat: 51.51382754700306, lng: -0.09138173055736436 },
+    zoom: 14,
+    mapId: "116b56ec96574c87",
+    // zoomControl: true,
+    mapTypeControl: false,
+    // scaleControl: boolean,
+    streetViewControl: false,
+    // rotateControl: boolean,
+    // fullscreenControl: false,
   });
 
   let iconBase = "./../assets/img/markers/";
@@ -28,98 +35,233 @@ function initMap() {
         scaledSize: new google.maps.Size(40, 60),
       },
     },
-    hunt: {
-      icon: {
-        path: google.maps.SymbolPath.BACKWARD_CLOSED_ARROW,
-        fillColor: "green",
-        fillOpacity: 0.6,
-        strokeWeight: 0,
-        rotation: 0,
-        scale: 10,
-      },
-    },
   };
 
   const locations = [
     {
-      position: new google.maps.LatLng(
-        51.517688631783976,
-        -0.10081760748074763,
-      ),
+      position: new google.maps.LatLng(51.51585, -0.0919),
       type: "fair",
       content:
-        '<div id="content">' +
-        "<h3>Fair 1</h3>" +
-        "<p>Infomation about this fair</p>" +
-        "</div>",
+        '<div id="content" class="infoContent">' +
+        '<div class="contentItem">' +
+        "<h3>The Fair of Topsy Turvy Power </h3>" +
+        '<p class="">12:00-6:45pm </p>' +
+        '<div class="maptags"><span class="maptag">Free, drop in!</span></div>' +
+        "</div>" +
+        '<div class="contentItem">' +
+        '<a href="../fairs/guildhall.html"><img src="../assets/img/illustrations/acrobat.png"></a>' +
+        `<div><a href="../fairs/guildhall.html"><strong>More info</strong></a></div>` +
+        "</div>" +
+        " </div>",
     },
     {
-      position: new google.maps.LatLng(51.51466835280339, -0.08641876684061953),
+      position: new google.maps.LatLng(51.51796, -0.09479),
       type: "fair",
       content:
-        '<div id="content">' +
-        "<h3>Fair 2</h3>" +
-        "<p>Infomation about this fair</p>" +
-        "</div>",
+        '<div id="content" class="infoContent">' +
+        '<div class="contentItem">' +
+        "<h3>The Fair of Tall and Short True Stories</h3>" +
+        '<p class="">12:00-7pm</p>' +
+        '<div class="maptags"><span class="maptag">Free, drop in!</span></div>' +
+        "</div>" +
+        '<div class="contentItem">' +
+        '<a href="../fairs/london-wall.html"><img src="../assets/img/illustrations/band.png"></a>' +
+        `<div><a href="../fairs/london-wall.html"><strong>More info</strong></a></div>` +
+        "</div>" +
+        " </div>",
     },
     {
-      position: new google.maps.LatLng(
-        51.513159391906115,
-        -0.09616054986444414,
-      ),
+      position: new google.maps.LatLng(51.51384, -0.09835),
       type: "fair",
       content:
-        '<div id="content">' +
-        "<h3>Fair 3</h3>" +
-        "<p>Infomation about this fair</p>" +
-        "</div>",
+        '<div id="content" class="infoContent">' +
+        '<div class="contentItem">' +
+        "<h3>The Fair of Pathways and Passage</h3>" +
+        '<p class="">12:00-9:30pm</p>' +
+        '<div class="maptags"><span class="maptag">Free, drop in!</span></div>' +
+        "</div>" +
+        '<div class="contentItem">' +
+        '<a href="../fairs/st-pauls.html"><img src="../assets/img/illustrations/juggler.png"></a>' +
+        `<div><a href="../fairs/st-pauls.html"><strong>More info</strong></a></div>` +
+        "</div>" +
+        " </div>",
     },
     {
-      position: new google.maps.LatLng(51.51692502405085, -0.10766186198067758),
-      type: "fair",
-      content:
-        '<div id="content">' +
-        "<h3>Fair 4</h3>" +
-        "<p>Infomation about this fair</p>" +
-        "</div>",
-    },
-    {
-      position: new google.maps.LatLng(51.51596415654087, -0.10630967216174751),
+      position: new google.maps.LatLng(51.51202, -0.09088),
       type: "adventure",
       content:
-        '<div id="content">' +
-        "<h3>Adventure 1</h3>" +
-        "<p>Infomation about this adventure</p>" +
-        "</div>",
+        '<div id="content" class="infoContent">' +
+        '<div class="contentItem">' +
+        "<h3>Animals in the City </h3>" +
+        '<p class="">Start at Bloomberg Arcade, on Cannon Street Side. </p>' +
+        '<div class="maptags"><span class="maptag">Just for families</span></div>' +
+        "</div>" +
+        '<div class="contentItem">' +
+        '<a href="../adventures/door-1.html"><img src="../assets/img/illustrations/info-door.png"></a>' +
+        `<div><a href="../adventures/door-1.html"><strong>More info</strong></a></div>` +
+        "</div>" +
+        " </div>",
     },
     {
-      position: new google.maps.LatLng(51.51335645826938, -0.08959207632630892),
+      position: new google.maps.LatLng(51.51702, -0.09015),
       type: "adventure",
       content:
-        '<div id="content">' +
-        "<h3>Adventure 2</h3>" +
-        "<p>Infomation about this adventure</p>" +
-        `<a href="https://www.youhavefoundconey.net/" target="_blank"><strong>Link to another website</strong></a>` +
-        "</div>",
+        '<div id="content" class="infoContent">' +
+        '<div class="contentItem">' +
+        "<h3>Epic Investment </h3>" +
+        '<p class="">Start at Coleman Street Gardens, in front of Girdler\'s Company </p>' +
+        '<div class="maptags"><span class="maptag">Just for adults</span></div>' +
+        "</div>" +
+        '<div class="contentItem">' +
+        '<a href="../adventures/door-3.html"><img src="../assets/img/illustrations/info-door.png"></a>' +
+        `<div><a href="../adventures/door-3.html"><strong>More info</strong></a></div>` +
+        "</div>" +
+        " </div>",
     },
     {
-      position: new google.maps.LatLng(51.51984594260593, -0.10259542547264745),
+      position: new google.maps.LatLng(51.51449, -0.0803),
       type: "adventure",
       content:
-        '<div id="content">' +
-        "<h3>Adventure 3</h3>" +
-        "<p>Infomation about this adventure</p>" +
-        "</div>",
+        '<div id="content" class="infoContent">' +
+        '<div class="contentItem">' +
+        "<h3>Daniel Mendoza</h3>" +
+        '<p class="">Start at 30 St Mary\'s Axe (The Gerkin), on the east side. </p>' +
+        '<div class="maptags"><span class="maptag">Suitable for all</span></div>' +
+        "</div>" +
+        '<div class="contentItem">' +
+        '<a href="../adventures/door-4.html"><img src="../assets/img/illustrations/info-door.png"></a>' +
+        `<div><a href="../adventures/door-4.html"><strong>More info</strong></a></div>` +
+        "</div>" +
+        " </div>",
     },
-    // {
-    //   position: new google.maps.LatLng(51.51647019724397, -0.09342378488567582),
-    //   type: "hunt",
-    //   content:
-    //     '<div id="content">' +
-    //     "<h3>HUNT</h3>" +
-    //     "<p>Infomation about the hunt</p>" +
-    //     "</div>",
-    // },
+    {
+      position: new google.maps.LatLng(51.51424, -0.10332),
+      type: "adventure",
+      content:
+        '<div id="content" class="infoContent">' +
+        '<div class="contentItem">' +
+        "<h3>Moll Cutpurse and Ann Duck</h3>" +
+        '<p class="">Start across the road from City Thameslink </p>' +
+        '<div class="maptags"><span class="maptag">Suitable for all</span></div>' +
+        "</div>" +
+        '<div class="contentItem">' +
+        '<a href="../adventures/door-5.html"><img src="../assets/img/illustrations/info-door.png"></a>' +
+        `<div><a href="../adventures/door-5.html"><strong>More info</strong></a></div>` +
+        "</div>" +
+        " </div>",
+    },
+    {
+      position: new google.maps.LatLng(51.51705, -0.09275),
+      type: "adventure",
+      content:
+        '<div id="content" class="infoContent">' +
+        '<div class="contentItem">' +
+        "<h3>Ghost Hunting with Brian</h3>" +
+        '<p class="">Start at Aldermenbary Square </p>' +
+        '<div class="maptags"><span class="maptag">Suitable for all</span></div>' +
+        "</div>" +
+        '<div class="contentItem">' +
+        '<a href="../adventures/door-6.html"><img src="../assets/img/illustrations/info-door.png"></a>' +
+        `<div><a href="../adventures/door-6.html"><strong>More info</strong></a></div>` +
+        "</div>" +
+        " </div>",
+    },
+    {
+      position: new google.maps.LatLng(51.51349, -0.08808),
+      type: "adventure",
+      content:
+        '<div id="content" class="infoContent">' +
+        '<div class="contentItem">' +
+        "<h3>The Artful Dodges Again </h3>" +
+        '<p class="">Start in the square outside the main entrance of The Royal Exchange </p>' +
+        '<div class="maptags"><span class="maptag">Just for families</span></div>' +
+        "</div>" +
+        '<div class="contentItem">' +
+        '<a href="../adventures/door-7.html"><img src="../assets/img/illustrations/info-door.png"></a>' +
+        `<div><a href="../adventures/door-7.html"><strong>More info</strong></a></div>` +
+        "</div>" +
+        " </div>",
+    },
+    {
+      position: new google.maps.LatLng(51.52006, -0.09683),
+      type: "adventure",
+      content:
+        '<div id="content" class="infoContent">' +
+        '<div class="contentItem">' +
+        "<h3>The Smashing Rock Sisters </h3>" +
+        '<p class="">Start in the square opposite Barbican Tube at the entrance to Barbican Estate</p>' +
+        '<div class="maptags"><span class="maptag">Suitable for all</span></div>' +
+        "</div>" +
+        '<div class="contentItem">' +
+        '<a href="../adventures/door-8.html"><img src="../assets/img/illustrations/info-door.png"></a>' +
+        `<div><a href="../adventures/door-8.html"><strong>More info</strong></a></div>` +
+        "</div>" +
+        " </div>",
+    },
+    {
+      position: new google.maps.LatLng(51.51018, -0.08593),
+      type: "adventure",
+      content:
+        '<div id="content" class="infoContent">' +
+        '<div class="contentItem">' +
+        "<h3>A Resting Place </h3>" +
+        '<p class="">Start at the open square in front of Monument</p>' +
+        '<div class="maptags"><span class="maptag">Suitable for all</span></div>' +
+        "</div>" +
+        '<div class="contentItem">' +
+        '<a href="../adventures/door-9.html"><img src="../assets/img/illustrations/info-door.png"></a>' +
+        `<div><a href="../adventures/door-9.html"><strong>More info</strong></a></div>` +
+        "</div>" +
+        " </div>",
+    },
+    {
+      position: new google.maps.LatLng(51.50811, -0.07594),
+      type: "adventure",
+      content:
+        '<div id="content" class="infoContent">' +
+        '<div class="contentItem">' +
+        "<h3>Mariam the 2040 Tour Guide </h3>" +
+        '<p class="">Tower of London</p>' +
+        '<div class="maptags"><span class="maptag">Just for adults</span></div>' +
+        "</div>" +
+        '<div class="contentItem">' +
+        '<a href="../adventures/door-10.html"><img src="../assets/img/illustrations/info-door.png"></a>' +
+        `<div><a href="../adventures/door-10.html"><strong>More info</strong></a></div>` +
+        "</div>" +
+        " </div>",
+    },
+    {
+      position: new google.maps.LatLng(51.51785, -0.08643),
+      type: "adventure",
+      content:
+        '<div id="content" class="infoContent">' +
+        '<div class="contentItem">' +
+        "<h3>Phyllis Wheatley  </h3>" +
+        '<p class="">Start at Finsbury Circus Gardens</p>' +
+        '<div class="maptags"><span class="maptag">Suitable for all</span></div>' +
+        "</div>" +
+        '<div class="contentItem">' +
+        '<a href="../adventures/door-11.html"><img src="../assets/img/illustrations/info-door.png"></a>' +
+        `<div><a href="../adventures/door-11.html"><strong>More info</strong></a></div>` +
+        "</div>" +
+        " </div>",
+    },
+    {
+      position: new google.maps.LatLng(51.51909, -0.09028),
+      type: "adventure",
+      content:
+        '<div id="content" class="infoContent">' +
+        '<div class="contentItem">' +
+        "<h3>Mysteries of the City </h3>" +
+        '<p class="">Start at St Bartholemew\'s Gatehouse</p>' +
+        '<div class="maptags"><span class="maptag">Suitable for all</span></div>' +
+        "</div>" +
+        '<div class="contentItem">' +
+        '<a href="../adventures/door-12.html"><img src="../assets/img/illustrations/info-door.png"></a>' +
+        `<div><a href="../adventures/door-12.html"><strong>More info</strong></a></div>` +
+        "</div>" +
+        " </div>",
+    },
   ];
 
   // TODO change it to follow this logic https://developers.google.com/maps/documentation/javascript/examples/marker-remove
@@ -171,62 +313,12 @@ function initMap() {
     });
   };
 
-  const showAdventures = () => {
-    locations.map((location) => {
-      if (location.type === "adventure") {
-        activeMarkers.push(location);
-      }
-    });
-  };
-
-  const showFairs = () => {
-    locations.map((location) => {
-      if (location.type === "fair") {
-        activeMarkers.push(location);
-      }
-    });
-  };
-
-  // Reveal location buttons and toggle
-  //TODO FIX
-  const adventureBtn = document.getElementById("adventureBtn");
-  console.log("aB before click", adventureBtn);
-
-  adventureBtn.addEventListener("click", () => {
-    console.log("fB after click", fairBtn);
-    console.log("aB after click", adventureBtn);
-    if (adventureBtn.getAttribute("aria-pressed") === "false") {
-      clearMarkers();
-      showAdventures();
-      showActiveMarkers();
-      adventureBtn.setAttribute("aria-pressed", true);
-    } else if (adventureBtn.getAttribute("aria-pressed")) {
-      clearMarkers();
-      showActiveMarkers();
-      adventureBtn.setAttribute("aria-pressed", false);
-    }
-  });
-
-  const fairBtn = document.getElementById("fairBtn");
-  console.log("fB before click", fairBtn);
-  fairBtn.addEventListener("click", () => {
-    showFairs();
-    showActiveMarkers();
-  });
-
-  // const everythingBtn = document.getElementById("everythingBtn");
-  // everythingBtn.addEventListener("click", () => {
-  //       showAllMarkers();
-  // });
+  showAllMarkers();
 
   // Functionality for showing your own location
 
   infoWindow = new google.maps.InfoWindow();
 
-  // const locationButton = document.createElement("button");
-  // locationButton.textContent = "Show my Current Location";
-  // locationButton.classList.add("custom-map-control-button");
-  // map.controls[google.maps.ControlPosition.TOP_CENTER].push(locationButton);
   const locationButton = document.getElementById("locateBtn");
   locationButton.addEventListener("click", () => {
     // Try HTML5 geolocation.
@@ -287,48 +379,3 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
 }
 
 window.initMap = initMap;
-
-// To show current location as latitude and long
-
-let currentlat = 51.511980258090276;
-let currentlng = -0.08828733953354373;
-
-const reCentreMap = (currentlat, currentlng) => {
-  const cityMap = document.getElementById("map2");
-  cityMap.innerHTML = `<iframe src="https://www.google.com/maps/d/embed?mid=1uDTupDbexb25b7sKfx7vTbMh1EV4toQ&ll=${currentlat}%2C${currentlng}}&z=13hl=en&ehbc=2E312F" height="480"></iframe`;
-  console.log(currentlat, currentlng);
-};
-
-reCentreMap(currentlat, currentlng);
-
-// cityMap.innerHTML = ` <iframe
-//       src="https://www.google.com/maps/d/embed?mid=1uDTupDbexb25b7sKfx7vTbMh1EV4toQ&ll=2.511980258090276%2C-0.08828733953354373&z=16hl=en&ehbc=2E312F"
-//       width="640" height="480"></iframe>`;
-
-function geoFindMe() {
-  const status = document.querySelector("#status");
-
-  function success(position) {
-    // const latitude = position.coords.latitude;
-    // const longitude = position.coords.longitude;
-    let currentlat = position.coords.latitude;
-    let currentlng = position.coords.longitude;
-    reCentreMap(currentlat, currentlng);
-
-    status.textContent = "";
-    console.log(`Latitude: ${latitude} °, Longitude: ${longitude} °`);
-  }
-
-  function error() {
-    status.textContent = "Unable to retrieve your location";
-  }
-
-  if (!navigator.geolocation) {
-    status.textContent = "Geolocation is not supported by your browser";
-  } else {
-    status.textContent = "Locating…";
-    navigator.geolocation.getCurrentPosition(success, error);
-  }
-}
-
-document.querySelector("#find-me").addEventListener("click", geoFindMe);

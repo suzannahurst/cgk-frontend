@@ -68,7 +68,7 @@ export const displayArtist = (artist) => {
   // TODO check why this [0] is different to another collection
 
   const showInfoMount = document.getElementById("showInfoMount");
-  const artistInfoMount = document.getElementById("artistInfo");
+  // const artistInfoMount = document.getElementById("artistInfo");
   const tagsMount = document.getElementById("tagsMount");
   const imgMount = document.getElementById("artistImgMount");
   const fairMount = document.getElementById("fairMount");
@@ -82,8 +82,8 @@ export const displayArtist = (artist) => {
       <p id="showDescription" class="maintext">${description}</p>
       `;
 
-  artistInfoMount.innerHTML = ` <h3 class="subtitle">About <span id="aboutArtistTitle">${name}</span></h3>
-      <p id="artistBiog" class="maintext">${biog}</p>`;
+  // artistInfoMount.innerHTML = ` <h3 class="subtitle">About <span id="aboutArtistTitle">${name}</span></h3>
+  //     <p id="artistBiog" class="maintext">${biog}</p>`;
   // add if we implement artist tags
 
   let tag;
@@ -101,7 +101,8 @@ export const displayArtist = (artist) => {
   });
 
   fairMount.innerHTML = ` <p>Back to <span><a href="./../fairs/${fairSlug}.html" class="highlighted">${fairName}</a>. </span>
-      </p>`;
+      </p>
+            <p>Back to the <a href="./../home.html" class="highlighted">homepage.</a></p>`;
 
   const imgUrl = image.data.map((img) => {
     return img.attributes.url;
@@ -116,3 +117,41 @@ export const displayArtist = (artist) => {
 // );
 
 // TODO best way to dynamically populate artists per page
+
+console.log(window.location.pathname);
+const pathname = "/artists/little-bulb.html";
+
+const findId = (pathname) => {
+  const artistSlug = pathname.replace("/artists/", "");
+  const artists = [
+    { slug: "little-bulb", id: 1 },
+    { slug: "judith-hope", id: 2 },
+    { slug: "chivaree-circus", id: 3 },
+    { slug: "walk-the-plank", id: 4 },
+    { slug: "home-sweet-home", id: 5 },
+    { slug: "brass-volcanoes", id: 6 },
+    { slug: "old-time-sailors", id: 7 },
+    { slug: "jelly-rollers", id: 8 },
+    { slug: "layla-rosa", id: 9 },
+    { slug: "artistry", id: 10 },
+    { slug: "fubunation", id: 11 },
+    { slug: "london-drawing", id: 12 },
+    { slug: "the-poetry-takeaway", id: 13 },
+    { slug: "thingumajig-theatre", id: 14 },
+    { slug: "small-truth-theatre", id: 15 },
+    { slug: "pirates-of-the-carabina", id: 16 },
+    { slug: "she-koyokh", id: 17 },
+    { slug: "grupo-lokito", id: 18 },
+    { slug: "girum-bekele", id: 19 },
+    { slug: "walk-the-plank-2", id: 20 },
+    { slug: "emergency-exit-arts", id: 21 },
+    { slug: "the-keyholders-cafe", id: 22 },
+    { slug: "the-wheelabouts", id: 23 },
+  ];
+  const idToUse = artists.find(slug === artistSlug);
+  return idToUse;
+};
+
+// findId("/artists/judith-hope.html");
+
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find
