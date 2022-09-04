@@ -34,7 +34,7 @@ const anim = () => {
   });
 };
 
-landing.addEventListener("click", () => {
+keyhole.addEventListener("click", () => {
   anim();
   setInterval(() => {
     window.location.href = "./signup.html";

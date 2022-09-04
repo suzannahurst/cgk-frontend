@@ -2,6 +2,11 @@
 const showdown = window.showdown;
 const converter = new showdown.Converter();
 
+if (cookieConsent.trackingAllowed()) {
+  // Google Analytics code and/or other tracking code
+  console.log("tracking enabled");
+}
+
 import { fetchArtists } from "../artists/artists.js";
 
 export const fetchFairs = () => {

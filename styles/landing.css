@@ -3,20 +3,20 @@ body {
   font-weight: 600;
 }
 p {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
 }
 
 h1.title,
 h2.title {
-  margin-bottom: 5px;
+  margin-bottom: 1.5rem;
 }
 
 h1.title {
-  font-size: 1.7rem;
+  font-size: 4rem;
 }
 
 h2.title {
-  font-size: 2.5rem;
+  font-size: 3rem;
 }
 
 .keyhole {
@@ -104,10 +104,6 @@ h2.title {
   }
   .keyhole {
     height: 90vh;
-  }
-
-  .info-wrapper {
-    max-width: 300px;
   }
 
   .keyhole.black {
