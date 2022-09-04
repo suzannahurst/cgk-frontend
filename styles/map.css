@@ -100,6 +100,7 @@ p.broadcast {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 1.5rem;
 }
 
 .contentItem > h3 {
@@ -114,6 +115,11 @@ p.broadcast {
   max-width: 90%;
   margin-block-end: 10px;
 }
+
+/* .contentItem > div > a > strong {
+  font-family: "Big John";
+  font-size: 1rem;
+} */
 
 .maptag {
   text-align: left;

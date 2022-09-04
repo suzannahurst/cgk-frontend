@@ -2,7 +2,9 @@ const landing = document.getElementById("landing");
 const keyhole = document.getElementById("keyholeBlack");
 const overlay = document.getElementById("overlay");
 
-landing.addEventListener("click", () => {
+const enterBtn = document.getElementById("enterBtn");
+
+const anim = () => {
   gsap.to(".black", {
     y: -400,
     duration: 4,
@@ -30,4 +32,18 @@ landing.addEventListener("click", () => {
     border: " #fff 1px solid",
     ease: "power1.out",
   });
+};
+
+landing.addEventListener("click", () => {
+  anim();
+  setInterval(() => {
+    window.location.href = "./signup.html";
+  }, 7000);
+});
+
+enterBtn.addEventListener("click", () => {
+  anim();
+  setInterval(() => {
+    window.location.href = "./signup.html";
+  }, 7000);
 });

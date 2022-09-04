@@ -56,6 +56,14 @@ h2.title {
   background-color: var(--accent-color-secondary);
 }
 
+.enter > p {
+  margin-block-end: 0;
+}
+
+.enter:hover {
+  cursor: pointer;
+}
+
 .overlay {
   background-image: url(./../assets/img/back-16.jpg);
   background-size: cover;
