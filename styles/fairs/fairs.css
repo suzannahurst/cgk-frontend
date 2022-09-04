@@ -105,4 +105,7 @@ h3.location {
     display: flex;
     gap: 2rem;
   }
+  .fair-img-wrapper > .hero-image {
+    max-height: 400px;
+  }
 }

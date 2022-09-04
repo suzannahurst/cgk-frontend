@@ -19,9 +19,9 @@ landing.addEventListener("click", () => {
     //   // ease: "power1.out",
   });
 
-  setInterval(() => {
-    keyhole.classList.add("hide");
-  }, 5000);
+  // setInterval(() => {
+  //   keyhole.classList.add("hide");
+  // }, 5000);
 
   gsap.to(".info-wrapper", {
     delay: 1,
