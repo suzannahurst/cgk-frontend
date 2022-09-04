@@ -69,29 +69,34 @@ export const displayFair = (fair) => {
   //  `;
 
   fairInfoMount.innerHTML = `
-      <h3 class="location"> ${location}
-      </h3>
-      <p id="fairDescription" >${description}</p>
+      <p id="fairDescription"  >${description}</p>
       <div id="fairTags"></div>
+
    `;
 
   let fairTags = document.getElementById("fairTags");
   let tag;
-  console.log(tags);
+  console.log(tags.data);
 
   tags.data.map((tg) => {
-    if (tg.name) {
+    if (tg.attributes.name) {
+      console.log("tag", tg);
       tag = document.createElement("span");
       tag.classList.add("tag");
-      tag.innerHTML = tg.name;
+      tag.innerHTML = tg.attributes.name;
 
       fairTags.appendChild(tag);
     }
   });
   // DISPLAY TRAVEL
-  travelInfoMount.innerHTML = `<h3 class="subtitle">How to get there</h3>
-      <p>Nearest tube: ${tube} </p>
-      <p>Show on <a href="${gm}" target="_blank" class="highlighted">Google Maps</a></p>`;
+  travelInfoMount.innerHTML = `
+     <h3>When</h3>
+  <p>15 October, 12:00-9:30pm</p>
+  <h3 >Where</h3>
+  <p>St Paul's Churchyard<br/>
+London <a href="${gm}" target="_blank" class="highlighted">EC4M 8AD</a></p>
+   <h3>Nearest tubes</h3>
+   <p class="maintext"> ${tube} </p>`;
 
   // DISPLAY PROGRAMME
   programmeInfoMount.innerHTML = converter.makeHtml(programme);
