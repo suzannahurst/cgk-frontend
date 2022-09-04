@@ -53,44 +53,44 @@ h2.title {
 }
 
 .enter {
-  background-color: var(--color-orange);
+  background-color: var(--accent-color-secondary);
 }
 
-.reveal {
+.overlay {
   background-image: url(./../assets/img/back-16.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  opacity: 0;
   position: fixed;
   width: 100vw;
   height: 120vh;
   margin-top: -2rem;
+  transform: scale(4);
   z-index: -999999;
+  /* opacity: 0; */
 }
 
-/* FADE IN CSS */
-.fade-in {
-  animation-delay: 2s;
-  animation-name: fadeInOpacity;
-  /* animation-iteration-count: 0; */
-  animation-timing-function: linear;
-  animation-duration: 5s;
-
-  /* opacity: 1; */
+.hide {
+  display: none;
 }
 
-@keyframes fadeInOpacity {
-  0% {
-    opacity: 0;
-    transform: scale(4);
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
+.hideoverlay {
+  opacity: 0;
 }
 
 @media screen and (min-width: 450px) {
+  .overlay {
+    background-image: url(./../assets/img/background-ls.jpg);
+    background-position: center center;
+    /* background-size: 60vh; */
+    background-repeat: no-repeat;
+    position: fixed;
+    width: 100vw;
+    height: 120vh;
+    margin-top: -2rem;
+    transform: scale(1.5);
+    z-index: -999999;
+    /* opacity: 0; */
+  }
   .keyhole {
     height: 90vh;
   }
