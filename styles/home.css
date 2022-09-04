@@ -32,7 +32,7 @@ section.contents > * {
   width: fit-content;
 } */
 .date > span {
-  font-size: 2rem;
+  font-size: 1.5rem;
   display: block;
   font-family: "Big John";
   /* color: var(--color-orange); */
@@ -90,6 +90,10 @@ section.contents > * {
 
 .practical {
   grid-area: f;
+}
+
+.wrapper > h2 {
+  margin-block-end: 0;
 }
 
 @media screen and (min-width: 800px) {

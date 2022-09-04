@@ -16,16 +16,14 @@
 
 
   <!-- our styles -->
-  <link rel="stylesheet" href="/styles/generics.css">
-  <link rel="stylesheet" href="/styles/main.css">
-  <link rel="stylesheet" href="/styles/adventures/adventures.css">
+  <link rel="stylesheet" href="./../styles/generics.css">
+  <link rel="stylesheet" href="./../styles/main.css">
+  <link rel="stylesheet" href="./../styles/maze.css">
 
 
   <!-- our scripts -->
-  <script src="./../scripts/adventures/adventures.js" type="module"></script>
-  <script src="./../scripts/adventures/door8.js" type="module"></script>
-
-  <title>The Smashing Rock Sisters</title>
+  <!-- <script src="" type="module"></script> -->
+  <title>The Maze - How it works</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -37,7 +35,7 @@
     <div class="dropdown">
       <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown"
         aria-expanded="false">
-        <img src="/assets/img/keyhole-circle.png">
+        <img src="./../assets/img/keyhole-circle.png">
       </button>
       <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
         <li><button class="dropdown-item" type="button"><a href="/fairs/st-pauls.html">St Paul’s Fair</a></button></li>
@@ -55,37 +53,55 @@
     </div>
   </header>
   <main>
-    <div id="not-found">
-      <p id="err-msg" class="page-subtitle"></p>
-    </div>
-    <section>
-      <section>
-        <h3 class="adventure">Adventure</h3>
-        <h2 class="title" id="fairTitle">The Smashing Rock Sisters</h2>
-        <div id="adventureInfoMount"></div>
-      </section>
-      <section>
-        <div id="tagsMount"></div>
-      </section>
-      <section>
-        <div id="locationMount"></div>
-      </section>
 
-      <section>
-        <div id="keyInfoMount"></div>
-      </section>
+    <section class="info">
+      <img src="./../assets/img/illustrations/mazegerkhin.png" class="hero-image">
+      <div class="hero-info">
 
-
-      <section class="begin-adventure">
-        <h3 class="subtitle">Found the password?</h3>
-        <button><a href="#">
-            <p>Begin adventure</p>
-          </a></button>
-      </section>
-      <section>
-        <p>Back to <span><a href="./../maze/maze-map.html" class="highlighted">The Maze of Adventures</a>. </span>
+        <h2 class="title">The Maze - How it works</h2>
+        <p>
+          Some routes welcome families, some have age restrictions. Some routes have step-free access but a handful of
+          routes end up in historical buildings that are not accessible to wheelchair users. Explore the map to find
+          out a route that
+          suits
+          you.
         </p>
-      </section>
+
+        <p>
+          Go to the location indicated on the map: on those public squares and gardens, you will find a red, wooden
+          door,
+          with a
+          door keeper showing the key to start the adventure.
+        </p>
+
+        <p> You will need a smartphone - either per person or per group - to lead you, with access to
+          mobile data.</p>
+
+        <p>
+          The door keeper will invite you to scan a QR code or send a text message to open the adventure online. You
+          will
+          not need
+          to download any app. Normal messaging costs and data will apply.
+        </p>
+        <p>
+          You will then be guided in audio and captions, so bring headphones if you like, but each adventure can be
+          enjoyed
+          without.
+        </p>
+        <p>
+          You can expect each adventure, including the end-surprise, to take no more than 1 hour.
+        </p>
+
+      </div>
+    </section>
+    <section class="maze-buttons">
+      <button><a href="#">
+          <p>Artists involved</p>
+        </a></button>
+      <button><a href="./maze-map.html">
+          <p>Explore the map</p>
+        </a></button>
+    </section>
 
   </main>
   <footer class="footer-outer">
@@ -117,9 +133,6 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
     crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/2.1.0/showdown.min.js"
-    integrity="sha512-LhccdVNGe2QMEfI3x4DVV3ckMRe36TfydKss6mJpdHjNFiV07dFpS2xzeZedptKZrwxfICJpez09iNioiSZ3hA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
 
 </html>
