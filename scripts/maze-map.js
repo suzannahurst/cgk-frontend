@@ -1,7 +1,7 @@
 // MAP
 
-import { fetchAdventures } from "./adventures/adventures.js";
-let locationsToShow = [];
+// import { fetchAdventures } from "./adventures/adventures.js";
+// let locationsToShow = [];
 
 // const populateMap = async () => {
 //   let adventures = [];

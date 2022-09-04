@@ -293,8 +293,11 @@ function initMap() {
     }
   };
 
+  let currentInfoWindow = null;
+
   const showAllMarkers = () => {
     locations.map((location) => {
+      // console.log("location", location);
       const marker = new google.maps.Marker({
         position: location.position,
         icon: icons[location.type].icon,
@@ -303,12 +306,17 @@ function initMap() {
       const placewindow = new google.maps.InfoWindow({
         content: location.content,
       });
+
       marker.addListener("click", () => {
+        if (currentInfoWindow != null) {
+          currentInfoWindow.close();
+        }
         placewindow.open({
           anchor: marker,
           map,
           shouldFocus: false,
         });
+        currentInfoWindow = placewindow;
       });
     });
   };
@@ -364,6 +372,11 @@ function initMap() {
     } else {
       // Browser doesn't support Geolocation
       handleLocationError(false, infoWindow, map.getCenter());
+    }
+  });
+  google.maps.event.addListener(map, "click", function () {
+    if (currentInfoWindow != null) {
+      currentInfoWindow.close();
     }
   });
 }
