@@ -130,6 +130,7 @@ span.tag {
   font-size: 1.3rem;
   font-weight: 800;
   margin-inline-end: 1rem;
+  display: inline-block;
 }
 
 section.info > img {
@@ -208,7 +209,7 @@ header {
 
 .socialicon {
   width: 2rem;
-  margin-inline-start: 0.5rem;
+  margin-inline-end: 0.5rem;
 }
 
 /* HAMBURGER MENU */

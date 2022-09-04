@@ -75,9 +75,9 @@ export const displayAdventure = (adventure) => {
   // DISPLAY INFO
 
   adventureInfoMount.innerHTML = `
-   <p id="fairDescription" class="description"> ${description}</p>
-      <p id="fairDescription" class="description"> ${keyinfo}</p>
-      <div id="fairTags"></div>
+   <p > ${description}</p>
+      <p > ${keyinfo}</p>
+  
    `;
 
   let tag;
