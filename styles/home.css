@@ -96,6 +96,11 @@ section.contents > * {
   margin-block-end: 0;
 }
 
+.footer-outer {
+  flex-direction: row;
+  text-align: right;
+}
+
 @media screen and (min-width: 800px) {
   section > p,
   p.blurb {
