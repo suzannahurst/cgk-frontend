@@ -97,6 +97,7 @@ p {
 
 strong {
   font-weight: 600;
+  color: var(--accent-color-primary);
 }
 
 p.description {
@@ -131,6 +132,7 @@ span.tag {
   font-weight: 800;
   margin-inline-end: 1rem;
   display: inline-block;
+  border-radius: 5px;
 }
 
 section.info > img {
