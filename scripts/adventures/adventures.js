@@ -69,14 +69,12 @@ export const displayAdventure = (adventure) => {
   const adventureInfoMount = document.getElementById("adventureInfoMount");
   const locationMount = document.getElementById("locationMount");
   const tagsMount = document.getElementById("tagsMount");
-  const keyInfoMount = document.getElementById("keyInfoMount");
-  // const artistFeaturedMount = document.getElementById("artistFeaturedMount");
 
   // DISPLAY INFO
 
   adventureInfoMount.innerHTML = `
-   <p > ${description}</p>
-      <p > ${keyinfo}</p>
+   <p class="maintext" > ${description}</p>
+      <p class="maintext"> ${keyinfo}</p>
   
    `;
 
@@ -94,9 +92,9 @@ export const displayAdventure = (adventure) => {
     }
   });
   // DISPLAY TRAVEL
-  locationMount.innerHTML = `<h3 class="subtitle">How to get there</h3>
+  locationMount.innerHTML = `
       <p>Nearest tube: ${tube} </p>
-      <p>Show on <a href="${gm}" target="_blank" class="highlighted">Google Maps</a></p>`;
+      <p class="maintext">Show on <a href="${gm}" target="_blank" class="highlighted">Google Maps</a></p>`;
 
   // DISPLAY PROGRAMME
   //   programmeInfoMount.innerHTML = converter.makeHtml(programme);

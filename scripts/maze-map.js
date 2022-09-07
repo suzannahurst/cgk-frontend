@@ -93,14 +93,14 @@ function initMap() {
       type: "adventure",
       content:
         '<div id="content" class="infoContent">' +
-        '<div class="contentItem">' +
-        "<h3>Animals in the City </h3>" +
+        '<div class="contentItem text">' +
+        `<h3 class="adventureName">Animals in the City </h3>` +
         '<p class="">Start at Bloomberg Arcade, on Cannon Street Side. </p>' +
         '<div class="maptags"><span class="maptag">Just for families</span></div>' +
+        `<a href="../adventures/door-1.html"><h3 class="info">More info</h3></a>` +
         "</div>" +
         '<div class="contentItem">' +
         '<a href="../adventures/door-1.html"><img src="../assets/img/illustrations/info-door.png"></a>' +
-        `<div><a href="../adventures/door-1.html"><strong>More info</strong></a></div>` +
         "</div>" +
         " </div>",
     },
@@ -109,14 +109,30 @@ function initMap() {
       type: "adventure",
       content:
         '<div id="content" class="infoContent">' +
-        '<div class="contentItem">' +
-        "<h3>Epic Investment </h3>" +
+        '<div class="contentItem text">' +
+        `<h3 class="adventureName">Epic Investment </h3>` +
         '<p class="">Start at Coleman Street Gardens, in front of Girdler\'s Company </p>' +
         '<div class="maptags"><span class="maptag">Just for adults</span></div>' +
+        '<a href="../adventures/door-2.html"><h3 class="info">More info</h3></a>' +
+        "</div>" +
+        '<div class="contentItem">' +
+        '<a href="../adventures/door-2.html"><img src="../assets/img/illustrations/info-door.png"></a>' +
+        "</div>" +
+        " </div>",
+    },
+    {
+      position: new google.maps.LatLng(51.51217, -0.09831),
+      type: "adventure",
+      content:
+        '<div id="content" class="infoContent">' +
+        '<div class="contentItem text">' +
+        `<h3 class="adventureName">Future Gondolier </h3>` +
+        '<p class="">Start at Peter\'s Hill </p>' +
+        '<div class="maptags"><span class="maptag">Suitable for all</span></div>' +
+        `<a href="../adventures/door-3.html"><h3 class="info">More info</h3></a>` +
         "</div>" +
         '<div class="contentItem">' +
         '<a href="../adventures/door-3.html"><img src="../assets/img/illustrations/info-door.png"></a>' +
-        `<div><a href="../adventures/door-3.html"><strong>More info</strong></a></div>` +
         "</div>" +
         " </div>",
     },
@@ -125,14 +141,14 @@ function initMap() {
       type: "adventure",
       content:
         '<div id="content" class="infoContent">' +
-        '<div class="contentItem">' +
-        "<h3>Daniel Mendoza</h3>" +
+        '<div class="contentItem text">' +
+        `<h3 class="adventureName">Daniel Mendoza</h3>` +
         '<p class="">Start at 30 St Mary\'s Axe (The Gerkin), on the east side. </p>' +
         '<div class="maptags"><span class="maptag">Suitable for all</span></div>' +
+        `<a href="../adventures/door-4.html"><h3 class="info">More info</h3></a>` +
         "</div>" +
         '<div class="contentItem">' +
         '<a href="../adventures/door-4.html"><img src="../assets/img/illustrations/info-door.png"></a>' +
-        `<div><a href="../adventures/door-4.html"><strong>More info</strong></a></div>` +
         "</div>" +
         " </div>",
     },
@@ -141,14 +157,14 @@ function initMap() {
       type: "adventure",
       content:
         '<div id="content" class="infoContent">' +
-        '<div class="contentItem">' +
-        "<h3>Moll Cutpurse and Ann Duck</h3>" +
+        '<div class="contentItem text">' +
+        '<h3 class="adventureName">Moll Cutpurse and Ann Duck</h3>' +
         '<p class="">Start across the road from City Thameslink </p>' +
         '<div class="maptags"><span class="maptag">Suitable for all</span></div>' +
+        `<a href="../adventures/door-5.html"><h3 class="info">More info</h3></a>` +
         "</div>" +
         '<div class="contentItem">' +
         '<a href="../adventures/door-5.html"><img src="../assets/img/illustrations/info-door.png"></a>' +
-        `<div><a href="../adventures/door-5.html"><strong>More info</strong></a></div>` +
         "</div>" +
         " </div>",
     },
@@ -157,14 +173,14 @@ function initMap() {
       type: "adventure",
       content:
         '<div id="content" class="infoContent">' +
-        '<div class="contentItem">' +
-        "<h3>Ghost Hunting with Brian</h3>" +
+        '<div class="contentItem text">' +
+        `<h3 class="adventureName">Ghost Hunting with Brian</h3>` +
         '<p class="">Start at Aldermenbary Square </p>' +
         '<div class="maptags"><span class="maptag">Suitable for all</span></div>' +
+        `<a href="../adventures/door-6.html"><h3 class="info">More info</h3></a>` +
         "</div>" +
         '<div class="contentItem">' +
         '<a href="../adventures/door-6.html"><img src="../assets/img/illustrations/info-door.png"></a>' +
-        `<div><a href="../adventures/door-6.html"><strong>More info</strong></a></div>` +
         "</div>" +
         " </div>",
     },
@@ -173,14 +189,14 @@ function initMap() {
       type: "adventure",
       content:
         '<div id="content" class="infoContent">' +
-        '<div class="contentItem">' +
-        "<h3>The Artful Dodges Again </h3>" +
+        '<div class="contentItem text">' +
+        `<h3 class="adventureName">The Artful Dodges Again </h3>` +
         '<p class="">Start in the square outside the main entrance of The Royal Exchange </p>' +
         '<div class="maptags"><span class="maptag">Just for families</span></div>' +
+        `<a href="../adventures/door-7.html"><h3 class="info">More info</h3></a>` +
         "</div>" +
         '<div class="contentItem">' +
         '<a href="../adventures/door-7.html"><img src="../assets/img/illustrations/info-door.png"></a>' +
-        `<div><a href="../adventures/door-7.html"><strong>More info</strong></a></div>` +
         "</div>" +
         " </div>",
     },
@@ -189,14 +205,14 @@ function initMap() {
       type: "adventure",
       content:
         '<div id="content" class="infoContent">' +
-        '<div class="contentItem">' +
-        "<h3>The Smashing Rock Sisters </h3>" +
+        '<div class="contentItem text">' +
+        `<h3 class="adventureName">The Smashing Rock Sisters </h3>` +
         '<p class="">Start in the square opposite Barbican Tube at the entrance to Barbican Estate</p>' +
         '<div class="maptags"><span class="maptag">Suitable for all</span></div>' +
+        `<div><a href="../adventures/door-8.html"><h3 class="info">More info</h3></a></div>` +
         "</div>" +
         '<div class="contentItem">' +
         '<a href="../adventures/door-8.html"><img src="../assets/img/illustrations/info-door.png"></a>' +
-        `<div><a href="../adventures/door-8.html"><strong>More info</strong></a></div>` +
         "</div>" +
         " </div>",
     },
@@ -205,14 +221,14 @@ function initMap() {
       type: "adventure",
       content:
         '<div id="content" class="infoContent">' +
-        '<div class="contentItem">' +
-        "<h3>A Resting Place </h3>" +
+        '<div class="contentItem text">' +
+        `<h3 class="adventureName">A Resting Place </h3>` +
         '<p class="">Start at the open square in front of Monument</p>' +
         '<div class="maptags"><span class="maptag">Suitable for all</span></div>' +
+        `<a href="../adventures/door-9.html"><h3 class="info">More info</h3></a>` +
         "</div>" +
         '<div class="contentItem">' +
         '<a href="../adventures/door-9.html"><img src="../assets/img/illustrations/info-door.png"></a>' +
-        `<div><a href="../adventures/door-9.html"><strong>More info</strong></a></div>` +
         "</div>" +
         " </div>",
     },
@@ -221,14 +237,14 @@ function initMap() {
       type: "adventure",
       content:
         '<div id="content" class="infoContent">' +
-        '<div class="contentItem">' +
-        "<h3>Mariam the 2040 Tour Guide </h3>" +
+        '<div class="contentItem text">' +
+        `<h3 class="adventureName">Mariam the 2040 Tour Guide </h3>` +
         '<p class="">Tower of London</p>' +
         '<div class="maptags"><span class="maptag">Just for adults</span></div>' +
+        `<a href="../adventures/door-10.html"><h3 class="info">More info</h3></a>` +
         "</div>" +
         '<div class="contentItem">' +
         '<a href="../adventures/door-10.html"><img src="../assets/img/illustrations/info-door.png"></a>' +
-        `<div><a href="../adventures/door-10.html"><strong>More info</strong></a></div>` +
         "</div>" +
         " </div>",
     },
@@ -237,14 +253,14 @@ function initMap() {
       type: "adventure",
       content:
         '<div id="content" class="infoContent">' +
-        '<div class="contentItem">' +
-        "<h3>Phyllis Wheatley  </h3>" +
+        '<div class="contentItem text">' +
+        `<h3 class="adventureName">Phyllis Wheatley  </h3>` +
         '<p class="">Start at Finsbury Circus Gardens</p>' +
         '<div class="maptags"><span class="maptag">Suitable for all</span></div>' +
+        `<a href="../adventures/door-11.html"><h3 class="info">More info</h3></a>` +
         "</div>" +
         '<div class="contentItem">' +
         '<a href="../adventures/door-11.html"><img src="../assets/img/illustrations/info-door.png"></a>' +
-        `<div><a href="../adventures/door-11.html"><strong>More info</strong></a></div>` +
         "</div>" +
         " </div>",
     },
@@ -253,14 +269,14 @@ function initMap() {
       type: "adventure",
       content:
         '<div id="content" class="infoContent">' +
-        '<div class="contentItem">' +
-        "<h3>Mysteries of the City </h3>" +
+        '<div class="contentItem text">' +
+        `<h3 class="adventureName">Mysteries of the City </h3>` +
         '<p class="">Start at St Bartholemew\'s Gatehouse</p>' +
         '<div class="maptags"><span class="maptag">Suitable for all</span></div>' +
+        `<a href="../adventures/door-12.html"><h3 class="info">More info</h3></a>` +
         "</div>" +
         '<div class="contentItem">' +
         '<a href="../adventures/door-12.html"><img src="../assets/img/illustrations/info-door.png"></a>' +
-        `<div><a href="../adventures/door-12.html"><strong>More info</strong></a></div>` +
         "</div>" +
         " </div>",
     },

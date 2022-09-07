@@ -94,13 +94,21 @@ p.broadcast {
 /* INFO WINDOW */
 
 .infoContent {
-  /* padding: 1.5rem; */
+  padding: 1rem;
   /* background-color: var(--color-mint); */
   width: fit-content;
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 1.5rem;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.contentItem {
+  text-align: left;
+}
+
+.contentItem.text {
+  max-width: 70%;
 }
 
 .contentItem > h3 {
@@ -112,8 +120,16 @@ p.broadcast {
   text-align: left;
 }
 .contentItem > a > img {
-  max-width: 90%;
+  max-width: 100px;
   margin-block-end: 10px;
+}
+
+h3.info {
+  font-size: 1.5rem;
+}
+
+h3.info:hover {
+  color: var(--main-bg-color);
 }
 
 /* .contentItem > div > a > strong {
@@ -134,11 +150,12 @@ p.broadcast {
 
 .maptags {
   display: flex;
+  margin-block-end: 10px;
 }
 
 @media screen and (min-width: 450px) {
   .infoContent {
-    max-width: 40vw;
+    max-width: 40rem;
   }
   p.broadcast {
     font-size: 2rem;
