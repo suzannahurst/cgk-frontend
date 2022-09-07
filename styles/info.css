@@ -14,6 +14,16 @@ h3.subtitle {
 .htgt-list > li {
   margin-block-end: 2rem;
 }
+
+section.privacy > ul {
+  list-style: circle;
+  padding-left: 1.5rem;
+}
+
+p.maintext {
+  margin-block-end: 2rem;
+}
+
 @media screen and (min-width: 450px) {
   .train-wrapper {
     display: flex;
