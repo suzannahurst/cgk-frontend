@@ -1,70 +1,20 @@
-/* CAROUSEL  */
-
-.fair-carousel {
-  width: 100%;
-}
-
-.carousel {
-  height: 80vh;
-}
-
-.carousel-inner {
-  height: 100%;
-  padding: 10px;
-}
-
-.carousel-item {
-  height: 100%;
-}
-
-.carousel-caption {
-  position: initial;
-}
-
-.carousel-caption > h3 {
-  font-weight: 700;
-  font-size: 3rem;
-  margin-bottom: 3rem;
-}
-
-.artist-list {
-  font-size: 1.4rem;
-  text-align: left;
-}
-
-.artist-time {
-  display: inline-block;
-}
-
-li.artist-item {
-  margin-block-end: 2.5rem;
-}
-
-.artist-item > a {
-  display: inline-block;
-}
-
-h3.location {
-  font-weight: 600;
-}
-
-h4.artist-name {
-  font-weight: 700;
-  font-size: 1.8rem;
-}
-
 /* OTHER STYLES */
 
 .fair-img-wrapper {
-  width: 100%;
+  width: 80%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   margin-bottom: var(--padding);
 }
 
 .fair-img-wrapper > .hero-image {
   max-height: 300px;
+  justify-content: flex-start;
 }
+
+/* img.acrobat {
+  margin-inline-start: -100px;
+} */
 
 .programme-item {
   margin-block-end: 4rem;
@@ -83,21 +33,39 @@ h3.location {
 }
 
 .widget {
-  background: var(--accent-color-secondary);
   display: inline-block;
-  /* position: fixed; */
-  /* right: -10px; */
-  padding: 10px 20px 10px 10px;
-  font-family: "Big John";
-  font-size: 1.5rem;
+  max-width: 200px;
+  position: fixed;
+  right: -10px;
   /* top: 50%; */
-  border: 1px solid #fff;
   /* opacity: 50%; */
   z-index: -9999;
 }
 
+.fair-img-wrapper.band > .widget {
+  max-width: 150px;
+  top: 5%;
+}
+
+.fair-img-wrapper.juggler > .widget {
+  max-width: 150px;
+  top: 25%;
+}
+
 .tag {
   display: inline-block;
+}
+
+@media screen and (min-width: 450px) {
+  .widget {
+    right: 5%;
+    bottom: 10%;
+    /* opacity: 50%; */
+  }
+  .fair-img-wrapper.juggler > .widget,
+  .fair-img-wrapper.band > .widget {
+    top: auto;
+  }
 }
 
 @media screen and (min-width: 800px) {
@@ -107,5 +75,8 @@ h3.location {
   }
   .fair-img-wrapper > .hero-image {
     max-height: 400px;
+  }
+  .fair-img-wrapper > .hero-image.band {
+    max-height: 300px;
   }
 }

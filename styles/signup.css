@@ -6,6 +6,10 @@ header.signup {
   background: transparent;
 }
 
+.terms > p {
+  font-size: 1.2rem;
+}
+
 #mc_embed_signup {
   background: #fff;
   clear: left;

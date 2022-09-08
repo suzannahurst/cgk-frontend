@@ -140,7 +140,7 @@ section.info > img {
   margin-bottom: 1.5rem;
 }
 
-@media screen and (min-width: 450px) {
+@media screen and (min-width: 550px) {
   p.maintext {
     max-width: 60%;
   }
