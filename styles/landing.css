@@ -16,7 +16,7 @@ h1.title {
 }
 
 h2.title {
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 
 .keyhole {
@@ -50,6 +50,21 @@ h2.title {
   padding: var(--padding);
   background-color: transparent;
   border-radius: 10px;
+}
+
+.logo-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  position: fixed;
+  bottom: 5%;
+  left: 0;
+}
+
+img.logo {
+  max-width: 100px;
 }
 
 .enter {
@@ -109,6 +124,15 @@ h2.title {
   .keyhole.black {
     left: inherit;
     top: -15%;
+  }
+
+  .logo-wrapper {
+    justify-content: flex-end;
+  }
+
+  img.logo {
+    max-width: 100px;
+    margin-inline-end: 1.5rem;
   }
 }
 
