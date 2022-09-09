@@ -156,6 +156,9 @@ section.info > img {
   section {
     margin-block-end: 2rem;
   }
+  section.info > img {
+    max-width: 40%;
+  }
 
   section:last-child {
     margin-bottom: 0;
