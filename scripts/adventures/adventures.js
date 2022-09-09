@@ -62,7 +62,7 @@ export const showMissingAdventureMsg = (msg) => {
 };
 
 export const displayAdventure = (adventure) => {
-  console.log(adventure.data.attributes);
+  console.log(adventure.data.attributes.name);
   const { description, keyinfo, tags, tube, gm } = adventure.data.attributes;
 
   // const { url } = image.data.attributes;
@@ -74,15 +74,13 @@ export const displayAdventure = (adventure) => {
 
   adventureInfoMount.innerHTML = `
    <p class="maintext" > ${description}</p>
-      <p class="maintext"> ${keyinfo}</p>
+     <h3>Instructions</h3>  <p class="maintext">${keyinfo}</p>
   
    `;
 
   let tag;
-  console.log(tags);
 
   tags.data.map((tg) => {
-    console.log(tg);
     if (tg.attributes.name) {
       tag = document.createElement("span");
       tag.classList.add("tag");
@@ -99,4 +97,28 @@ export const displayAdventure = (adventure) => {
   // DISPLAY PROGRAMME
   //   programmeInfoMount.innerHTML = converter.makeHtml(programme);
 };
-//TODO - display dynamically  with markdown conversion
+
+const findId = (pathname) => {
+  let adventureslug = pathname.replace("/adventures/", "");
+  adventureslug = adventureslug.replace(".html", "");
+  console.log(adventureslug);
+  const adventures = [
+    { slug: "door-1", id: 6 },
+    { slug: "door-2", id: 7 },
+    { slug: "door-3", id: 8 },
+    { slug: "door-4", id: 9 },
+    { slug: "door-5", id: 10 },
+    { slug: "door-6", id: 11 },
+    { slug: "door-7", id: 12 },
+    { slug: "door-8", id: 13 },
+    { slug: "door-9", id: 14 },
+    { slug: "door-10", id: 15 },
+    { slug: "door-11", id: 16 },
+    { slug: "door-12", id: 17 },
+  ];
+  const adventure = adventures.find(({ slug }) => slug === adventureslug);
+  return adventure.id;
+};
+
+const pathname = window.location.pathname;
+getAdventure(findId(pathname));

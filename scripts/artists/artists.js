@@ -7,11 +7,6 @@ export const fetchArtists = () => {
   fetch(artistsReq)
     .then((response) => response.json())
     .then((artists) => {
-      // let fairList = document.getElementById("fair-list");
-
-      // artists.forEach((fair) => {
-      //   fairList.appendChild(createArticleCard(fair));
-      // });
       console.log(artists);
       return artists;
     })
@@ -63,7 +58,6 @@ export const displayArtist = (artist) => {
   const fairName = fair.data.attributes.name;
   const fairSlug = fair.data.attributes.slug;
   const fairGm = fair.data.attributes.gm;
-  console.log(artist.data.attributes);
 
   const showInfoMount = document.getElementById("showInfoMount");
   const tagsMount = document.getElementById("tagsMount");
@@ -121,10 +115,12 @@ export const displayArtist = (artist) => {
 // TODO best way to dynamically populate artists per page
 
 console.log(window.location.pathname);
-const pathname = "/artists/little-bulb.html";
 
 const findId = (pathname) => {
-  const artistSlug = pathname.replace("/artists/", "");
+  // debugger;
+  let artistSlug = pathname.replace("/artists/", "");
+  artistSlug = artistSlug.replace(".html", "");
+  console.log(artistSlug);
   const artists = [
     { slug: "little-bulb", id: 1 },
     { slug: "judith-hope", id: 2 },
@@ -150,10 +146,9 @@ const findId = (pathname) => {
     { slug: "the-keyholders-cafe", id: 22 },
     { slug: "the-wheelabouts", id: 23 },
   ];
-  const idToUse = artists.find(slug === artistSlug);
-  return idToUse;
+  const artist = artists.find(({ slug }) => slug === artistSlug);
+  return artist.id;
 };
 
-// findId("/artists/judith-hope.html");
-
-// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find
+const pathname = window.location.pathname;
+getArtist(findId(pathname));
