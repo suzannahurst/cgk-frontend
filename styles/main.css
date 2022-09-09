@@ -42,6 +42,7 @@ main {
   justify-content: center;
   align-items: center;
   width: 100%;
+  max-width: 1080px;
 }
 
 main.landing {
@@ -150,12 +151,18 @@ section.info > img {
 
 @media screen and (min-width: 550px) {
   p.maintext {
-    max-width: 60%;
+    max-width: 70%;
   }
   section {
-    margin-block-end: 2rem;
+    margin-block-end: 0;
   }
 
+  section:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 800px) {
   section.info {
     display: flex;
     flex-direction: row-reverse;
@@ -163,17 +170,11 @@ section.info > img {
     align-items: center;
     gap: 1.5rem;
   }
-  section.info > img {
-    max-width: 40%;
-    margin-bottom: 0;
-  }
-  section.info {
-    text-align: left;
-  }
-  section:last-child {
-    margin-bottom: 0;
+  img {
+    max-width: initial;
   }
 }
+
 /* HEADER  */
 header {
   width: 100%;

@@ -57,18 +57,20 @@ h3.location {
 }
 
 @media screen and (min-width: 450px) {
-  .widget {
-    right: 5%;
-    bottom: 10%;
-    /* opacity: 50%; */
-  }
   .fair-img-wrapper.juggler > .widget,
   .fair-img-wrapper.band > .widget {
     top: auto;
   }
+  section {
+    margin-block-end: 1rem;
+  }
 }
 
 @media screen and (min-width: 800px) {
+  .widget {
+    right: 5%;
+    bottom: 10%;
+  }
   .programme-wrapper {
     display: flex;
     gap: 2rem;
@@ -78,5 +80,8 @@ h3.location {
   }
   .fair-img-wrapper > .hero-image.band {
     max-height: 300px;
+  }
+  .fair-img-wrapper > .hero-image.acrobat {
+    max-width: 450px;
   }
 }
