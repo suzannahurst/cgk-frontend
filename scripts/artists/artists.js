@@ -66,7 +66,6 @@ export const displayArtist = (artist) => {
   console.log(artist.data.attributes);
 
   const showInfoMount = document.getElementById("showInfoMount");
-  // const artistInfoMount = document.getElementById("artistInfo");
   const tagsMount = document.getElementById("tagsMount");
   const tagsSection = document.getElementById("tagsSection");
   const imgMount = document.getElementById("artistImgMount");

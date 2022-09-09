@@ -4,8 +4,10 @@ img.artist-img {
   max-width: 120%;
 }
 
-@media screen and (min-width: 400px) {
-  .artist-img {
-    max-width: 40%;
+@media screen and (min-width: 700px) {
+  img.artist-img {
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 60%;
   }
 }
