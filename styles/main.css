@@ -144,6 +144,10 @@ section.info > img {
   margin-bottom: 1.5rem;
 }
 
+.hide {
+  display: none;
+}
+
 @media screen and (min-width: 550px) {
   p.maintext {
     max-width: 60%;
@@ -308,6 +312,10 @@ button {
   border: 1px solid #fff;
   color: #fff;
   border-radius: 4px;
+}
+
+button > a > p:hover {
+  color: #1c8f93;
 }
 
 button > a > p {

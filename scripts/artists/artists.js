@@ -64,12 +64,11 @@ export const displayArtist = (artist) => {
   const fairSlug = fair.data.attributes.slug;
   const fairGm = fair.data.attributes.gm;
   console.log(artist.data.attributes);
-  // console.log(fair.data.attributes);
-  // TODO check why this [0] is different to another collection
 
   const showInfoMount = document.getElementById("showInfoMount");
   // const artistInfoMount = document.getElementById("artistInfo");
   const tagsMount = document.getElementById("tagsMount");
+  const tagsSection = document.getElementById("tagsSection");
   const imgMount = document.getElementById("artistImgMount");
   const fairMount = document.getElementById("fairMount");
 
@@ -89,16 +88,20 @@ export const displayArtist = (artist) => {
   let tag;
   // console.log(tags);
 
-  tags.data.map((tg) => {
-    console.log(tg);
-    if (tg.attributes.name) {
-      tag = document.createElement("span");
-      tag.classList.add("tag");
-      tag.innerHTML = tg.attributes.name;
+  if (tags.data.length === 0) {
+    tagsSection.classList.add("hide");
+  } else {
+    tags.data.map((tg) => {
+      console.log(tg);
+      if (tg.attributes.name) {
+        tag = document.createElement("span");
+        tag.classList.add("tag");
+        tag.innerHTML = tg.attributes.name;
 
-      tagsMount.appendChild(tag);
-    }
-  });
+        tagsMount.appendChild(tag);
+      }
+    });
+  }
 
   fairMount.innerHTML = ` <p>Back to <span><a href="./../fairs/${fairSlug}.html" class="highlighted">${fairName}</a>. </span>
       </p>

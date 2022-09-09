@@ -2,6 +2,10 @@ body {
   text-align: center;
 }
 
-.maze-buttons > button {
-  margin-inline-end: 1.5rem;
+section.maze-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
