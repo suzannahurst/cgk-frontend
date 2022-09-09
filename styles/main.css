@@ -55,7 +55,7 @@ main.landing {
 }
 
 section {
-  margin-block-end: 4rem;
+  margin-block-end: 2rem;
   width: 100%;
 }
 
@@ -154,7 +154,7 @@ section.info > img {
     max-width: 70%;
   }
   section {
-    margin-block-end: 0;
+    margin-block-end: 2rem;
   }
 
   section:last-child {

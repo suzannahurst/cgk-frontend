@@ -15,5 +15,7 @@
   ],
   "theme_color": "#ffffff",
   "background_color": "#1c8f93",
-  "display": "standalone"
+  "display": "standalone",
+  "categories": ["entertainment", "games"],
+  "description": "A free immersive takeover of the City of London by Coney & Friends"
 }

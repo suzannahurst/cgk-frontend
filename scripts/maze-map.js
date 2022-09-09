@@ -58,7 +58,7 @@ function initMap() {
     },
   };
 
-  // TODO Trying to dynamically populate map
+  // TODO  dynamically populate map
   // let locations = [];
   // locationsToShow.map(
   //   (locationToShow) => {
@@ -95,7 +95,7 @@ function initMap() {
         '<div id="content" class="infoContent">' +
         '<div class="contentItem text">' +
         `<h3 class="adventureName">Animals in the City </h3>` +
-        '<p class="">Start at Bloomberg Arcade, on Cannon Street Side. </p>' +
+        '<p class="">Find the red door at Bloomberg Arcade, on Cannon Street Side. </p>' +
         '<div class="maptags"><span class="maptag">Just for families</span></div>' +
         `<a href="../adventures/door-1.html"><h3 class="info">More info</h3></a>` +
         "</div>" +
@@ -111,7 +111,7 @@ function initMap() {
         '<div id="content" class="infoContent">' +
         '<div class="contentItem text">' +
         `<h3 class="adventureName">Epic Investment </h3>` +
-        '<p class="">Start at Coleman Street Gardens, in front of Girdler\'s Company </p>' +
+        '<p class="">Find the red door at Coleman Street Gardens, in front of Girdler\'s Company </p>' +
         '<div class="maptags"><span class="maptag">Just for adults</span></div>' +
         '<a href="../adventures/door-2.html"><h3 class="info">More info</h3></a>' +
         "</div>" +
@@ -127,7 +127,7 @@ function initMap() {
         '<div id="content" class="infoContent">' +
         '<div class="contentItem text">' +
         `<h3 class="adventureName">Future Gondolier </h3>` +
-        '<p class="">Start at Peter\'s Hill </p>' +
+        '<p class="">Find the red door at Peter\'s Hill </p>' +
         '<div class="maptags"><span class="maptag">Suitable for all</span></div>' +
         `<a href="../adventures/door-3.html"><h3 class="info">More info</h3></a>` +
         "</div>" +
@@ -143,7 +143,7 @@ function initMap() {
         '<div id="content" class="infoContent">' +
         '<div class="contentItem text">' +
         `<h3 class="adventureName">Daniel Mendoza</h3>` +
-        '<p class="">Start at 30 St Mary\'s Axe (The Gerkin), on the east side. </p>' +
+        '<p class="">Find the red door at 30 St Mary\'s Axe (The Gerkin), on the east side. </p>' +
         '<div class="maptags"><span class="maptag">Suitable for all</span></div>' +
         `<a href="../adventures/door-4.html"><h3 class="info">More info</h3></a>` +
         "</div>" +
@@ -159,7 +159,7 @@ function initMap() {
         '<div id="content" class="infoContent">' +
         '<div class="contentItem text">' +
         '<h3 class="adventureName">Moll Cutpurse and Ann Duck</h3>' +
-        '<p class="">Start across the road from City Thameslink </p>' +
+        '<p class="">Find the red door across the road from City Thameslink </p>' +
         '<div class="maptags"><span class="maptag">Suitable for all</span></div>' +
         `<a href="../adventures/door-5.html"><h3 class="info">More info</h3></a>` +
         "</div>" +
@@ -175,7 +175,7 @@ function initMap() {
         '<div id="content" class="infoContent">' +
         '<div class="contentItem text">' +
         `<h3 class="adventureName">Ghost Hunting with Brian</h3>` +
-        '<p class="">Start at Aldermenbary Square </p>' +
+        '<p class=""> Find the red door at Aldermenbary Square </p>' +
         '<div class="maptags"><span class="maptag">Suitable for all</span></div>' +
         `<a href="../adventures/door-6.html"><h3 class="info">More info</h3></a>` +
         "</div>" +
@@ -191,7 +191,7 @@ function initMap() {
         '<div id="content" class="infoContent">' +
         '<div class="contentItem text">' +
         `<h3 class="adventureName">The Artful Dodges Again </h3>` +
-        '<p class="">Start in the square outside the main entrance of The Royal Exchange </p>' +
+        '<p class="">Find the red door in the square outside the main entrance of The Royal Exchange </p>' +
         '<div class="maptags"><span class="maptag">Just for families</span></div>' +
         `<a href="../adventures/door-7.html"><h3 class="info">More info</h3></a>` +
         "</div>" +
@@ -207,7 +207,7 @@ function initMap() {
         '<div id="content" class="infoContent">' +
         '<div class="contentItem text">' +
         `<h3 class="adventureName">The Smashing Rock Sisters </h3>` +
-        '<p class="">Start in the square opposite Barbican Tube at the entrance to Barbican Estate</p>' +
+        '<p class="">Find the red door in the square opposite Barbican Tube at the entrance to Barbican Estate</p>' +
         '<div class="maptags"><span class="maptag">Suitable for all</span></div>' +
         `<div><a href="../adventures/door-8.html"><h3 class="info">More info</h3></a></div>` +
         "</div>" +
@@ -223,7 +223,7 @@ function initMap() {
         '<div id="content" class="infoContent">' +
         '<div class="contentItem text">' +
         `<h3 class="adventureName">A Resting Place </h3>` +
-        '<p class="">Start at the open square in front of Monument</p>' +
+        '<p class="">Find the red door at the open square in front of Monument</p>' +
         '<div class="maptags"><span class="maptag">Suitable for all</span></div>' +
         `<a href="../adventures/door-9.html"><h3 class="info">More info</h3></a>` +
         "</div>" +
@@ -255,7 +255,7 @@ function initMap() {
         '<div id="content" class="infoContent">' +
         '<div class="contentItem text">' +
         `<h3 class="adventureName">Phyllis Wheatley  </h3>` +
-        '<p class="">Start at Finsbury Circus Gardens</p>' +
+        '<p class="">Find the red door at Finsbury Circus Gardens</p>' +
         '<div class="maptags"><span class="maptag">Suitable for all</span></div>' +
         `<a href="../adventures/door-11.html"><h3 class="info">More info</h3></a>` +
         "</div>" +
@@ -271,7 +271,7 @@ function initMap() {
         '<div id="content" class="infoContent">' +
         '<div class="contentItem text">' +
         `<h3 class="adventureName">Mysteries of the City </h3>` +
-        '<p class="">Start at St Bartholemew\'s Gatehouse</p>' +
+        '<p class="">Find the red door at St Bartholemew\'s Gatehouse</p>' +
         '<div class="maptags"><span class="maptag">Suitable for all</span></div>' +
         `<a href="../adventures/door-12.html"><h3 class="info">More info</h3></a>` +
         "</div>" +
