@@ -24,11 +24,25 @@ p.maintext {
   margin-block-end: 2rem;
 }
 
+img.boat-img {
+  margin-left: -3rem;
+  margin-right: -3rem;
+  max-width: 120%;
+}
+
 @media screen and (min-width: 450px) {
   .train-wrapper {
     display: flex;
   }
   .train-item > p {
     max-width: 80%;
+  }
+  .boat-wrapper {
+    display: flex;
+  }
+  img.boat-img {
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 100%;
   }
 }
