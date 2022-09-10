@@ -1,7 +1,6 @@
 {
   "name": "The Golden Key",
   "short_name": "The Golden Key",
-  "start_url": ".",
   "orientation": "portrait-primary",
   "icons": [
     {
