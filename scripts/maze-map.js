@@ -50,9 +50,21 @@ function initMap() {
   let iconBase = "./../assets/img/markers/";
 
   const icons = {
-    adventure: {
+    everyone: {
       icon: {
-        url: iconBase + "adventure-marker.png",
+        url: iconBase + "everyone.png",
+        scaledSize: new google.maps.Size(40, 60),
+      },
+    },
+    families: {
+      icon: {
+        url: iconBase + "families2.png",
+        scaledSize: new google.maps.Size(40, 60),
+      },
+    },
+    adults: {
+      icon: {
+        url: iconBase + "adults.png",
         scaledSize: new google.maps.Size(40, 60),
       },
     },
@@ -90,7 +102,7 @@ function initMap() {
   const locations = [
     {
       position: new google.maps.LatLng(51.51202, -0.09088),
-      type: "adventure",
+      type: "families",
       content:
         '<div id="content" class="infoContent">' +
         '<div class="contentItem text">' +
@@ -106,7 +118,7 @@ function initMap() {
     },
     {
       position: new google.maps.LatLng(51.51702, -0.09015),
-      type: "adventure",
+      type: "adults",
       content:
         '<div id="content" class="infoContent">' +
         '<div class="contentItem text">' +
@@ -122,7 +134,7 @@ function initMap() {
     },
     {
       position: new google.maps.LatLng(51.51217, -0.09831),
-      type: "adventure",
+      type: "everyone",
       content:
         '<div id="content" class="infoContent">' +
         '<div class="contentItem text">' +
@@ -138,7 +150,7 @@ function initMap() {
     },
     {
       position: new google.maps.LatLng(51.51449, -0.0803),
-      type: "adventure",
+      type: "everyone",
       content:
         '<div id="content" class="infoContent">' +
         '<div class="contentItem text">' +
@@ -154,7 +166,7 @@ function initMap() {
     },
     {
       position: new google.maps.LatLng(51.51424, -0.10332),
-      type: "adventure",
+      type: "everyone",
       content:
         '<div id="content" class="infoContent">' +
         '<div class="contentItem text">' +
@@ -170,7 +182,7 @@ function initMap() {
     },
     {
       position: new google.maps.LatLng(51.51705, -0.09275),
-      type: "adventure",
+      type: "everyone",
       content:
         '<div id="content" class="infoContent">' +
         '<div class="contentItem text">' +
@@ -186,7 +198,7 @@ function initMap() {
     },
     {
       position: new google.maps.LatLng(51.51349, -0.08808),
-      type: "adventure",
+      type: "families",
       content:
         '<div id="content" class="infoContent">' +
         '<div class="contentItem text">' +
@@ -202,7 +214,7 @@ function initMap() {
     },
     {
       position: new google.maps.LatLng(51.52006, -0.09683),
-      type: "adventure",
+      type: "everyone",
       content:
         '<div id="content" class="infoContent">' +
         '<div class="contentItem text">' +
@@ -218,7 +230,7 @@ function initMap() {
     },
     {
       position: new google.maps.LatLng(51.51018, -0.08593),
-      type: "adventure",
+      type: "everyone",
       content:
         '<div id="content" class="infoContent">' +
         '<div class="contentItem text">' +
@@ -234,7 +246,7 @@ function initMap() {
     },
     {
       position: new google.maps.LatLng(51.50811, -0.07594),
-      type: "adventure",
+      type: "adults",
       content:
         '<div id="content" class="infoContent">' +
         '<div class="contentItem text">' +
@@ -250,7 +262,7 @@ function initMap() {
     },
     {
       position: new google.maps.LatLng(51.51785, -0.08643),
-      type: "adventure",
+      type: "everyone",
       content:
         '<div id="content" class="infoContent">' +
         '<div class="contentItem text">' +
@@ -266,7 +278,7 @@ function initMap() {
     },
     {
       position: new google.maps.LatLng(51.51909, -0.09028),
-      type: "adventure",
+      type: "everyone",
       content:
         '<div id="content" class="infoContent">' +
         '<div class="contentItem text">' +

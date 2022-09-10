@@ -1,16 +1,28 @@
-.clessa {
-  font-family: "Charm", cursive;
-}
-
-p.clessa {
-  font-size: 2rem;
+h2.title {
+  font-family: "Great Vibes", cursive;
+  font-size: 6rem;
+  letter-spacing: 0.4rem;
+  margin-block-end: 1rem;
 }
 
 .subtitle {
   font-size: 3rem;
-  font-family: "Charm", cursive;
+  font-family: "Great Vibes", cursive;
+  letter-spacing: 0.3rem;
 }
+div.hero-image {
+  margin-block-end: 1.5rem;
+}
+@media screen and (min-width: 800px) {
+  p {
+    max-width: 90%;
+  }
 
-body {
-  text-align: center;
+  div.hero-image {
+    height: 100vh;
+  }
+
+  img.hero-image {
+    max-width: 450px;
+  }
 }

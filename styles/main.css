@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,400;0,600;0,700;0,900;1,300;1,400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Charm&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
 
 @font-face {
   font-family: "Big John";
@@ -81,7 +82,7 @@ h1.title {
 h2.title {
   font-size: 3rem;
   font-weight: 600;
-  margin-block-end: 3rem;
+  margin-block-end: 2rem;
   font-family: var(--font-headings);
 }
 
@@ -214,13 +215,25 @@ header {
 
 .social-wrapper {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+  gap: 1rem;
+  font-family: var(--font-headings);
+}
+
+.social-wrapper > .coney,
+.social-wrapper > .col {
+  display: flex;
   flex-direction: row;
   justify-content: center;
 }
-
+.social-item {
+  margin-inline-end: 0.5rem;
+}
 .socialicon {
   width: 2rem;
-  margin-inline-end: 0.5rem;
+  /* margin-inline-end: 0.5rem; */
 }
 
 /* HAMBURGER MENU */

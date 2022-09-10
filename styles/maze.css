@@ -1,5 +1,5 @@
-body {
-  /* text-align: center; */
+div.hero-image {
+  margin-block-end: 1.5rem;
 }
 
 section.maze-buttons {
@@ -8,4 +8,10 @@ section.maze-buttons {
   justify-content: center;
   align-items: center;
   gap: 1rem;
+}
+
+@media screen and (min-width: 450px) {
+  div.hero-image {
+    margin-block-end: 0;
+  }
 }

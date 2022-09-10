@@ -2,6 +2,9 @@ body {
   text-align: center;
 }
 
+header {
+  z-index: 99999;
+}
 header.signup {
   background: transparent;
 }
@@ -21,8 +24,6 @@ header.signup {
   background: transparent;
   /* background: #fff; */
   clear: left;
-  /* font: 14px Helvetica, Arial, sans-serif; */
-  /* width: 600px; */
 }
 
 .mclogo {
@@ -51,6 +52,23 @@ label {
   border: none;
   min-height: 0px;
   padding-bottom: 0px;
+}
+#mc-embedded-subscribe.button {
+  background-color: var(--accent-color-secondary);
+  border: 1px solid #fff;
+}
+
+#mc_embed_signup .button:hover {
+  background-color: var(--accent-color-secondary);
+}
+
+#mc_embed_signup #mce-success-response {
+  color: #fff;
+  font-size: 2rem;
+}
+
+#mc_embed_signup div#mce-responses {
+  margin: 0;
 }
 
 @media screen and (min-width: 450px) {
