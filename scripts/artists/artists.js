@@ -145,6 +145,16 @@ const findId = (pathname) => {
     { slug: "emergency-exit-arts", id: 21 },
     { slug: "the-keyholders-cafe", id: 22 },
     { slug: "the-wheelabouts", id: 23 },
+    { slug: "raze-collective", id: 24 },
+    { slug: "global-grooves", id: 25 },
+    { slug: "pepa-duarte-charly-monreal", id: 26 },
+    { slug: "sol-cinema", id: 27 },
+    { slug: "the-story-explorers", id: 28 },
+    { slug: "moth-theatre", id: 29 },
+    { slug: "20-storytellers-100-keys", id: 30 },
+    { slug: "play-disrupt", id: 31 },
+    { slug: "katy-cawkwell", id: 32 },
+    ,
   ];
   const artist = artists.find(({ slug }) => slug === artistSlug);
   return artist.id;
