@@ -10,15 +10,19 @@
 
 :root {
   --main-bg-color: #1c8f93;
+  /* --main-bg-color: #e8d7a4; */
   --accent-color-primary: #e8d7a4;
   --accent-color-secondary: #ea9e25;
+  /* --accent-color-primary: #ea9e25; */
+  /* --accent-color-secondary: #1c8f93; */
   --color-red: #bc4121;
   --color-mint: #94cab7;
   --color-grey: #7f7f7f;
   --color-orange: #e86530;
   --font-headings: "Big John", serif;
   --font-body: "Space Grotesk", sans-serif;
-  --font-color: #fff;
+  /* --font-color: #fff; */
+  --font-color: #000;
   --padding: 1.5rem;
 }
 
@@ -36,6 +40,8 @@ body {
   font-family: var(--font-body);
 
   color: #fff;
+  /* color: #000; */
+
   text-align: left;
 }
 
