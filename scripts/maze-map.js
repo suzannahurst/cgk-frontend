@@ -58,7 +58,7 @@ function initMap() {
     },
     families: {
       icon: {
-        url: iconBase + "families2.png",
+        url: iconBase + "families3.png",
         scaledSize: new google.maps.Size(40, 60),
       },
     },

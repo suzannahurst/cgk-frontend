@@ -28,11 +28,13 @@ export const getFair = (id) => {
   fetch(fairReq)
     .then((resp) => {
       if (resp.ok) {
+        console.log("resp", resp);
         return resp.json();
       } else {
         throw new Error(resp.statusText);
       }
     })
+
     .then(displayFair)
     // .then((fair) => {
     //   console.log("fair", fair);

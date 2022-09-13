@@ -22,35 +22,45 @@ export const fetchAdventures = async () => {
   try {
     const response = await fetch(
       "https://coney-golden-key.herokuapp.com/api/adventures?populate=*",
+      {
+        headers: {
+          // "Content-Type": "text/plain;charset=UTF-8",
+          "Content-Type": "application/json",
+        },
+      },
     );
     if (!response.ok) throw response;
-
+    // console.log("resp fetchAdventures", response);
     const adventures = await response.json();
-    console.log(adventures);
+    // console.log(adventures);
     return adventures;
   } catch (error) {
     console.log("error", error);
     throw error;
   }
 };
+fetchAdventures();
 
 export const getAdventure = (id) => {
   const adventureReq = new Request(
     `https://coney-golden-key.herokuapp.com/api/adventures/${id}?populate=*`,
   );
 
-  fetch(adventureReq)
+  fetch(adventureReq, {
+    headers: new Headers({
+      // "X-Content-Type-Options": "nosniff",
+      "Content-Type": "application/json",
+    }),
+  })
     .then((resp) => {
       if (resp.ok) {
+        console.log("resp getAdventure", resp);
         return resp.json();
       } else {
         throw new Error(resp.statusText);
       }
     })
     .then(displayAdventure)
-    // .then((fair) => {
-    //   console.log("fair", fair);
-    // })
     .catch(showMissingAdventureMsg);
 };
 
