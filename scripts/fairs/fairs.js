@@ -57,18 +57,8 @@ export const displayFair = (fair) => {
   const fairInfoMount = document.getElementById("fairInfoMount");
   const travelInfoMount = document.getElementById("travelInfoMount");
   const programmeInfoMount = document.getElementById("programmeInfoMount");
-  // const artistFeaturedMount = document.getElementById("artistFeaturedMount");
 
   // DISPLAY INFO
-
-  // TODO add image
-  // fairInfoMount.innerHTML = `<h2 class="title" id="fairTitle">${name}</h2>
-  //     <img id="fairImg" class="fair-img hero" src="https://res.cloudinary.com/dcwl3hold/image/upload/v1661765161/${url}"/>
-  //     <h3 class="location">Location: ${location}
-  //     </h3>
-  //     <p id="fairDescription" class="description">${description}</p>
-  //     <div id="fairTags"></div>
-  //  `;
 
   fairInfoMount.innerHTML = `
       <p id="fairDescription"  >${description}</p>
@@ -102,26 +92,18 @@ export const displayFair = (fair) => {
   // DISPLAY PROGRAMME
   programmeInfoMount.innerHTML = converter.makeHtml(programme);
 };
-//TODO - display dynamically  with markdown conversion
 
-// DISPLAY ARTISTS
+// PULSING WIDGET
+const widget = document.getElementById("widget");
 
-// TODO MAP OVER PROGRAMME?
+const anim = () => {
+  gsap.to(".widget", {
+    duration: 2,
+    scale: 1.2,
+    repeat: -1,
+    ease: "power1.out",
+    yoyo: true,
+  });
+};
 
-//   const artistsToDisplay = [];
-//   artists.map((artist) => {
-//     artistsToDisplay.push(artist);
-//     const li = document.createElement("li");
-//     li.innerHTML = ` <li class="artist-item">
-//           <a href="#">
-//             <h4 class="artist-name">${artist.name}</h4>
-//           </a>
-//           <p class="artist-time">${artist.shows}</p>
-//           <p>${artist.showname}</p>
-//           <p><a href="./../artists/${artist.slug}.html" class="highlighted">
-//               More info
-//             </a></p>
-//         </li>`;
-//     artistFeaturedMount.append(li);
-//   });
-// };
+anim();
