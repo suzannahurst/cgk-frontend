@@ -30,6 +30,16 @@ img.boat-img {
   max-width: 120%;
 }
 
+/* .faq-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.faq-wrapper > img {
+  max-height: 30%;
+} */
+
 @media screen and (min-width: 450px) {
   .train-wrapper {
     display: flex;
