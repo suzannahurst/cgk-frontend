@@ -66,20 +66,20 @@ export const displayFair = (fair) => {
 
    `;
 
-  let fairTags = document.getElementById("fairTags");
-  let tag;
-  console.log(tags.data);
+  // let fairTags = document.getElementById("fairTags");
+  // let tag;
+  // console.log(tags.data);
 
-  tags.data.map((tg) => {
-    if (tg.attributes.name) {
-      console.log("tag", tg);
-      tag = document.createElement("span");
-      tag.classList.add("tag");
-      tag.innerHTML = tg.attributes.name;
+  // tags.data.map((tg) => {
+  //   if (tg.attributes.name) {
+  //     console.log("tag", tg);
+  //     tag = document.createElement("span");
+  //     tag.classList.add("tag");
+  //     tag.innerHTML = tg.attributes.name;
 
-      fairTags.appendChild(tag);
-    }
-  });
+  //     fairTags.appendChild(tag);
+  //   }
+  // });
   // DISPLAY TRAVEL
   travelInfoMount.innerHTML = `
      <h3>When</h3>
@@ -93,7 +93,7 @@ export const displayFair = (fair) => {
   programmeInfoMount.innerHTML = converter.makeHtml(programme);
 };
 
-// PULSING WIDGET
+// // PULSING WIDGET
 const widget = document.getElementById("widget");
 
 const anim = () => {
