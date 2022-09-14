@@ -32,7 +32,7 @@ function initMap() {
   const icons = {
     everyone: {
       icon: {
-        url: iconBase + "marker-red.png",
+        url: iconBase + "marker-pink.png",
         scaledSize: new google.maps.Size(40, 60),
       },
     },

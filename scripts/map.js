@@ -31,19 +31,19 @@ function initMap() {
     },
     everyone: {
       icon: {
-        url: iconBase + "marker-pink.png",
+        url: iconBase + "marker-red.png",
         scaledSize: new google.maps.Size(40, 60),
       },
     },
     families: {
       icon: {
-        url: iconBase + "marker-pink.png",
+        url: iconBase + "marker-red.png",
         scaledSize: new google.maps.Size(40, 60),
       },
     },
     adults: {
       icon: {
-        url: iconBase + "marker-pink.png",
+        url: iconBase + "marker-red.png",
         scaledSize: new google.maps.Size(40, 60),
       },
     },
