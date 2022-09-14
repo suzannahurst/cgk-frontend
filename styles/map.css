@@ -3,12 +3,20 @@ body {
   color: #000;
   text-align: center;
 }
-#mazeMap,
+#mazeMap {
+  width: 100vw;
+  height: 75vh;
+  position: fixed !important;
+  top: 14vh;
+  left: 0;
+  margin-block-end: 30px;
+}
+
 #map {
   width: 100vw;
-  height: 79vh;
+  height: 80vh;
   position: fixed !important;
-  top: 10.5vh;
+  top: 10vh;
   left: 0;
   margin-block-end: 30px;
 }
@@ -19,6 +27,7 @@ header {
   width: 100%;
   justify-content: space-between;
   align-items: flex-start;
+  background-color: var(--main-bg-color);
 }
 footer {
   position: fixed;
@@ -41,11 +50,30 @@ footer {
   align-items: center;
 }
 
+.title-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  height: 100%;
+}
+
+h1 {
+  color: #fff;
+}
+
 .title-wrapper > h2 {
   font-size: 1.5rem;
   font-weight: 600;
   margin-block-end: 0;
   text-align: left;
+  color: #fff;
+}
+
+.title-wrapper > span {
+  color: #fff;
+  font-weight: 600;
+  width: max-content;
 }
 .maze-subtitle {
   font-size: 1rem;
@@ -80,15 +108,7 @@ footer {
 p.broadcast {
   font-size: 12px;
   color: #fff;
-}
-
-.title-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-between;
-  height: 100%;
-  width: 60%;
+  margin-bottom: 0;
 }
 
 /* INFO WINDOW */
@@ -164,8 +184,11 @@ h3.info:hover {
 
   #mazeMap,
   #map {
-    height: 70vh;
-    top: 16.5vh;
+    height: 80vh;
+    top: 9.5vh;
+  }
+  .controls-container {
+    justify-content: flex-end;
   }
 }
 
