@@ -17,28 +17,31 @@ h1.title {
 
 h2.title {
   font-size: 2.5rem;
-}
-
-.keyhole {
-  /* position: fixed; */
-}
-
-.keyhole.black {
-  z-index: -99999;
-  transform: scale(0.1);
-  /* top: -10%;
-  left: 0; */
-}
-
-.keyhole.scene {
-  position: fixed;
-  top: 0;
-  z-index: -99999;
-  /* transform: scale(4); */
-  /* opacity: 0; */
+  display: flex;
+  flex-direction: column;
 }
 
 .keyhole-wrapper {
+  max-height: 30%;
+  margin-block-end: 1.5rem;
+}
+
+.info-wrapper > p {
+  display: flex;
+  flex-direction: column;
+}
+
+img.keyhole {
+  height: 100%;
+  width: 100%;
+}
+/* .keyhole.scene {
+  position: fixed;
+  top: 0;
+  z-index: -99999;
+} */
+
+/* .keyhole-wrapper {
   width: 100%;
   height: 10vh;
   display: flex;
@@ -46,11 +49,7 @@ h2.title {
   align-items: center;
 }
 
-.info-wrapper {
-  padding: var(--padding);
-  background-color: transparent;
-  border-radius: 10px;
-}
+
 
 .logo-wrapper {
   display: flex;
@@ -61,6 +60,21 @@ h2.title {
   position: fixed;
   bottom: 5%;
   left: 0;
+} */
+
+.info-wrapper {
+  padding: var(--padding);
+  background-color: transparent;
+  border-radius: 10px;
+}
+
+.fixed {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
 }
 
 img.logo {
@@ -104,10 +118,15 @@ img.logo {
   main {
     gap: 0;
   }
-  .overlay {
-    background-image: url(./../assets/img/background-ls.jpg);
+
+  .fixed {
+    left: initial;
+    top: initial;
+  }
+  /* .overlay {
+    background-image: url(./../assets/img/landscape.jpg);
     background-position: center center;
-    /* background-size: 60vh; */
+
     background-repeat: no-repeat;
     position: fixed;
     width: 100vw;
@@ -115,20 +134,20 @@ img.logo {
     margin-top: -2rem;
     transform: scale(1.5);
     z-index: -999999;
-    /* opacity: 0; */
-  }
-  .keyhole {
-    height: 90vh;
-  }
 
-  .keyhole.black {
+  } */
+  /* .keyhole {
+    height: 90vh;
+  } */
+
+  /* .keyhole.black {
     left: inherit;
     top: -15%;
-  }
+  } */
 
-  .logo-wrapper {
+  /* .logo-wrapper {
     justify-content: flex-end;
-  }
+  } */
 
   img.logo {
     max-width: 100px;
