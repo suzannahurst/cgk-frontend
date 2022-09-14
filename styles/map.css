@@ -114,17 +114,33 @@ p.broadcast {
 /* INFO WINDOW */
 
 .infoContent {
-  padding: 1rem;
+  padding: 0.5rem;
   /* background-color: var(--color-mint); */
   width: fit-content;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
-  gap: 1rem;
+  gap: 0.5rem;
+  flex-direction: column;
 }
 
 .contentItem {
   text-align: left;
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  gap: 0.5rem;
+  flex-direction: row;
+}
+
+.contentItem.lower {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.contentItem > img {
+  max-width: 30%;
 }
 
 .contentItem.text {
@@ -132,11 +148,14 @@ p.broadcast {
 }
 
 .contentItem > h3 {
-  /* margin-block-end: 0; */
+  margin-block-end: 0;
   text-align: left;
 }
-.contentItem > p {
+p.adventureInfo {
   margin-block-end: 10px;
+  text-align: left;
+  font-size: 1.2rem;
+  margin-block-end: 0;
   text-align: left;
 }
 .contentItem > a > img {
@@ -162,10 +181,29 @@ h3.info:hover {
   border: #fff solid 1px;
   padding: 6px;
   background-color: var(--accent-color-secondary);
-  font-size: 1.3rem;
+  font-size: 1rem;
   font-weight: 800;
-  margin-inline-end: 1rem;
+  margin-inline-end: 5px;
   color: #fff;
+}
+
+.maptag.green {
+  background-color: var(--color-mint);
+}
+.maptag.red {
+  background-color: var(--color-red);
+}
+
+.maptag.purple {
+  background-color: var(--color-purple);
+}
+
+.maptag.pink {
+  background-color: var(--color-pink);
+}
+
+.maptag.black {
+  background-color: #000;
 }
 
 .maptags {
@@ -175,7 +213,7 @@ h3.info:hover {
 
 @media screen and (min-width: 450px) {
   .infoContent {
-    max-width: 40rem;
+    max-width: 30rem;
   }
   p.broadcast {
     font-size: 1.5rem;
@@ -189,6 +227,13 @@ h3.info:hover {
   }
   .controls-container {
     justify-content: flex-end;
+  }
+
+  .contentItem > img {
+    max-height: 90px;
+  }
+  p.adventureInfo {
+    font-size: 1.3rem;
   }
 }
 
