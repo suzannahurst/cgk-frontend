@@ -177,9 +177,6 @@ section.info > img {
     align-items: center;
     gap: 1.5rem;
   }
-  img {
-    max-width: initial;
-  }
 }
 
 /* HEADER  */

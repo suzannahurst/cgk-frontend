@@ -1,25 +1,5 @@
 // MAP
 
-// import { fetchAdventures } from "./adventures/adventures.js";
-// let locationsToShow = [];
-
-// const populateMap = async () => {
-//   let adventures = [];
-
-//   try {
-//     adventures = await fetchAdventures();
-//     // console.log(adventures);
-//   } catch (err) {
-//     console.error("Error:", error);
-//   }
-//   const data = adventures.data;
-//   data.map((adventure) => {
-//     locationsToShow.push(adventure);
-//   });
-//   // console.log("adventures", adventures);
-// };
-// populateMap();
-
 // Note: This example requires that you consent to location sharing when
 // prompted by your browser. If you see the error "The Geolocation service
 // failed.", it means you probably did not give permission for the browser to
@@ -52,19 +32,19 @@ function initMap() {
   const icons = {
     everyone: {
       icon: {
-        url: iconBase + "everyone.png",
+        url: iconBase + "marker-red.png",
         scaledSize: new google.maps.Size(40, 60),
       },
     },
     families: {
       icon: {
-        url: iconBase + "families3.png",
+        url: iconBase + "marker-purple.png",
         scaledSize: new google.maps.Size(40, 60),
       },
     },
     adults: {
       icon: {
-        url: iconBase + "adults.png",
+        url: iconBase + "marker-black.png",
         scaledSize: new google.maps.Size(40, 60),
       },
     },

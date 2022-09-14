@@ -49,7 +49,7 @@ const anim = () => {
     y: 100,
     duration: 4,
     scale: 13,
-    // ease: "power1.out",
+    ease: "power1.out",
   });
   gsap.to(".info-wrapper", {
     delay: 1,

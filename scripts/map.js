@@ -25,25 +25,25 @@ function initMap() {
   const icons = {
     fair: {
       icon: {
-        url: iconBase + "fair-marker.png",
+        url: iconBase + "marker-yellow.png",
         scaledSize: new google.maps.Size(40, 60),
       },
     },
     everyone: {
       icon: {
-        url: iconBase + "everyone.png",
+        url: iconBase + "marker-red.png",
         scaledSize: new google.maps.Size(40, 60),
       },
     },
     families: {
       icon: {
-        url: iconBase + "families3.png",
+        url: iconBase + "marker-purple.png",
         scaledSize: new google.maps.Size(40, 60),
       },
     },
     adults: {
       icon: {
-        url: iconBase + "adults.png",
+        url: iconBase + "marker-black.png",
         scaledSize: new google.maps.Size(40, 60),
       },
     },

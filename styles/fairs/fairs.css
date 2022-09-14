@@ -84,4 +84,7 @@ h3.location {
   .fair-img-wrapper > .hero-image.acrobat {
     max-width: 450px;
   }
+  img {
+    max-width: initial;
+  }
 }
