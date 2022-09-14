@@ -68,7 +68,7 @@ enterBtn.addEventListener("click", () => {
   setInterval(() => {
     landing.classList.add("fixed", "animated");
   }, 2000);
-  // setInterval(() => {
-  //   window.location.href = "./signup.html";
-  // }, 7000);
+  setInterval(() => {
+    window.location.href = "./signup.html";
+  }, 7000);
 });
