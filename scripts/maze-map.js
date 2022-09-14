@@ -87,8 +87,8 @@ function initMap() {
         '<div id="content" class="infoContent">' +
         '<div class="contentItem text">' +
         `<h3 class="adventureName">Animals in the City </h3>` +
-        '<p class="">Find the red door at Bloomberg Arcade, on Cannon Street Side. </p>' +
-        '<div class="maptags"><span class="maptag">Just for families</span></div>' +
+        '<p class="">To begin your adventure, find the red door at Bloomberg Arcade, on Cannon Street Side. Don\'t forget your smartphone. </p>' +
+        '<div class="maptags"><span class="maptag">Wheelchair accessible</span><span class="maptag">Great for kids</span></div>' +
         `<a href="../adventures/door-1.html"><h3 class="info">More info</h3></a>` +
         "</div>" +
         '<div class="contentItem">' +
