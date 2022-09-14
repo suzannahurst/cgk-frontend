@@ -22,12 +22,6 @@ export const fetchAdventures = async () => {
   try {
     const response = await fetch(
       "https://coney-golden-key.herokuapp.com/api/adventures?populate=*",
-      {
-        headers: {
-          // "Content-Type": "text/plain;charset=UTF-8",
-          "Content-Type": "application/json",
-        },
-      },
     );
     if (!response.ok) throw response;
     // console.log("resp fetchAdventures", response);
