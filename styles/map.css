@@ -212,6 +212,10 @@ h3.info:hover {
   margin-block-end: 10px;
 }
 
+#locateBtn {
+  display: none;
+}
+
 @media screen and (min-width: 450px) {
   .infoContent {
     max-width: 30rem;
