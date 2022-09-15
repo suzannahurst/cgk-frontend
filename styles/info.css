@@ -30,15 +30,13 @@ img.boat-img {
   max-width: 120%;
 }
 
-/* .faq-wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+img.extra {
+  position: fixed;
+  top: 10%;
+  right: 0;
+  max-height: 80%;
+  opacity: 8%;
 }
-
-.faq-wrapper > img {
-  max-height: 30%;
-} */
 
 @media screen and (min-width: 450px) {
   .train-wrapper {
@@ -54,5 +52,13 @@ img.boat-img {
     margin-left: 0;
     margin-right: 0;
     max-width: 100%;
+  }
+
+  img.extra {
+    position: fixed;
+    top: 10%;
+    right: 20%;
+    max-height: 80%;
+    opacity: 8%;
   }
 }

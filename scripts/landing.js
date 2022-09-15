@@ -61,6 +61,10 @@ const anim = () => {
     margin: "0 1.5rem",
     y: -100,
   });
+  gsap.to(".logo", {
+    duration: 1,
+    opacity: 0,
+  });
 };
 
 enterBtn.addEventListener("click", () => {

@@ -48,7 +48,7 @@ img.keyhole {
   align-items: center;
 }
 
-
+ */
 
 .logo-wrapper {
   display: flex;
@@ -57,9 +57,14 @@ img.keyhole {
   align-items: center;
   width: 100%;
   position: fixed;
-  bottom: 5%;
+  bottom: 2%;
   left: 0;
-} */
+}
+
+.logo-wrapper > .logo {
+  max-width: 70px;
+  z-index: -999999;
+}
 
 .info-wrapper {
   padding: var(--padding);
@@ -144,9 +149,9 @@ img.logo {
     top: -15%;
   } */
 
-  /* .logo-wrapper {
+  .logo-wrapper {
     justify-content: flex-end;
-  } */
+  }
 
   img.logo {
     max-width: 100px;
