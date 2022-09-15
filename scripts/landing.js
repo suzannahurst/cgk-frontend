@@ -48,7 +48,7 @@ const anim = () => {
   gsap.to(".keyhole", {
     y: 100,
     duration: 4,
-    scale: 13,
+    scale: 6,
     ease: "power1.out",
   });
   gsap.to(".info-wrapper", {
