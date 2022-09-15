@@ -42,10 +42,11 @@ h2.title {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  width: 75%;
 }
 
 .keyhole {
-  width: 75%;
+  width: 100%;
 }
 .juggler {
   width: 200px;
