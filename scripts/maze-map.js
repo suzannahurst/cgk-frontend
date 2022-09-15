@@ -39,20 +39,13 @@ function initMap() {
       );
       if (!response.ok) throw response;
       const adventures = await response.json();
-      // console.log(adventures);
+      // console.log("adventures", adventures);
       return adventures;
     } catch (error) {
       console.log("error", error);
       throw error;
     }
   };
-
-  try {
-    adv = fetchAdventures();
-    console.log("adventures after fetch", adv);
-  } catch (err) {
-    console.log("error", error);
-  }
 
   map = new google.maps.Map(document.getElementById("mazeMap"), {
     center: { lat: 51.51382754700306, lng: -0.09138173055736436 },
@@ -87,37 +80,57 @@ function initMap() {
         scaledSize: new google.maps.Size(40, 60),
       },
     },
+    adventure: {
+      icon: {
+        url: iconBase + "marker-purple.png",
+        scaledSize: new google.maps.Size(40, 60),
+      },
+    },
   };
 
-  // TODO  dynamically populate map
   // let locations = [];
-  // locationsToShow.map(
-  //   (locationToShow) => {
-  //     console.log("hi", locationToShow);
-  //   },
-  // const { name, oneline, tags, latitude, longitude, slug } = locationToShow;
-  // const location = {
-  //   position: new google.maps.LatLng(latitude, longitude),
-  //   type: "adventure",
-  //   content:
-  //     '<div id="content" class="infoContent">' +
-  //     '<div class="contentItem">' +
-  //     '<img src="../assets/img/illustrations/info-door.png">' +
-  //     "</div>" +
-  //     '<div class="content-item">' +
-  //     `<h3>${name}</h3>` +
-  //     `<p>${oneline}</p>` +
-  //     "<p>Family Friendly</p>" +
-  //     "<p>Step-free access</p>" +
-  //     `<a href="../adventures/${slug}.html"><strong>Find out more</strong></a>` +
-  //     "</div>" +
-  //     " </div>",
-  // };
-  // locations.push(location);
-  // });
-  // );
 
-  // console.log("locations", locations);
+  // // TODO create tags fn
+  // const createTags = (type, tags) => {
+  //   tags.map((tag) => {
+  //     return;
+  //     `<span class="maptag purple">${tag}</span>`;
+  //   });
+  // };
+
+  // const createAdventures = async () => {
+  //   const adventures = await fetchAdventures();
+  //   adventures.data.map((adventure) => {
+  //     console.log("adventure", adventure);
+  //     const { name, keyinfo, tags, latitude, longitude, slug, type } =
+  //       adventure.attributes;
+  //     const location = {
+  //       position: new google.maps.LatLng(latitude, longitude),
+  //       // position: new google.maps.LatLng(51.51202, -0.09088),
+  //       type: "adventure",
+  //       content:
+  //         '<div id="content" class="infoContent">' +
+  //         `<h3 class="adventureName">${name} </h3>` +
+  //         '<div class="contentItem">' +
+  //         '<div class="contentWrapper">' +
+  //         `<p class="adventureInfo" >${keyinfo} </p>` +
+  //         "</div>" +
+  //         '<img src="../assets/img/illustrations/info-door.png">' +
+  //         "</div>" +
+  //         '<div class="contentItem lower">' +
+  //         // `<div class="maptags">${}</div>` +
+  //         `<a href="../adventures/${slug}.html"><h3 class="info">More info </h3></a>` +
+  //         "</div>" +
+  //         "</div>",
+  //     };
+  //     locations.push(location);
+  //     console.log(locations);
+  //   });
+  //   showAllMarkers();
+  // };
+
+  // createAdventures();
+
   const locations = [
     {
       position: new google.maps.LatLng(51.51202, -0.09088),
@@ -250,7 +263,7 @@ function initMap() {
       type: "everyone",
       content:
         '<div id="content" class="infoContent">' +
-        `<h3 class="adventureName">The Artful Dodges Again</h3>` +
+        `<h3 class="adventureName">The Smashing Rock Sisters</h3>` +
         '<div class="contentItem">' +
         '<div class="contentWrapper">' +
         '<p class="adventureInfo" >To begin, find the red door in the square, opposite Barbican Tube at the entrance to Barbican Estate. Don\'t forget your smartphone (and headphones if you have them!)</p>' +
@@ -348,8 +361,9 @@ function initMap() {
   let currentInfoWindow = null;
 
   const showAllMarkers = () => {
+    console.log("hi");
     locations.map((location) => {
-      // console.log("location", location);
+      console.log("location", location);
       const marker = new google.maps.Marker({
         position: location.position,
         icon: icons[location.type].icon,
@@ -372,7 +386,6 @@ function initMap() {
       });
     });
   };
-
   showAllMarkers();
 
   infoWindow = new google.maps.InfoWindow();

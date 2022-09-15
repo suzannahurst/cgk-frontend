@@ -238,7 +238,7 @@ function initMap() {
       type: "everyone",
       content:
         '<div id="content" class="infoContent">' +
-        `<h3 class="adventureName">The Artful Dodges Again</h3>` +
+        `<h3 class="adventureName">The Smashing Rock Sisters</h3>` +
         '<div class="contentItem">' +
         '<div class="contentWrapper">' +
         '<p class="adventureInfo" >To begin, find the red door in the square, opposite Barbican Tube at the entrance to Barbican Estate. Don\'t forget your smartphone (and headphones if you have them!)</p>' +
