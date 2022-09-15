@@ -22,6 +22,7 @@ h2.title {
   font-size: 2.5rem;
   display: flex;
   flex-direction: column;
+  z-index: 999999;
 }
 
 /* .keyhole-wrapper {
@@ -42,11 +43,11 @@ h2.title {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  width: 75%;
+  width: 100%;
 }
 
 .keyhole {
-  width: 100%;
+  width: 65%;
 }
 .juggler {
   width: 200px;
@@ -58,7 +59,7 @@ h2.title {
   width: 200px;
   margin-bottom: -100px;
   align-self: flex-end;
-  z-index: 99999;
+  z-index: 999;
 }
 
 .hide {
@@ -166,22 +167,10 @@ img.logo {
   }
 
   .key-wrapper {
-    height: 70%;
+    /* height: 70%; */
     /* width: 100%; */
   }
 
-  .keyhole {
-    width: 100%;
-    height: 100%;
-  }
-
-  .juggler {
-    margin-left: -60px;
-  }
-
-  .dragon {
-    margin-right: -70px;
-  }
   /* .fixed {
       left: initial;
       top: initial;
@@ -215,6 +204,19 @@ img.logo {
   img.logo {
     max-width: 100px;
     margin-inline-end: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  .keyhole {
+    width: 25%;
+  }
+  .juggler {
+    margin-left: 25%;
+  }
+
+  .dragon {
+    margin-right: 25%;
   }
 }
 
