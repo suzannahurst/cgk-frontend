@@ -195,6 +195,9 @@ header {
 }
 
 /* FOOTER  */
+footer {
+  background-color: var(--main-bg-color);
+}
 .footer-outer {
   display: flex;
   flex-direction: column;
