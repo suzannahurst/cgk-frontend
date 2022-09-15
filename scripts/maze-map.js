@@ -1,3 +1,18 @@
+// export const fetchAdventures = async () => {
+//   try {
+//     const response = await fetch(
+//       "https://coney-golden-key.herokuapp.com/api/adventures?populate=*",
+//     );
+//     if (!response.ok) throw response;
+//     const adventures = await response.json();
+//     console.log(adventures);
+//     return adventures;
+//   } catch (error) {
+//     console.log("error", error);
+//     throw error;
+//   }
+// };
+
 // MAP
 
 // Note: This example requires that you consent to location sharing when
@@ -15,6 +30,30 @@ const showMissingAdventureMsg = (msg) => {
 let map, infoWindow;
 
 function initMap() {
+  let adv = [];
+
+  const fetchAdventures = async () => {
+    try {
+      const response = await fetch(
+        "https://coney-golden-key.herokuapp.com/api/adventures?populate=*",
+      );
+      if (!response.ok) throw response;
+      const adventures = await response.json();
+      // console.log(adventures);
+      return adventures;
+    } catch (error) {
+      console.log("error", error);
+      throw error;
+    }
+  };
+
+  try {
+    adv = fetchAdventures();
+    console.log("adventures after fetch", adv);
+  } catch (err) {
+    console.log("error", error);
+  }
+
   map = new google.maps.Map(document.getElementById("mazeMap"), {
     center: { lat: 51.51382754700306, lng: -0.09138173055736436 },
     zoom: 14,
