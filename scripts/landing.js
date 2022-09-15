@@ -44,14 +44,33 @@ const landing = document.getElementById("landing");
 const enterBtn = document.getElementById("enterBtn");
 const infoWrapper = document.getElementById("infoWrapper");
 
+// const anim = () => {
+//   gsap.to(".keyhole", {
+//     y: 100,
+//     duration: 4,
+//     scale: 6,
+//     ease: "power1.out",
+//   });
+//   gsap.to(".info-wrapper", {
+//     display: "initial",
+//     delay: 1,
+//     zIndex: 99999,
+//     duration: 4,
+//     backgroundColor: "#e86530",
+//     border: " #fff 1px solid",
+//     ease: "power1.out",
+//     margin: "0 1.5rem",
+//     y: -100,
+//   });
+//   gsap.to(".logo", {
+//     duration: 1,
+//     opacity: 0,
+//   });
+// };
+
 const anim = () => {
-  gsap.to(".keyhole", {
-    y: 100,
-    duration: 4,
-    scale: 6,
-    ease: "power1.out",
-  });
   gsap.to(".info-wrapper", {
+    display: "initial",
     delay: 1,
     zIndex: 99999,
     duration: 4,
@@ -75,4 +94,12 @@ enterBtn.addEventListener("click", () => {
   setInterval(() => {
     window.location.href = "./signup.html";
   }, 7000);
+});
+
+landing.addEventListener("click", () => {
+  // anim();
+
+  // setInterval(() => {
+  window.location.href = "./signup.html";
+  // }, 7000);
 });
