@@ -57,43 +57,6 @@ function initMap() {
 
   let locations = [];
 
-  // const locations = [
-  //   {
-  //     position: new google.maps.LatLng(51.51585, -0.094),
-  //     type: "location",
-  //     content:
-  //       '<div id="content" class="infoContent">' +
-  //       `<h3 class="adventureName">Name</h3>` +
-  //       '<div class="contentItem">' +
-  //       '<div class="contentWrapper">' +
-  //       "<h3 >Restaurant</h3> " +
-  //       '<p class="adventureInfo"></p>Orci ac auctor augue mauris augue. Eleifend donec pretium vulputate sapien.</p>' +
-  //       "</div>" +
-  //       '<div class="contentItem lower">' +
-  //       '<div class="maptags"><span class="maptag">Tag</span><span class="maptag">Tag</span></div>' +
-  //       `<a href="#"><h3 class="info">More info </h3></a>` +
-  //       "</div>" +
-  //       "</div>",
-  //   },
-  //   {
-  //     position: new google.maps.LatLng(51.5151, -0.084),
-  //     type: "location",
-  //     content:
-  //       '<div id="content" class="infoContent">' +
-  //       `<h3 class="adventureName">Name</h3>` +
-  //       '<div class="contentItem">' +
-  //       '<div class="contentWrapper">' +
-  //       "<h3 >Restaurant</h3> " +
-  //       '<p class="adventureInfo"></p>Orci ac auctor augue mauris augue. Eleifend donec pretium vulputate sapien.</p>' +
-  //       "</div>" +
-  //       '<div class="contentItem lower">' +
-  //       '<div class="maptags"><span class="maptag">Tag</span><span class="maptag">Tag</span></div>' +
-  //       `<a href="#"><h3 class="info">More info </h3></a>` +
-  //       "</div>" +
-  //       "</div>",
-  //   },
-  // ];
-
   const createAPs = async () => {
     const afterparties = await fetchAPs();
     afterparties.data.map((afterparty) => {
