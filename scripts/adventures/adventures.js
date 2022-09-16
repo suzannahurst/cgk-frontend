@@ -47,7 +47,7 @@ export const getAdventure = (id) => {
   })
     .then((resp) => {
       if (resp.ok) {
-        console.log("resp getAdventure", resp);
+        // console.log("resp getAdventure", resp);
         return resp.json();
       } else {
         throw new Error(resp.statusText);
@@ -77,6 +77,7 @@ export const displayAdventure = (adventure) => {
 
   adventureInfoMount.innerHTML = `
    <p class="maintext" > ${description}</p>
+   <br/>
      <h3>Instructions</h3>  <p class="maintext">${keyinfo}</p>
   
    `;

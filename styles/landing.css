@@ -165,7 +165,9 @@ img.logo {
   main {
     gap: 0;
   }
-
+  .keyhole {
+    width: 40%;
+  }
   .key-wrapper {
     /* height: 70%; */
     /* width: 100%; */

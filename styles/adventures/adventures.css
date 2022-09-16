@@ -10,6 +10,18 @@ h3.adventure {
   color: rgba(255, 255, 255, 0.6);
 }
 
+section {
+  margin-block-end: 3rem;
+}
+
+img.markerbg {
+  position: fixed;
+  max-width: 200px;
+  right: -15%;
+  top: 20%;
+  z-index: -9999;
+}
+
 @media screen and (min-width: 450px) {
   section.begin-adventure {
     max-width: 35%;
