@@ -5,9 +5,33 @@
 // failed.", it means you probably did not give permission for the browser to
 // locate you.
 
+const showMissingAPMsg = (msg) => {
+  document.getElementById("not-found").style =
+    "display: flex; display: -webkit-box; display: -ms-flexbox;";
+  document.getElementById("err-msg").innerHTML = msg;
+  // console.log("fair not found");
+};
+
 let map, infoWindow;
 
 function initMap() {
+  let ap = [];
+
+  const fetchAPs = async () => {
+    try {
+      const response = await fetch(
+        "https://coney-golden-key.herokuapp.com/api/after-parties?populate=*",
+      );
+      if (!response.ok) throw response;
+      const aps = await response.json();
+
+      return aps;
+    } catch (error) {
+      console.log("error", error);
+      throw error;
+    }
+  };
+
   map = new google.maps.Map(document.getElementById("map"), {
     center: { lat: 51.51382754700306, lng: -0.09138173055736436 },
     zoom: 14,
@@ -23,7 +47,7 @@ function initMap() {
   let iconBase = "./../assets/img/markers/";
 
   const icons = {
-    location: {
+    general: {
       icon: {
         url: iconBase + "marker-yellow.png",
         scaledSize: new google.maps.Size(40, 60),
@@ -31,43 +55,66 @@ function initMap() {
     },
   };
 
-  const locations = [
-    {
-      position: new google.maps.LatLng(51.51585, -0.094),
-      type: "location",
-      content:
-        '<div id="content" class="infoContent">' +
-        `<h3 class="adventureName">Name</h3>` +
-        '<div class="contentItem">' +
-        '<div class="contentWrapper">' +
-        "<h3 >Restaurant</h3> " +
-        '<p class="adventureInfo"></p>Orci ac auctor augue mauris augue. Eleifend donec pretium vulputate sapien.</p>' +
-        "</div>" +
-        '<div class="contentItem lower">' +
-        '<div class="maptags"><span class="maptag">Tag</span><span class="maptag">Tag</span></div>' +
-        `<a href="#"><h3 class="info">More info </h3></a>` +
-        "</div>" +
-        "</div>",
-    },
-    {
-      position: new google.maps.LatLng(51.5151, -0.084),
-      type: "location",
-      content:
-        '<div id="content" class="infoContent">' +
-        `<h3 class="adventureName">Name</h3>` +
-        '<div class="contentItem">' +
-        '<div class="contentWrapper">' +
-        "<h3 >Restaurant</h3> " +
-        '<p class="adventureInfo"></p>Orci ac auctor augue mauris augue. Eleifend donec pretium vulputate sapien.</p>' +
-        "</div>" +
-        '<div class="contentItem lower">' +
-        '<div class="maptags"><span class="maptag">Tag</span><span class="maptag">Tag</span></div>' +
-        `<a href="#"><h3 class="info">More info </h3></a>` +
-        "</div>" +
-        "</div>",
-    },
-  ];
+  let locations = [];
 
+  // const locations = [
+  //   {
+  //     position: new google.maps.LatLng(51.51585, -0.094),
+  //     type: "location",
+  //     content:
+  //       '<div id="content" class="infoContent">' +
+  //       `<h3 class="adventureName">Name</h3>` +
+  //       '<div class="contentItem">' +
+  //       '<div class="contentWrapper">' +
+  //       "<h3 >Restaurant</h3> " +
+  //       '<p class="adventureInfo"></p>Orci ac auctor augue mauris augue. Eleifend donec pretium vulputate sapien.</p>' +
+  //       "</div>" +
+  //       '<div class="contentItem lower">' +
+  //       '<div class="maptags"><span class="maptag">Tag</span><span class="maptag">Tag</span></div>' +
+  //       `<a href="#"><h3 class="info">More info </h3></a>` +
+  //       "</div>" +
+  //       "</div>",
+  //   },
+  //   {
+  //     position: new google.maps.LatLng(51.5151, -0.084),
+  //     type: "location",
+  //     content:
+  //       '<div id="content" class="infoContent">' +
+  //       `<h3 class="adventureName">Name</h3>` +
+  //       '<div class="contentItem">' +
+  //       '<div class="contentWrapper">' +
+  //       "<h3 >Restaurant</h3> " +
+  //       '<p class="adventureInfo"></p>Orci ac auctor augue mauris augue. Eleifend donec pretium vulputate sapien.</p>' +
+  //       "</div>" +
+  //       '<div class="contentItem lower">' +
+  //       '<div class="maptags"><span class="maptag">Tag</span><span class="maptag">Tag</span></div>' +
+  //       `<a href="#"><h3 class="info">More info </h3></a>` +
+  //       "</div>" +
+  //       "</div>",
+  //   },
+  // ];
+
+  const createAPs = async () => {
+    const afterparties = await fetchAPs();
+    afterparties.data.map((afterparty) => {
+      const { name, description, latitude, longitude, url, type } =
+        afterparty.attributes;
+
+      const location = {
+        position: new google.maps.LatLng(latitude, longitude),
+        // position: new google.maps.LatLng(51.51202, -0.09088),
+        type: "general",
+        content: `<div id="content" class="infoContent"><h3 class="adventureName">${name} </h3>
+        <h4>${type}</h4>
+        <div class="contentItem"><div class="contentWrapper"><p class="adventureInfo" >${description}</p></div></div><div class="contentItem lower"><a href="${url}"><h4 class="info">More info </h4></a></div></div>`,
+      };
+      locations.push(location);
+      // console.log(locations);
+    });
+    showAllMarkers();
+  };
+
+  createAPs();
   // TODO change it to follow this logic https://developers.google.com/maps/documentation/javascript/examples/marker-remove
   let activeMarkers = [];
 
@@ -125,7 +172,7 @@ function initMap() {
     });
   };
 
-  showAllMarkers();
+  // showAllMarkers();
 
   // Functionality for showing your own location
 
