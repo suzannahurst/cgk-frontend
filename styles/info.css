@@ -15,7 +15,8 @@ h3.subtitle {
   margin-block-end: 2rem;
 }
 
-section.privacy > ul {
+section.privacy > ul,
+section.accessibility > ul {
   list-style: circle;
   padding-left: 1.5rem;
 }
