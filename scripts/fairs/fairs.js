@@ -83,7 +83,7 @@ export const displayFair = (fair) => {
   // DISPLAY TRAVEL
   travelInfoMount.innerHTML = `
      <h3>When</h3>
-  <p>${date}</p>
+  <p>Saturday 15 October, ${date}</p>
   <h3 >Where</h3>
   ${directions}
    <h3>Nearest tubes</h3>
