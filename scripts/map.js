@@ -148,20 +148,20 @@ function initMap() {
         longitude,
         slug,
         date,
-        type,
+        location,
         image,
       } = fair.attributes;
 
       const imgUrl = image.data.attributes.url;
-      const location = {
+      const loc = {
         position: new google.maps.LatLng(latitude, longitude),
         // position: new google.maps.LatLng(51.51202, -0.09088),
         type: "fair",
-        content: `<div id="content" class="infoContent"><h3 class="adventureName">${name} </h3><div class="contentItem"><div class="contentWrapper"><h4>${date}</h4><p class="adventureInfo" >${keyinfo}</p></div><img src=${imgUrl}></div><div class="contentItem lower"><div class="maptags">${createTags(
+        content: `<div id="content" class="infoContent"><h3 class="adventureName">${name} </h3><div class="contentItem"><div class="contentWrapper"><h4>${location}</h4><h4>${date}</h4><p class="adventureInfo" >${keyinfo}</p></div><img src=${imgUrl}></div><div class="contentItem lower"><div class="maptags">${createTags(
           tags,
         )}</div><a href="../adventures/${slug}.html"><h3 class="info">More info </h3></a></div></div>`,
       };
-      locations.push(location);
+      locations.push(loc);
       // console.log(locations);
     });
     showAllMarkers();

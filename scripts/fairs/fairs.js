@@ -94,7 +94,6 @@ export const displayFair = (fair) => {
 };
 
 // // PULSING WIDGET
-const widget = document.getElementById("widget");
 
 const anim = () => {
   gsap.to(".widget", {
