@@ -2,6 +2,11 @@ body {
   text-align: center;
   font-weight: 600;
 }
+
+.landing,
+.key-wrapper {
+  cursor: pointer;
+}
 p {
   font-size: 1.8rem;
 }
@@ -12,21 +17,21 @@ h2.title {
 }
 
 h1.title {
-  font-size: 7rem;
-  color: var(--accent-color-secondary);
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: #fff;
-}
-
-h2.title {
   font-size: 5rem;
   color: var(--accent-color-secondary);
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: #fff;
 }
 
-p.strapline {
+h2.title {
   font-size: 4rem;
+  color: var(--accent-color-secondary);
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #fff;
+}
+
+p.strapline {
+  font-size: 3rem;
   font-family: "Big John";
   color: var(--accent-color-secondary);
   -webkit-text-stroke-width: 1px;
@@ -53,16 +58,16 @@ p > span {
 }
 
 .keyhole {
-  width: 65%;
+  width: 70%;
 }
 .juggler {
-  width: 200px;
+  max-width: 130px;
   margin-top: -100px;
   align-self: flex-start;
 }
 
 .dragon {
-  width: 200px;
+  max-width: 130px;
   margin-bottom: -100px;
   align-self: flex-end;
   z-index: 999;
@@ -138,14 +143,34 @@ img.logo {
 
 @media screen and (min-width: 850px) {
   .keyhole {
-    width: 25%;
+    width: 30%;
   }
   .juggler {
     margin-left: 25%;
+    max-width: 170px;
   }
 
   .dragon {
     margin-right: 25%;
+    max-width: 170px;
+  }
+
+  h1.title {
+    font-size: 6rem;
+  }
+
+  h2.title {
+    font-size: 5rem;
+  }
+
+  p.strapline {
+    font-size: 5rem;
+  }
+}
+
+@media screen and (min-width: 850px) and (orientation: portrait) {
+  .keyhole {
+    width: 60%;
   }
 }
 
