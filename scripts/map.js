@@ -5,9 +5,32 @@
 // failed.", it means you probably did not give permission for the browser to
 // locate you.
 
+const showMissingAdventureMsg = (msg) => {
+  document.getElementById("not-found").style =
+    "display: flex; display: -webkit-box; display: -ms-flexbox;";
+  document.getElementById("err-msg").innerHTML = msg;
+  // console.log("fair not found");
+};
+
 let map, infoWindow;
 
 function initMap() {
+  let adv = [];
+
+  const fetchAdventures = async () => {
+    try {
+      const response = await fetch(
+        "https://coney-golden-key.herokuapp.com/api/adventures?populate=*",
+      );
+      if (!response.ok) throw response;
+      const adventures = await response.json();
+      // console.log("adventures", adventures);
+      return adventures;
+    } catch (error) {
+      console.log("error", error);
+      throw error;
+    }
+  };
   map = new google.maps.Map(document.getElementById("map"), {
     center: { lat: 51.51382754700306, lng: -0.09138173055736436 },
     zoom: 14,
@@ -58,7 +81,7 @@ function initMap() {
         `<h3 class="adventureName">The Fair of Topsy Turvy Power </h3>` +
         '<div class="contentItem">' +
         '<div class="contentWrapper">' +
-        "<h3 >12:00-6:45pm</h3> " +
+        "<h3 >12:00-7pm</h3> " +
         '<p class="adventureInfo"></p>At the historic headquarters of London\'s city government, take the opportunity to venture into spaces not normally open to the public and discover unique and exciting activities and performances in every room.</p>' +
         "</div>" +
         '<img src="../assets/img/illustrations/acrobat.png">' +
@@ -74,7 +97,7 @@ function initMap() {
       type: "fair",
       content:
         '<div id="content" class="infoContent">' +
-        `<h3 class="adventureName">The Fair of Tall and Short True Stories</h3>` +
+        `<h3 class="adventureName">The Fair of Tall and Small Stories</h3>` +
         '<div class="contentItem">' +
         '<div class="contentWrapper">' +
         "<h3 >12:00-7pm</h3> " +

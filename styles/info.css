@@ -37,6 +37,7 @@ img.extra {
   right: 0;
   max-height: 80%;
   opacity: 8%;
+  z-index: -99999;
 }
 
 @media screen and (min-width: 450px) {
