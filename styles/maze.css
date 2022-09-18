@@ -2,6 +2,10 @@ div.hero-image {
   margin-block-end: 1.5rem;
 }
 
+.listItem {
+  margin-block-end: 2rem;
+}
+
 section.maze-buttons {
   display: flex;
   flex-wrap: wrap;

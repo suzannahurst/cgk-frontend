@@ -254,6 +254,17 @@ footer {
   border: transparent;
   max-width: 10%;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.dropdown-toggle > img {
+  margin-block-end: 5px;
+}
+.dropdown-toggle > span {
+  font-family: "Big John";
 }
 
 .dropdown > .btn.show,

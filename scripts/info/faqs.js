@@ -29,9 +29,9 @@ export const displayFaq = (faq) => {
   const li = document.createElement("li");
   li.classList.add("faqItem", "listItem");
   // li.innerHTML =
-  li.innerHTML = `<h3 class="subtitle">${question} </h3><p class="maintext"> ${converter.makeHtml(
+  li.innerHTML = `<h3 class="subtitle">${question} </h3>${converter.makeHtml(
     answer,
-  )}</p>
+  )}
 `;
 
   return li;

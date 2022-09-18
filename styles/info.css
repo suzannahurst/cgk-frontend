@@ -62,3 +62,8 @@ img.extra {
     opacity: 8%;
   }
 }
+
+/* LIST EG FAQS  */
+.listItem {
+  margin-block-end: 2rem;
+}

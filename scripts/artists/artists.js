@@ -154,6 +154,7 @@ const findId = (pathname) => {
     { slug: "20-storytellers-100-keys", id: 30 },
     { slug: "play-disrupt", id: 31 },
     { slug: "katy-cawkwell", id: 32 },
+    { slug: "spare-tyre", id: 33 },
     ,
   ];
   const artist = artists.find(({ slug }) => slug === artistSlug);
