@@ -30,6 +30,45 @@
 
 /* PROGRAMME STYLES  */
 
+.show-item {
+  margin-block-end: 2rem;
+  width: 100%;
+  display: flex;
+
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.show-item > div > p {
+  margin-block-end: 0.5rem;
+}
+
+.programme-item {
+  margin-block-end: 4rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  /* flex-wrap: wrap; */
+  justify-content: space-between;
+  background-color: rgba(233, 233, 233, 0.2);
+  padding: 1.5rem;
+  border-radius: 5px;
+}
+
+h3.location {
+  color: rgba(255, 255, 255, 100);
+  width: 100%;
+  font-size: 2rem;
+  margin-block-end: 1.5rem;
+}
+
+.show-image {
+  width: 50%;
+  margin-block-end: 1rem;
+  border-radius: 5px;
+}
+
+/* 
 .programme-item {
   margin-block-end: 4rem;
   width: 100%;
@@ -60,7 +99,7 @@ h3.location {
   width: 100%;
   margin-block-end: 1rem;
   border-radius: 5px;
-}
+} */
 
 @media screen and (min-width: 450px) {
   .widget {
@@ -90,6 +129,9 @@ h3.location {
   }
 
   .programme-item {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     align-items: flex-start;
     justify-content: flex-start;
     gap: 1.5rem;
@@ -109,7 +151,12 @@ h3.location {
 
   .show-item {
     max-width: 50%;
+    display: initial;
     margin-block-end: 0;
+    width: 48%;
+  }
+  .show-image {
+    width: 100%;
   }
 
   .show-image.fire {
