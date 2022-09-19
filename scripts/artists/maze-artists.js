@@ -1,20 +1,3 @@
-// scripts/index.js
-export const fetchArtists = () => {
-  const artistsReq = new Request(
-    "https://coney-golden-key.herokuapp.com/api/artists",
-  );
-
-  fetch(artistsReq)
-    .then((response) => response.json())
-    .then((artists) => {
-      console.log(artists);
-      return artists;
-    })
-    .catch((error) => {
-      console.error("Error:", error);
-    });
-};
-
 export const getArtist = (id) => {
   const artistReq = new Request(
     `https://coney-golden-key.herokuapp.com/api/artists/${id}?populate=*`,
@@ -44,43 +27,24 @@ export const showMissingArtistMsg = (msg) => {
 };
 
 export const displayArtist = (artist) => {
-  const {
-    name,
-    showname,
-    showtimes,
-    description,
-    fair,
-    biog,
-    slug,
-    tags,
-    showlocation,
-    image,
-  } = artist.data.attributes;
-  const fairName = fair.data.attributes.name;
-  const fairSlug = fair.data.attributes.slug;
-  const fairGm = fair.data.attributes.gm;
+  console.log(artist);
+  const { description, tags, image } = artist.data.attributes;
 
   const showInfoMount = document.getElementById("showInfoMount");
   const tagsMount = document.getElementById("tagsMount");
   const tagsSection = document.getElementById("tagsSection");
   const imgMount = document.getElementById("artistImgMount");
-  const fairMount = document.getElementById("fairMount");
+
+  const showdown = window.showdown;
+  const converter = new showdown.Converter();
 
   showInfoMount.innerHTML = `
-      <h3 class="subtitle" id="showName">${showname}</h3>
-      <p>Times: <span >${showtimes}</span></p>
-      <p class="maintext">Location: <span><a href="${fairGm}" target="_blank" class="highlighted">${showlocation} </a></span></p>
-      <p>Fair: <span><a href="./../fairs/${fairSlug}.html" class="highlighted">${fairName}</a> </span>
-      </p>
-      <p id="showDescription" class="maintext">${description}</p>
+      <p id="showDescription" class="maintext">${converter.makeHtml(
+        description,
+      )}</p>
       `;
 
-  // artistInfoMount.innerHTML = ` <h3 class="subtitle">About <span id="aboutArtistTitle">${name}</span></h3>
-  //     <p id="artistBiog" class="maintext">${biog}</p>`;
-  // add if we implement artist tags
-
   let tag;
-  // console.log(tags);
 
   if (tags.data.length === 0) {
     tagsSection.classList.add("hide");
@@ -97,21 +61,11 @@ export const displayArtist = (artist) => {
     });
   }
 
-  fairMount.innerHTML = ` <p>Back to <span><a href="./../fairs/${fairSlug}.html" class="highlighted">${fairName}</a>. </span>
-      </p>
-            <p>Back to the <a href="./../home.html" class="highlighted">homepage.</a></p>`;
-
   const imgUrl = image.data.map((img) => {
     return img.attributes.url;
   });
   imgMount.innerHTML = `<img id="artistImg" class="artist-img" src=${imgUrl}></img>`;
 };
-
-// const showdown = window.showdown;
-// const converter = new showdown.Converter();
-// document.getElementById("fair-content").innerHTML = converter.makeHtml(
-//   fair.content,
-// );
 
 // TODO best way to dynamically populate artists per page
 
@@ -170,6 +124,7 @@ const findId = (pathname) => {
     { slug: "27-degrees", id: 45 },
   ];
   const artist = artists.find(({ slug }) => slug === artistSlug);
+  console.log("artist id", artist.id);
   return artist.id;
 };
 
