@@ -1,4 +1,4 @@
-/* OTHER STYLES */
+/* TOP IMAGE  */
 
 .fair-img-wrapper {
   display: flex;
@@ -11,21 +11,7 @@
   justify-content: flex-start;
 }
 
-.programme-item {
-  margin-block-end: 4rem;
-}
-
-h3.location {
-  color: rgba(255, 255, 255, 0.6);
-}
-
-.show-item {
-  margin-block-end: 2rem;
-}
-
-.show-item > p {
-  margin-block-end: 0;
-}
+/* WIDGET */
 
 .widget-wrapper {
   width: 100%;
@@ -40,6 +26,36 @@ h3.location {
 
 .tag {
   display: inline-block;
+}
+
+/* PROGRAMME STYLES  */
+
+.programme-item {
+  margin-block-end: 4rem;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+h3.location {
+  color: rgba(255, 255, 255, 100);
+  width: 100%;
+  font-size: 2rem;
+}
+
+.show-item {
+  margin-block-end: 2rem;
+  width: 48%;
+}
+
+.show-item > p {
+  margin-block-end: 0;
+}
+
+.show-image {
+  width: 100%;
+  margin-block-end: 1rem;
 }
 
 @media screen and (min-width: 450px) {
@@ -63,6 +79,16 @@ h3.location {
   .programme-wrapper {
     display: flex;
     gap: 2rem;
+    align-items: start;
+  }
+
+  .programme-item {
+    align-items: start;
+    max-width: 25%;
+  }
+
+  .show-item {
+    width: 100%;
   }
   .fair-img-wrapper > .hero-image {
     max-height: 400px;
