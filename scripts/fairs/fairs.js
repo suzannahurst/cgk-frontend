@@ -28,7 +28,7 @@ export const getFair = (id) => {
   fetch(fairReq)
     .then((resp) => {
       if (resp.ok) {
-        console.log("resp", resp);
+        // console.log("resp", resp);
         return resp.json();
       } else {
         throw new Error(resp.statusText);
@@ -50,7 +50,7 @@ export const showMissingFairMsg = (msg) => {
 };
 
 export const displayFair = (fair) => {
-  console.log(fair.data.attributes);
+  // console.log(fair.data.attributes);
   const { name, directions, description, tags, programme, tube, gm, date } =
     fair.data.attributes;
   // const { url } = image.data.attributes;
