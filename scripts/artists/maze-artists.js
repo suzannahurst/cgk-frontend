@@ -61,10 +61,14 @@ export const displayArtist = (artist) => {
     });
   }
 
-  const imgUrl = image.data.map((img) => {
-    return img.attributes.url;
-  });
-  imgMount.innerHTML = `<img id="artistImg" class="artist-img" src=${imgUrl}></img>`;
+  if (image.data === null) {
+    imgMount.classList.add("hide");
+  } else {
+    const imgUrl = image.data.map((img) => {
+      return img.attributes.url;
+    });
+    imgMount.innerHTML = `<img id="artistImg" class="artist-img" src=${imgUrl}></img>`;
+  }
 };
 
 // TODO best way to dynamically populate artists per page

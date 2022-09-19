@@ -101,10 +101,14 @@ export const displayArtist = (artist) => {
       </p>
             <p>Back to the <a href="./../home.html" class="highlighted">homepage.</a></p>`;
 
-  const imgUrl = image.data.map((img) => {
-    return img.attributes.url;
-  });
-  imgMount.innerHTML = `<img id="artistImg" class="artist-img" src=${imgUrl}></img>`;
+  if (image.data === null) {
+    imgMount.classList.add("hide");
+  } else {
+    const imgUrl = image.data.map((img) => {
+      return img.attributes.url;
+    });
+    imgMount.innerHTML = `<img id="artistImg" class="artist-img" src=${imgUrl}></img>`;
+  }
 };
 
 // const showdown = window.showdown;
