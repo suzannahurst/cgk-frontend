@@ -106,6 +106,7 @@ function initMap() {
       { id: 9, color: "red" },
       { id: 10, color: "gold" },
       { id: 11, color: "gold" },
+      { id: 12, color: "gold" },
     ];
 
     const wrapper = tags.data.map((tag) => {
@@ -137,7 +138,7 @@ function initMap() {
         // position: new google.maps.LatLng(51.51202, -0.09088),
         type: type,
         content: `<div id="content" class="infoContent"><h3 class="adventureName">${name} </h3>
-        <h4>Last entry: ${lastEntry}</h4><div class="contentItem"><div class="contentWrapper"><p class="adventureInfo" >${logistics}</p><br/><p class="adventureInfo" >${description}</p><br/><p class="adventureInfo" >${after}</p></div><img src="../assets/img/illustrations/info-door.png"></div><div class="contentItem lower"><div class="maptags">${createTags(
+        <h4>Last entry: ${lastEntry}</h4><div class="contentItem"><div class="contentWrapper"><p class="adventureInfo" >${description}</p><br/><p class="adventureInfo" >${after}</p></div><img src="../assets/img/illustrations/info-door.png"></div><div class="contentItem lower"><div class="maptags">${createTags(
           tags,
         )}</div><a href="../adventures/${slug}.html"><h3 class="info">More info </h3></a></div></div>`,
       };
@@ -170,7 +171,7 @@ function initMap() {
         type: "fair",
         content: `<div id="content" class="infoContent"><h3 class="adventureName">${name} </h3><div class="contentItem"><div class="contentWrapper"><h4>${location}</h4><h4>${date}</h4><p class="adventureInfo" >${keyinfo}</p></div><img src=${imgUrl}></div><div class="contentItem lower"><div class="maptags">${createTags(
           tags,
-        )}</div><a href="../adventures/${slug}.html"><h3 class="info">More info </h3></a></div></div>`,
+        )}</div><a href="../fairs/${slug}.html"><h3 class="info">More info </h3></a></div></div>`,
       };
       locations.push(loc);
       // console.log(locations);

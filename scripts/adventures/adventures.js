@@ -95,7 +95,7 @@ export const displayAdventure = (adventure) => {
    `;
 
   instructionsMount.innerHTML = `
-  <h3 class="subtitle">Instructions</h3> 
+  <h3 class="subtitle">About this adventure</h3> 
    <p class="maintext" > ${description}</p>
     <p class="maintext">${after}</p>
    `;
