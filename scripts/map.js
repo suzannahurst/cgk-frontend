@@ -119,14 +119,25 @@ function initMap() {
   const createAdventures = async () => {
     const adventures = await fetchAdventures();
     adventures.data.map((adventure) => {
-      const { name, keyinfo, tags, latitude, longitude, slug, type } =
-        adventure.attributes;
-
+      const {
+        name,
+        lastEntry,
+        description,
+        after,
+        logistics,
+        tags,
+        latitude,
+        longitude,
+        slug,
+        type,
+      } = adventure.attributes;
+      console.log(type);
       const location = {
         position: new google.maps.LatLng(latitude, longitude),
         // position: new google.maps.LatLng(51.51202, -0.09088),
         type: type,
-        content: `<div id="content" class="infoContent"><h3 class="adventureName">${name} </h3><div class="contentItem"><div class="contentWrapper"><p class="adventureInfo" >${keyinfo}</p></div><img src="../assets/img/illustrations/info-door.png"></div><div class="contentItem lower"><div class="maptags">${createTags(
+        content: `<div id="content" class="infoContent"><h3 class="adventureName">${name} </h3>
+        <h4>Last entry: ${lastEntry}</h4><div class="contentItem"><div class="contentWrapper"><p class="adventureInfo" >${logistics}</p><br/><p class="adventureInfo" >${description}</p><br/><p class="adventureInfo" >${after}</p></div><img src="../assets/img/illustrations/info-door.png"></div><div class="contentItem lower"><div class="maptags">${createTags(
           tags,
         )}</div><a href="../adventures/${slug}.html"><h3 class="info">More info </h3></a></div></div>`,
       };

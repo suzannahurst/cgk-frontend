@@ -66,20 +66,38 @@ export const showMissingAdventureMsg = (msg) => {
 
 export const displayAdventure = (adventure) => {
   console.log(adventure.data.attributes.name);
-  const { description, keyinfo, tags, tube, gm } = adventure.data.attributes;
+  const {
+    name,
+    openingTime,
+    lastEntry,
+    after,
+    logistics,
+    slug,
+    startingInstruction,
+    description,
+    keyinfo,
+    tags,
+    tube,
+    gm,
+  } = adventure.data.attributes;
 
   // const { url } = image.data.attributes;
   const adventureInfoMount = document.getElementById("adventureInfoMount");
+  const instructionsMount = document.getElementById("instructionsMount");
   const locationMount = document.getElementById("locationMount");
   const tagsMount = document.getElementById("tagsMount");
 
   // DISPLAY INFO
 
   adventureInfoMount.innerHTML = `
+  <p class="maintext" ><strong> ${logistics}</strong></p>
+  <p class="maintext" >Opening times: ${openingTime}. Last entry: ${lastEntry}</p>
+   `;
+
+  instructionsMount.innerHTML = `
+  <h3 class="subtitle">Instructions</h3> 
    <p class="maintext" > ${description}</p>
-   <br/>
-     <h3>Instructions</h3>  <p class="maintext">${keyinfo}</p>
-  
+    <p class="maintext">${after}</p>
    `;
 
   let tag;
@@ -95,8 +113,9 @@ export const displayAdventure = (adventure) => {
   });
   // DISPLAY TRAVEL
   locationMount.innerHTML = `
-      <p>Nearest station: ${tube} </p>
-      <p class="maintext">Show on <a href="${gm}" target="_blank" class="highlighted">Google Maps</a></p>`;
+  <p> ${startingInstruction} </p>
+     <p class="maintext">Show on <a href="${gm}" target="_blank" class="highlighted">Google Maps</a></p>
+  <p>Nearest station: ${tube} </p>`;
 
   // DISPLAY PROGRAMME
   //   programmeInfoMount.innerHTML = converter.makeHtml(programme);
