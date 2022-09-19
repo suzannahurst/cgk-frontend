@@ -86,7 +86,7 @@ export const displayFair = (fair) => {
   <p>Sat 15 October, ${date}</p>
   <h3 >Where</h3>
   ${directions}
-   <h3>Nearest tubes</h3>
+   <h3>Nearest station:</h3>
    <p class="maintext"> ${tube} </p>`;
 
   // DISPLAY PROGRAMME

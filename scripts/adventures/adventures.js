@@ -95,7 +95,7 @@ export const displayAdventure = (adventure) => {
   });
   // DISPLAY TRAVEL
   locationMount.innerHTML = `
-      <p>Nearest tube: ${tube} </p>
+      <p>Nearest station: ${tube} </p>
       <p class="maintext">Show on <a href="${gm}" target="_blank" class="highlighted">Google Maps</a></p>`;
 
   // DISPLAY PROGRAMME
