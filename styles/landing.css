@@ -3,8 +3,7 @@ body {
   font-weight: 600;
 }
 
-.landing,
-.key-wrapper {
+a {
   cursor: pointer;
 }
 p {
@@ -17,32 +16,32 @@ h2.title {
 }
 
 h1.title {
-  font-size: 5rem;
-  color: var(--accent-color-secondary);
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: #fff;
+  font-size: 3rem;
+  /* color: var(--accent-color-secondary); */
+  /* -webkit-text-stroke-width: 2px; */
+  /* -webkit-text-stroke-color: #fff; */
 }
 
 h2.title {
-  font-size: 4rem;
-  color: var(--accent-color-secondary);
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: #fff;
+  font-size: 2rem;
+  /* color: var(--accent-color-secondary); */
+  /* -webkit-text-stroke-width: 2px; */
+  /* -webkit-text-stroke-color: #fff; */
 }
 
 p.strapline {
-  font-size: 3rem;
-  font-family: "Big John";
-  color: var(--accent-color-secondary);
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: #fff;
+  font-size: 2rem;
+  /* font-family: "Big John"; */
+  /* color: var(--accent-color-secondary); */
+  /* -webkit-text-stroke-width: 1px; */
+  /* -webkit-text-stroke-color: #fff; */
 }
 p > span {
   display: block;
 }
 
 .title-wrapper {
-  position: absolute;
+  /* position: absolute; */
   padding: 1.5rem;
   width: 90%;
   text-align: center;
@@ -58,7 +57,7 @@ p > span {
 }
 
 .keyhole {
-  width: 70%;
+  width: 45%;
 }
 .juggler {
   max-width: 130px;
@@ -130,6 +129,9 @@ img.logo {
   .keyhole {
     width: 40%;
   }
+  .key-wrapper {
+    width: 60%;
+  }
 
   .logo-wrapper {
     justify-content: flex-end;
@@ -142,29 +144,38 @@ img.logo {
 }
 
 @media screen and (min-width: 850px) {
+  main.landing {
+    flex-direction: row;
+  }
   .keyhole {
-    width: 30%;
+    width: 55%;
+  }
+  .title-wrapper {
+    text-align: left;
+    width: max-content;
   }
   .juggler {
-    margin-left: 25%;
+    margin-left: 15%;
     max-width: 170px;
   }
 
   .dragon {
-    margin-right: 25%;
+    margin-right: 15%;
     max-width: 170px;
   }
 
   h1.title {
-    font-size: 6rem;
+    font-size: 3.5rem;
+    margin-block-end: 1rem;
   }
 
   h2.title {
-    font-size: 5rem;
+    font-size: 2.5rem;
+    margin-block-end: 1rem;
   }
 
   p.strapline {
-    font-size: 5rem;
+    font-size: 2rem;
   }
 }
 
