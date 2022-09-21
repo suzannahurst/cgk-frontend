@@ -46,7 +46,7 @@ section.contents > * {
   background: var(--accent-color-secondary);
   border: 1px solid #fff;
 }
-.contents-item > a:hover {
+a.contents-item:hover {
   color: #fff;
 }
 
@@ -77,8 +77,8 @@ section.contents > * {
   margin-bottom: 0;
 }
 
-.maze > a > img,
-.hunt > a > img {
+.maze > .wrapper > img,
+.hunt > .wrapper > img {
   max-width: 50%;
 }
 
@@ -151,6 +151,11 @@ img.logo {
       "a a f f f e e"
       "a a g g g e e";
     gap: var(--padding);
+  }
+
+  .maze > .wrapper > img,
+  .hunt > .wrapper > img {
+    max-width: 75%;
   }
 
   .maze > .wrapper,
