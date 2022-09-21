@@ -26,11 +26,11 @@ section.contents > * {
 }
 
 .date {
-  max-width: 70%;
+  /* max-width: 70%; */
   margin: auto;
 }
 .date > span {
-  font-size: 1.5rem;
+  font-size: 2rem;
   display: block;
   font-family: "Big John";
 }
@@ -169,6 +169,19 @@ img.logo {
   .date {
     max-width: 30%;
     margin: auto;
+  }
+
+  /* section.intro {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  section.intro > div {
+    max-width: 49%;
+  } */
+
+  h1.title {
+    width: 100%;
   }
   section.contents {
     display: grid;
