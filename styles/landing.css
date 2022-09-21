@@ -17,35 +17,23 @@ h2.title {
 
 h1.title {
   font-size: 3rem;
-  /* color: var(--accent-color-secondary); */
-  /* -webkit-text-stroke-width: 2px; */
-  /* -webkit-text-stroke-color: #fff; */
 }
 
 h2.title {
   font-size: 2rem;
-  /* color: var(--accent-color-secondary); */
-  /* -webkit-text-stroke-width: 2px; */
-  /* -webkit-text-stroke-color: #fff; */
 }
 
 p.strapline {
   font-size: 2rem;
-  /* font-family: "Big John"; */
-  /* color: var(--accent-color-secondary); */
-  /* -webkit-text-stroke-width: 1px; */
-  /* -webkit-text-stroke-color: #fff; */
 }
 p > span {
   display: block;
 }
 
 .title-wrapper {
-  /* position: absolute; */
   padding: 1.5rem;
   width: 90%;
   text-align: center;
-  /* background-color: rgba(255, 255, 255, 0.6); */
 }
 
 .key-wrapper {

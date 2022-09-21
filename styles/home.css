@@ -25,6 +25,10 @@ section.contents > * {
   min-width: 0;
 }
 
+.date {
+  max-width: 70%;
+  margin: auto;
+}
 .date > span {
   font-size: 1.5rem;
   display: block;

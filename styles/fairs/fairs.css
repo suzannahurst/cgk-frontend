@@ -144,6 +144,10 @@ h3.location {
     display: flex;
   }
 
+  .grow {
+    flex-grow: 1;
+  }
+
   .programme-item.narrow.solo > .show-item > .show-image {
     width: 49%;
   }
