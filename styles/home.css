@@ -149,10 +149,16 @@ img.logo {
   flex-direction: row;
   margin-bottom: 1.5rem;
 }
+@media screen and (min-width: 450px) {
+  .date {
+    max-width: 30%;
+    margin: auto;
+  }
+}
 
 @media screen and (min-width: 800px) {
-  .site-title > a > h1 {
-    font-size: 4rem;
+  h1.title {
+    font-size: 5rem;
   }
 
   section > p,
@@ -160,8 +166,9 @@ img.logo {
     max-width: 75%;
     margin: auto auto 15px auto;
   }
-  p.date {
-    margin-block-end: 0;
+  .date {
+    max-width: 30%;
+    margin: auto;
   }
   section.contents {
     display: grid;
