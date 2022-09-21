@@ -271,7 +271,7 @@ footer {
 }
 
 .dropdown > .btn.show,
-.dropdown > .btn.focus {
+.dropdown > .btn.focus .dropdown > .btn:active {
   background-color: transparent;
 }
 
