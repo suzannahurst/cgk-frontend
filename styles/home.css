@@ -137,6 +137,15 @@ img.logo {
   margin-block-start: 1.5rem;
 }
 
+.logo-wrapper.center {
+  display: none;
+}
+
+.logo-wrapper.sidepiece {
+  flex-direction: row;
+  margin-bottom: 1.5rem;
+}
+
 @media screen and (min-width: 800px) {
   .site-title > a > h1 {
     font-size: 4rem;
@@ -223,5 +232,13 @@ img.logo {
     max-width: 50px;
     margin-inline-end: 1.5rem;
     margin-block-start: 0;
+  }
+
+  .logo-wrapper.center {
+    display: initial;
+  }
+
+  .logo-wrapper.sidepiece {
+    display: none;
   }
 }

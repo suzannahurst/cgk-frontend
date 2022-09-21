@@ -225,8 +225,8 @@ footer {
 .social-wrapper {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  /* align-items: center; */
+  justify-content: flex-start;
+  align-items: flex-start;
   gap: 1rem;
   font-family: var(--font-headings);
 }
@@ -234,7 +234,7 @@ footer {
 .social-wrapper > .coney,
 .social-wrapper > .col {
   display: flex;
-  flex-direction: row;
+  flex-direction: row-reverse;
   justify-content: center;
 }
 .social-item {
