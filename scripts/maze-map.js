@@ -88,6 +88,7 @@ function initMap() {
       { id: 11, color: "gold" },
       { id: 12, color: "gold" },
       { id: 13, color: "gold" },
+      { id: 14, color: "gold" },
     ];
 
     // A FUNCTION SHOULD HAVE ONE OBJECTIVE

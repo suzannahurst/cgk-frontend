@@ -248,6 +248,7 @@ footer {
 /* HAMBURGER MENU */
 .dropdown {
   display: contents;
+  cursor: pointer;
 }
 
 .dropdown-toggle {
