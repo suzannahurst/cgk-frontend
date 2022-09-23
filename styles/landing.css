@@ -182,7 +182,7 @@ img.logo {
   left: 10px;
   bottom: 20px;
   box-shadow: 0px 0px 15px #cccccc;
-  padding: 5px 10px;
+  padding: 1.5rem;
 }
 #cookiePopup p {
   text-align: left;
