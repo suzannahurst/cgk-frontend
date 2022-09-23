@@ -1,5 +1,20 @@
 body {
   text-align: center;
+  padding-top: 4rem;
+}
+
+header {
+  position: initial;
+}
+
+h1.title {
+  font-size: 3rem;
+  margin-block-end: 1rem;
+}
+
+.dropdown-toggle {
+  position: fixed;
+  top: 20px;
 }
 
 section.info > .hero {
@@ -151,6 +166,9 @@ img.logo {
   margin-bottom: 1.5rem;
 }
 @media screen and (min-width: 450px) {
+  body {
+    padding-top: 1rem;
+  }
   .date {
     /* max-width: 30%; */
     margin: auto;
@@ -159,7 +177,8 @@ img.logo {
 
 @media screen and (min-width: 800px) {
   h1.title {
-    font-size: 5rem;
+    font-size: 4rem;
+    margin-block-end: 1rem;
   }
 
   section > p,
@@ -172,17 +191,9 @@ img.logo {
     margin: auto;
   }
 
-  /* section.intro {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  section.intro > div {
-    max-width: 49%;
-  } */
-
   h1.title {
     width: 100%;
+    margin-block-end: 0;
   }
   section.contents {
     display: grid;
@@ -199,7 +210,7 @@ img.logo {
 
   .fair > .wrapper > h2,
   .wrapper > h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     margin-bottom: 0;
   }
 
