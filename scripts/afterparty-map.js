@@ -60,16 +60,29 @@ function initMap() {
   const createAPs = async () => {
     const afterparties = await fetchAPs();
     afterparties.data.map((afterparty) => {
-      const { name, description, latitude, longitude, url, type } =
-        afterparty.attributes;
+      console.log(afterparty);
+      const {
+        name,
+        description,
+        latitude,
+        longitude,
+        url,
+        type,
+        OpeningHours,
+      } = afterparty.attributes;
 
       const location = {
         position: new google.maps.LatLng(latitude, longitude),
         // position: new google.maps.LatLng(51.51202, -0.09088),
         type: "general",
         content: `<div id="content" class="infoContent"><h3 class="adventureName">${name} </h3>
-        <h4>${type}</h4>
-        <div class="contentItem"><div class="contentWrapper"><p class="adventureInfo" >${description}</p></div></div><div class="contentItem lower"><a href="${url}"><h4 class="info">More info </h4></a></div></div>`,
+        <h4>${type} | ${OpeningHours}</h4>
+ 
+     <div class="contentItem"><div class="contentWrapper">
+     
+        <p class="adventureInfo" >${description}</p></div></div><div class="contentItem lower"><a href="${url}"><h4 class="info">More info </h4></a>
+        </div>
+        </div>`,
       };
       locations.push(location);
       // console.log(locations);
