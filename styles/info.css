@@ -82,3 +82,7 @@ img.extra {
 .listItem {
   margin-block-end: 2rem;
 }
+
+section.faqs {
+  margin-block-end: 4rem;
+}
