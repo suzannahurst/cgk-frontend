@@ -69,8 +69,8 @@ a.contents-item:hover {
   grid-area: a;
 }
 
-.maze > .wrapper,
-.hunt > .wrapper {
+/* .hunt > .wrapper  */
+.maze > .wrapper {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -119,9 +119,9 @@ a.contents-item:hover {
   margin-block-end: 0;
 }
 
-.hunt > .wrapper > img {
+/* .hunt > .wrapper > img {
   display: none;
-}
+} */
 
 /* FOOTER  */
 
@@ -186,24 +186,26 @@ img.logo {
   }
   section.contents {
     display: grid;
-    grid-template-columns: repeat(7, minmax(0, 1fr));
+    grid-template-columns: repeat(5, minmax(0, 1fr));
     grid-template-rows: repeat(2, minmax(0, 1fr));
     grid-template-areas:
-      "a a b c d e e "
-      "a a b c d e e"
-      "a a f g h e e"
-      "a a f g h e e";
+      " a b c d e  "
+      " a b c d e "
+      " f g g g h "
+      " f g g g h ";
+
     gap: var(--padding);
   }
 
-  .practical > .wrapper > h2,
-  .after > .wrapper > h2,
-  .map > .wrapper > h2 {
-    font-size: 1.3rem;
+  .fair > .wrapper > h2,
+  .wrapper > h2 {
+    font-size: 2rem;
     margin-bottom: 0;
   }
+
   .maze > .wrapper > img,
-  .hunt > .wrapper > img {
+  .hunt > .wrapper > img,
+  .wrapper > img {
     max-width: 75%;
   }
 
@@ -217,11 +219,11 @@ img.logo {
   }
 
   .stpauls {
-    grid-area: b;
+    grid-area: c;
   }
 
   .guildhall {
-    grid-area: c;
+    grid-area: b;
   }
 
   .londonwall {
@@ -232,11 +234,15 @@ img.logo {
     grid-area: e;
   }
   .practical {
-    grid-area: h;
+    grid-area: g;
   }
 
   .map {
     grid-area: f;
+  }
+
+  .after {
+    grid-area: h;
   }
 
   .contents-item > a > img {

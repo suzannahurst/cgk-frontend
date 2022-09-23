@@ -110,7 +110,7 @@ const findId = (pathname) => {
     { slug: "sol-cinema", id: 27 },
     { slug: "the-story-explorers", id: 28 },
     { slug: "moth-theatre", id: 29 },
-    { slug: "20-storytellers-100-keys", id: 30 },
+    { slug: "100-keys", id: 30 },
     { slug: "play-disrupt", id: 31 },
     { slug: "katy-cawkwell", id: 32 },
     { slug: "spare-tyre", id: 33 },
@@ -126,6 +126,9 @@ const findId = (pathname) => {
     { slug: "poltergeist-theatre", id: 43 },
     { slug: "ruth-sutcliffe", id: 44 },
     { slug: "27-degrees", id: 45 },
+    { slug: "the-red-thread", id: 46 },
+    { slug: "walk-the-plank-and-chivaree-circus", id: 47 },
+    ,
   ];
   const artist = artists.find(({ slug }) => slug === artistSlug);
   console.log("artist id", artist.id);
