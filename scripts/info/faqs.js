@@ -4,12 +4,13 @@ const converter = new showdown.Converter();
 // scripts/index.js
 export const fetchFaqs = () => {
   const faqsReq = new Request(
-    "https://coney-golden-key.herokuapp.com/api/faqs",
+    "https://coney-golden-key.herokuapp.com/api/faqs?populate=*",
   );
 
   fetch(faqsReq)
     .then((response) => response.json())
     .then((faqs) => {
+      console.log(faqs);
       // let faqList = document.getElementById("faqList");
       let aboutList = document.getElementById("aboutList");
       let travelList = document.getElementById("travelList");
@@ -18,6 +19,7 @@ export const fetchFaqs = () => {
       let localList = document.getElementById("localList");
       let data = faqs.data;
       data.map((faq) => {
+        console.log(faq);
         switch (faq.attributes.category) {
           case "about":
             aboutList.appendChild(displayFaq(faq));
@@ -29,6 +31,7 @@ export const fetchFaqs = () => {
             planList.appendChild(displayFaq(faq));
             break;
           case "security":
+            console.log("security");
             securityList.appendChild(displayFaq(faq));
             break;
           case "local":
