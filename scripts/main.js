@@ -12,6 +12,7 @@
 //   cookieConsent.reset();
 // });
 
+console.log("hello");
 var cookieName = "CookieSeenAccepted";
 var cookieValue = "True";
 var cookieExpireDays = 30;
