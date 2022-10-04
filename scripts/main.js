@@ -19,7 +19,6 @@ var cookieExpireDays = 30;
 // when users click accept button
 let acceptCookie = document.getElementById("acceptCookie");
 acceptCookie.onclick = function () {
-  console.log("clicking");
   createCookie(cookieName, cookieValue, cookieExpireDays);
 };
 // function to set cookie in web browser
