@@ -104,10 +104,11 @@ export const displayArtist = (artist) => {
   if (image.data === null) {
     imgMount.classList.add("hide");
   } else {
-    const imgUrl = image.data.map((img) => {
-      return img.attributes.url;
+    image.data.map((img) => {
+      const { url, alternativeText } = img.attributes;
+      console.log(img);
+      imgMount.innerHTML = `<img id="artistImg" class="artist-img" src=${url} alt="${alternativeText}"></img>`;
     });
-    imgMount.innerHTML = `<img id="artistImg" class="artist-img" src=${imgUrl}></img>`;
   }
 };
 

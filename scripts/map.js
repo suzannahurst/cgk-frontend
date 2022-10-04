@@ -134,13 +134,13 @@ function initMap() {
         slug,
         type,
       } = adventure.attributes;
-      console.log(type);
+
       const location = {
         position: new google.maps.LatLng(latitude, longitude),
         // position: new google.maps.LatLng(51.51202, -0.09088),
         type: type,
         content: `<div id="content" class="infoContent"><h3 class="adventureName">${name} </h3>
-        <h4>Last entry: ${lastEntry}</h4><div class="contentItem"><div class="contentWrapper"><p class="adventureInfo" >${description}</p><br/><p class="adventureInfo" >${after}</p></div><img src="../assets/img/illustrations/info-door.png"></div><div class="contentItem lower"><div class="maptags">${createTags(
+        <h4>Last entry: ${lastEntry}</h4><div class="contentItem"><div class="contentWrapper"><p class="adventureInfo" >${description}</p><br/><p class="adventureInfo" >${after}</p></div><img src="../assets/img/illustrations/info-door.png" alt="an illustration of an mediveal door"></div><div class="contentItem lower"><div class="maptags">${createTags(
           tags,
         )}</div><a href="../adventures/${slug}.html"><h3 class="info">More info </h3></a></div></div>`,
       };
@@ -167,11 +167,12 @@ function initMap() {
       } = fair.attributes;
 
       const imgUrl = image.data.attributes.url;
+      const alt = image.data.attributes.alternativeText;
       const loc = {
         position: new google.maps.LatLng(latitude, longitude),
         // position: new google.maps.LatLng(51.51202, -0.09088),
         type: "fair",
-        content: `<div id="content" class="infoContent"><h3 class="adventureName">${name} </h3><div class="contentItem"><div class="contentWrapper"><h4>${location}</h4><h4>${date}</h4><p class="adventureInfo" >${keyinfo}</p></div><img src=${imgUrl}></div><div class="contentItem lower"><div class="maptags">${createTags(
+        content: `<div id="content" class="infoContent"><h3 class="adventureName">${name} </h3><div class="contentItem"><div class="contentWrapper"><h4>${location}</h4><h4>${date}</h4><p class="adventureInfo" >${keyinfo}</p></div><img src=${imgUrl} alt="${alt}"></div><div class="contentItem lower"><div class="maptags">${createTags(
           tags,
         )}</div><a href="../fairs/${slug}.html"><h3 class="info">More info </h3></a></div></div>`,
       };
