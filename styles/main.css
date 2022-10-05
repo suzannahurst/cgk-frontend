@@ -9,7 +9,7 @@
 }
 
 :root {
-  --main-bg-color: #1c8f93;
+  --main-bg-color: #188081;
   --accent-color-primary: #e8d7a4;
   --accent-color-secondary: #ea9e25;
   --color-red: #bc4121;
@@ -339,13 +339,19 @@ button {
   padding: 10px;
   font-weight: 600;
   background-color: var(--accent-color-secondary);
-  border: 1px solid #fff;
-  color: #fff;
+  /* border: 1px solid #fff; */
+  border: 1px solid #000;
+  /* color: #fff; */
+  color: #000;
   border-radius: 4px;
 }
 
+button:hover {
+  background-color: var(--color-orange);
+}
+
 button > a > p:hover {
-  color: #1c8f93;
+  color: #000;
 }
 
 button > a > p {
