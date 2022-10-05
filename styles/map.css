@@ -62,6 +62,11 @@ h1 {
   color: #fff;
 }
 
+h1.afterpartyMapTitle {
+  text-align: right;
+  max-width: 80%;
+}
+
 .title-wrapper > h2 {
   font-size: 1.5rem;
   font-weight: 600;
