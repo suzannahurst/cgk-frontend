@@ -280,7 +280,7 @@ footer {
   font-family: "Big John";
   border: 2px solid rgb(255, 255, 255);
   background-color: #ea9e25;
-  padding: 2rem;
+  padding: 1rem;
   width: fit-content;
   position: absolute;
   inset: 0px auto auto 0px;
@@ -296,7 +296,7 @@ footer {
 }
 .dropdown-item:focus,
 .dropdown-item:hover > a {
-  color: #1c8f93;
+  color: #188081;
 }
 .btn:hover {
   background-color: inherit;
