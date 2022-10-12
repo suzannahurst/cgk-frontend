@@ -191,6 +191,7 @@ h3.info:hover {
   font-weight: 800;
   margin-inline-end: 5px;
   color: #fff;
+  border-radius: 4px;
 }
 
 .maptag.green {
