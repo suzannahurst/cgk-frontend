@@ -208,6 +208,10 @@ h3.info:hover {
   background-color: var(--color-pink);
 }
 
+.maptag.toilets {
+  background-color: #ca8ec0;
+}
+
 .maptag.black {
   background-color: #000;
 }
