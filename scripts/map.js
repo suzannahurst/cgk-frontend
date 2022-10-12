@@ -109,7 +109,7 @@ function initMap() {
       { id: 12, color: "gold" },
       { id: 13, color: "gold" },
       { id: 14, color: "gold" },
-      { id: 15, color: "gold" },
+      { id: 15, color: "toilets" },
     ];
 
     const wrapper = tags.data.map((tag) => {
