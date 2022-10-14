@@ -5,6 +5,13 @@ h2.title {
   margin-block-end: 1rem;
 }
 
+h2.play {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-block-end: 2rem;
+  font-family: var(--font-headings);
+}
+
 .subtitle {
   font-size: 3rem;
   font-family: "Great Vibes", cursive;
