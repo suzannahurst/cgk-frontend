@@ -5,6 +5,8 @@
 // failed.", it means you probably did not give permission for the browser to
 // locate you.
 
+import { adventures } from "./adventures/data.js";
+
 const showMissingAdventureMsg = (msg) => {
   document.getElementById("not-found").style =
     "display: flex; display: -webkit-box; display: -ms-flexbox;";
@@ -17,20 +19,22 @@ let map, infoWindow;
 function initMap() {
   let adv = [];
 
-  const fetchAdventures = async () => {
-    try {
-      const response = await fetch(
-        "https://coney-golden-key.herokuapp.com/api/adventures?populate=*",
-      );
-      if (!response.ok) throw response;
-      const adventures = await response.json();
-      // console.log("adventures", adventures);
-      return adventures;
-    } catch (error) {
-      console.log("error", error);
-      throw error;
-    }
-  };
+  // FETCH FUNCTIONALITY FOR WHEN CONNECTED TO STRAPI
+
+  // const fetchAdventures = async () => {
+  //   try {
+  //     const response = await fetch(
+  //       "https://coney-golden-key.herokuapp.com/api/adventures?populate=*",
+  //     );
+  //     if (!response.ok) throw response;
+  //     const adventures = await response.json();
+  //     // console.log("adventures", adventures);
+  //     return adventures;
+  //   } catch (error) {
+  //     console.log("error", error);
+  //     throw error;
+  //   }
+  // };
 
   map = new google.maps.Map(document.getElementById("mazeMap"), {
     center: { lat: 51.51382754700306, lng: -0.09138173055736436 },
@@ -103,9 +107,9 @@ function initMap() {
     return wrapper.join("");
   };
 
-  const createAdventures = async () => {
-    const adventures = await fetchAdventures();
-    adventures.data.map((adventure) => {
+  const createAdventures = async (adventures) => {
+    // const adventures = await fetchAdventures();
+    adventures.map((adventure) => {
       const {
         name,
         lastEntry,
@@ -118,7 +122,7 @@ function initMap() {
         slug,
         type,
       } = adventure.attributes;
-      console.log(type);
+      // console.log(type);
       const location = {
         position: new google.maps.LatLng(latitude, longitude),
         // position: new google.maps.LatLng(51.51202, -0.09088),
@@ -133,18 +137,6 @@ function initMap() {
     });
     showAllMarkers();
   };
-
-  createAdventures();
-
-  // TODO change it to follow this logic https://developers.google.com/maps/documentation/javascript/examples/marker-remove
-
-  const clearMarkers = () => {
-    if (activeMarkers) {
-      activeMarkers = [];
-    }
-  };
-
-  let currentInfoWindow = null;
 
   const showAllMarkers = () => {
     locations.map((location) => {
@@ -171,7 +163,16 @@ function initMap() {
       });
     });
   };
-  // showAllMarkers();
+
+  createAdventures(adventures);
+
+  const clearMarkers = () => {
+    if (activeMarkers) {
+      activeMarkers = [];
+    }
+  };
+
+  let currentInfoWindow = null;
 
   infoWindow = new google.maps.InfoWindow();
 

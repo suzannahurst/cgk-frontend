@@ -1,3 +1,3 @@
-import { getFair } from "./fairs.js";
+// import { getFair } from "./fairs.js";
 
-getFair(3);
+// getFair(3);

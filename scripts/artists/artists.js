@@ -1,39 +1,46 @@
 // scripts/index.js
-export const fetchArtists = () => {
-  const artistsReq = new Request(
-    "https://coney-golden-key.herokuapp.com/api/artists",
-  );
+// export const fetchArtists = () => {
+//   const artistsReq = new Request(
+//     "https://coney-golden-key.herokuapp.com/api/artists",
+//   );
 
-  fetch(artistsReq)
-    .then((response) => response.json())
-    .then((artists) => {
-      console.log(artists);
-      return artists;
-    })
-    .catch((error) => {
-      console.error("Error:", error);
-    });
-};
+//   fetch(artistsReq)
+//     .then((response) => response.json())
+//     .then((artists) => {
+//       console.log(JSON.stringify(artists));
+//       return artists;
+//     })
+//     .catch((error) => {
+//       console.error("Error:", error);
+//     });
+// };
 
-export const getArtist = (id) => {
-  const artistReq = new Request(
-    `https://coney-golden-key.herokuapp.com/api/artists/${id}?populate=*`,
-  );
+import { artists } from "./data.js";
 
-  fetch(artistReq)
-    .then((resp) => {
-      if (resp.ok) {
-        return resp.json();
-      } else {
-        throw new Error(resp.statusText);
-      }
-    })
-    // .then((artist) => {
-    //   console.log("artist", artist);
-    // })
-    .then(displayArtist)
+export const getArtist = (idToFind) => {
+  // const artistReq = new Request(
+  //   `https://coney-golden-key.herokuapp.com/api/artists/${id}?populate=*`,
+  // );
 
-    .catch(showMissingArtistMsg);
+  // fetch(artistReq)
+  //   .then((resp) => {
+  //     if (resp.ok) {
+  //       return resp.json();
+  //     } else {
+  //       throw new Error(resp.statusText);
+  //     }
+  //   })
+  //   // .then((artist) => {
+  //   //   console.log("artist", artist);
+  //   // })
+  //   .then(displayArtist)
+
+  //   .catch(showMissingArtistMsg);
+
+  const artist = artists.find(({ id }) => id === idToFind);
+
+  displayArtist(artist);
+  //  return artist;
 };
 
 export const showMissingArtistMsg = (msg) => {
@@ -55,10 +62,10 @@ export const displayArtist = (artist) => {
     tags,
     showlocation,
     image,
-  } = artist.data.attributes;
-  const fairName = fair.data.attributes.name;
-  const fairSlug = fair.data.attributes.slug;
-  const fairGm = fair.data.attributes.gm;
+  } = artist.attributes;
+  // const fairName = fair.attributes.name;
+  // const fairSlug = fair.attributes.slug;
+  // const fairGm = fair.attributes.gm;
 
   const showInfoMount = document.getElementById("showInfoMount");
   const tagsMount = document.getElementById("tagsMount");
@@ -66,12 +73,19 @@ export const displayArtist = (artist) => {
   const imgMount = document.getElementById("artistImgMount");
   const fairMount = document.getElementById("fairMount");
 
+  // showInfoMount.innerHTML = `
+  //     <h3 class="subtitle" id="showName">${showname}</h3>
+  //     <p>Times: <span >${showtimes}</span></p>
+  //     <p class="maintext">Location: <span><a href="${fairGm}" target="_blank" class="highlighted">${showlocation} </a></span></p>
+  //     <p>Fair: <span><a href="./../fairs/${fairSlug}.html" class="highlighted">${fairName}</a> </span>
+  //     </p>
+  //     <p id="showDescription" class="maintext">${description}</p>
+  //     `;
+
   showInfoMount.innerHTML = `
       <h3 class="subtitle" id="showName">${showname}</h3>
       <p>Times: <span >${showtimes}</span></p>
-      <p class="maintext">Location: <span><a href="${fairGm}" target="_blank" class="highlighted">${showlocation} </a></span></p>
-      <p>Fair: <span><a href="./../fairs/${fairSlug}.html" class="highlighted">${fairName}</a> </span>
-      </p>
+   
       <p id="showDescription" class="maintext">${description}</p>
       `;
 
@@ -79,37 +93,37 @@ export const displayArtist = (artist) => {
   //     <p id="artistBiog" class="maintext">${biog}</p>`;
   // add if we implement artist tags
 
-  let tag;
-  // console.log(tags);
+  // let tag;
+  // // console.log(tags);
 
-  if (tags.data.length === 0) {
-    tagsSection.classList.add("hide");
-  } else {
-    tags.data.map((tg) => {
-      console.log(tg);
-      if (tg.attributes.name) {
-        tag = document.createElement("span");
-        tag.classList.add("tag");
-        tag.innerHTML = tg.attributes.name;
+  // if (tags.data.length === 0) {
+  //   tagsSection.classList.add("hide");
+  // } else {
+  //   tags.data.map((tg) => {
+  //     // console.log(tg);
+  //     if (tg.attributes.name) {
+  //       tag = document.createElement("span");
+  //       tag.classList.add("tag");
+  //       tag.innerHTML = tg.attributes.name;
 
-        tagsMount.appendChild(tag);
-      }
-    });
-  }
+  //       tagsMount.appendChild(tag);
+  //     }
+  //   });
+  // }
 
-  fairMount.innerHTML = ` <p>Back to <span><a href="./../fairs/${fairSlug}.html" class="highlighted">${fairName}</a>. </span>
-      </p>
-            <p>Back to the <a href="./../home.html" class="highlighted">homepage.</a></p>`;
+  // fairMount.innerHTML = ` <p>Back to <span><a href="./../fairs/${fairSlug}.html" class="highlighted">${fairName}</a>. </span>
+  //     </p>
+  //           <p>Back to the <a href="./../home.html" class="highlighted">homepage.</a></p>`;
 
-  if (image.data === null) {
-    imgMount.classList.add("hide");
-  } else {
-    image.data.map((img) => {
-      const { url, alternativeText } = img.attributes;
-      console.log(img);
-      imgMount.innerHTML = `<img id="artistImg" class="artist-img" src=${url} alt="${alternativeText}"></img>`;
-    });
-  }
+  // if (image.data === null) {
+  //   imgMount.classList.add("hide");
+  // } else {
+  //   image.data.map((img) => {
+  //     const { url, alternativeText } = img.attributes;
+  //     // console.log(img);
+  //     imgMount.innerHTML = `<img id="artistImg" class="artist-img" src=${url} alt="${alternativeText}"></img>`;
+  //   });
+  // }
 };
 
 // const showdown = window.showdown;
@@ -118,15 +132,11 @@ export const displayArtist = (artist) => {
 //   fair.content,
 // );
 
-// TODO best way to dynamically populate artists per page
-
-console.log(window.location.pathname);
-
 const findId = (pathname) => {
   // debugger;
   let artistSlug = pathname.replace("/artists/", "");
   artistSlug = artistSlug.replace(".html", "");
-  console.log(artistSlug);
+  // console.log(artistSlug);
   const artists = [
     { slug: "little-bulb", id: 1 },
     { slug: "judith-hope", id: 2 },

@@ -1,22 +1,27 @@
-export const getArtist = (id) => {
-  const artistReq = new Request(
-    `https://coney-golden-key.herokuapp.com/api/artists/${id}?populate=*`,
-  );
+import { artists } from "./data.js";
 
-  fetch(artistReq)
-    .then((resp) => {
-      if (resp.ok) {
-        return resp.json();
-      } else {
-        throw new Error(resp.statusText);
-      }
-    })
-    // .then((artist) => {
-    //   console.log("artist", artist);
-    // })
-    .then(displayArtist)
+export const getArtist = (idToFind) => {
+  // const artistReq = new Request(
+  //   `https://coney-golden-key.herokuapp.com/api/artists/${id}?populate=*`,
+  // );
 
-    .catch(showMissingArtistMsg);
+  // fetch(artistReq)
+  //   .then((resp) => {
+  //     if (resp.ok) {
+  //       return resp.json();
+  //     } else {
+  //       throw new Error(resp.statusText);
+  //     }
+  //   })
+  //   // .then((artist) => {
+  //   //   console.log("artist", artist);
+  //   // })
+  //   .then(displayArtist)
+
+  //   .catch(showMissingArtistMsg);
+  const artist = artists.find(({ id }) => id === idToFind);
+
+  displayArtist(artist);
 };
 
 export const showMissingArtistMsg = (msg) => {
@@ -28,7 +33,7 @@ export const showMissingArtistMsg = (msg) => {
 
 export const displayArtist = (artist) => {
   console.log(artist);
-  const { description, tags, image } = artist.data.attributes;
+  const { description, tags, image } = artist.attributes;
 
   const showInfoMount = document.getElementById("showInfoMount");
   const tagsMount = document.getElementById("tagsMount");
@@ -44,31 +49,31 @@ export const displayArtist = (artist) => {
       )}</p>
       `;
 
-  let tag;
+  // let tag;
 
-  if (tags.data.length === 0) {
-    tagsSection.classList.add("hide");
-  } else {
-    tags.data.map((tg) => {
-      console.log(tg);
-      if (tg.attributes.name) {
-        tag = document.createElement("span");
-        tag.classList.add("tag");
-        tag.innerHTML = tg.attributes.name;
+  // if (tags.data.length === 0) {
+  //   tagsSection.classList.add("hide");
+  // } else {
+  //   tags.data.map((tg) => {
+  //     console.log(tg);
+  //     if (tg.attributes.name) {
+  //       tag = document.createElement("span");
+  //       tag.classList.add("tag");
+  //       tag.innerHTML = tg.attributes.name;
 
-        tagsMount.appendChild(tag);
-      }
-    });
-  }
+  //       tagsMount.appendChild(tag);
+  //     }
+  //   });
+  // }
 
-  if (image.data === null) {
-    imgMount.classList.add("hide");
-  } else {
-    const imgUrl = image.data.map((img) => {
-      return img.attributes.url;
-    });
-    imgMount.innerHTML = `<img id="artistImg" class="artist-img" src=${imgUrl}></img>`;
-  }
+  // if (image.data === null) {
+  //   imgMount.classList.add("hide");
+  // } else {
+  //   const imgUrl = image.data.map((img) => {
+  //     return img.attributes.url;
+  //   });
+  //   imgMount.innerHTML = `<img id="artistImg" class="artist-img" src=${imgUrl}></img>`;
+  // }
 };
 
 // TODO best way to dynamically populate artists per page
@@ -133,7 +138,7 @@ const findId = (pathname) => {
     ,
   ];
   const artist = artists.find(({ slug }) => slug === artistSlug);
-  console.log("artist id", artist.id);
+
   return artist.id;
 };
 

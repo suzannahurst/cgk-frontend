@@ -5,6 +5,8 @@
 // failed.", it means you probably did not give permission for the browser to
 // locate you.
 
+import { aps } from "./ap-data.js";
+
 const showMissingAPMsg = (msg) => {
   document.getElementById("not-found").style =
     "display: flex; display: -webkit-box; display: -ms-flexbox;";
@@ -17,20 +19,22 @@ let map, infoWindow;
 function initMap() {
   let ap = [];
 
-  const fetchAPs = async () => {
-    try {
-      const response = await fetch(
-        "https://coney-golden-key.herokuapp.com/api/after-parties?populate=*",
-      );
-      if (!response.ok) throw response;
-      const aps = await response.json();
+  // FETCH FUNCTIONALITY FOR WHEN CONNECTED TO STRAPI
 
-      return aps;
-    } catch (error) {
-      console.log("error", error);
-      throw error;
-    }
-  };
+  // const fetchAPs = async () => {
+  //   try {
+  //     const response = await fetch(
+  //       "https://coney-golden-key.herokuapp.com/api/after-parties?populate=*",
+  //     );
+  //     if (!response.ok) throw response;
+  //     const aps = await response.json();
+
+  //     return aps;
+  //   } catch (error) {
+  //     console.log("error", error);
+  //     throw error;
+  //   }
+  // };
 
   map = new google.maps.Map(document.getElementById("map"), {
     center: { lat: 51.51382754700306, lng: -0.09138173055736436 },
@@ -57,10 +61,10 @@ function initMap() {
 
   let locations = [];
 
-  const createAPs = async () => {
-    const afterparties = await fetchAPs();
-    afterparties.data.map((afterparty) => {
-      console.log(afterparty);
+  const createAPs = async (aps) => {
+    // const afterparties = await fetchAPs();
+
+    aps.map((afterparty) => {
       const {
         name,
         description,
@@ -90,8 +94,34 @@ function initMap() {
     showAllMarkers();
   };
 
-  createAPs();
-  // TODO change it to follow this logic https://developers.google.com/maps/documentation/javascript/examples/marker-remove
+  const showAllMarkers = () => {
+    locations.map((location) => {
+      // console.log("location", location);
+      const marker = new google.maps.Marker({
+        position: location.position,
+        icon: icons[location.type].icon,
+        map: map,
+      });
+      const placewindow = new google.maps.InfoWindow({
+        content: location.content,
+      });
+
+      marker.addListener("click", () => {
+        if (currentInfoWindow != null) {
+          currentInfoWindow.close();
+        }
+        placewindow.open({
+          anchor: marker,
+          map,
+          shouldFocus: false,
+        });
+        currentInfoWindow = placewindow;
+      });
+    });
+  };
+
+  createAPs(aps);
+
   let activeMarkers = [];
 
   const showActiveMarkers = () => {
@@ -121,34 +151,6 @@ function initMap() {
   };
 
   let currentInfoWindow = null;
-
-  const showAllMarkers = () => {
-    locations.map((location) => {
-      // console.log("location", location);
-      const marker = new google.maps.Marker({
-        position: location.position,
-        icon: icons[location.type].icon,
-        map: map,
-      });
-      const placewindow = new google.maps.InfoWindow({
-        content: location.content,
-      });
-
-      marker.addListener("click", () => {
-        if (currentInfoWindow != null) {
-          currentInfoWindow.close();
-        }
-        placewindow.open({
-          anchor: marker,
-          map,
-          shouldFocus: false,
-        });
-        currentInfoWindow = placewindow;
-      });
-    });
-  };
-
-  // showAllMarkers();
 
   // Functionality for showing your own location
 

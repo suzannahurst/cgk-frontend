@@ -25,7 +25,7 @@ export const fetchAdventures = async () => {
     );
     if (!response.ok) throw response;
     const adventures = await response.json();
-    // console.log(adventures);
+    console.log(JSON.stringify(adventures));
     return adventures;
   } catch (error) {
     console.log("error", error);

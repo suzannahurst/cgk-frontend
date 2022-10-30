@@ -4,6 +4,8 @@
 // prompted by your browser. If you see the error "The Geolocation service
 // failed.", it means you probably did not give permission for the browser to
 // locate you.
+import { adventures } from "./adventures/data.js";
+import { fairs } from "./fairs/data.js";
 
 const showMissingAdventureMsg = (msg) => {
   document.getElementById("not-found").style =
@@ -17,35 +19,37 @@ let map, infoWindow;
 function initMap() {
   let adv = [];
 
-  const fetchAdventures = async () => {
-    try {
-      const response = await fetch(
-        "https://coney-golden-key.herokuapp.com/api/adventures?populate=*",
-      );
-      if (!response.ok) throw response;
-      const adventures = await response.json();
-      console.log("adventures", adventures);
-      return adventures;
-    } catch (error) {
-      console.log("error", error);
-      throw error;
-    }
-  };
+  // FETCH FUNCTIONALITY FOR WHEN CONNECTED TO STRAPI
 
-  const fetchFairs = async () => {
-    try {
-      const response = await fetch(
-        "https://coney-golden-key.herokuapp.com/api/fairs?populate=*",
-      );
-      if (!response.ok) throw response;
-      const fairs = await response.json();
-      console.log("fairs", fairs);
-      return fairs;
-    } catch (error) {
-      console.log("error", error);
-      throw error;
-    }
-  };
+  // const fetchAdventures = async () => {
+  //   try {
+  //     const response = await fetch(
+  //       "https://coney-golden-key.herokuapp.com/api/adventures?populate=*",
+  //     );
+  //     if (!response.ok) throw response;
+  //     const adventures = await response.json();
+  //     console.log("adventures", adventures);
+  //     return adventures;
+  //   } catch (error) {
+  //     console.log("error", error);
+  //     throw error;
+  //   }
+  // };
+
+  // const fetchFairs = async () => {
+  //   try {
+  //     const response = await fetch(
+  //       "https://coney-golden-key.herokuapp.com/api/fairs?populate=*",
+  //     );
+  //     if (!response.ok) throw response;
+  //     const fairs = await response.json();
+  //     // console.log("fairs", fairs);
+  //     return fairs;
+  //   } catch (error) {
+  //     console.log("error", error);
+  //     throw error;
+  //   }
+  // };
   map = new google.maps.Map(document.getElementById("map"), {
     center: { lat: 51.51382754700306, lng: -0.09138173055736436 },
     zoom: 14,
@@ -120,9 +124,9 @@ function initMap() {
     // console.log(wrapper);
     return wrapper.join("");
   };
-  const createAdventures = async () => {
-    const adventures = await fetchAdventures();
-    adventures.data.map((adventure) => {
+  const createAdventures = async (adventures) => {
+    // const adventures = await fetchAdventures();
+    adventures.map((adventure) => {
       const {
         name,
         lastEntry,
@@ -151,10 +155,9 @@ function initMap() {
     showAllMarkers();
   };
 
-  // TODO POPULATE FAIR IMG
-  const createFairs = async () => {
-    const fairs = await fetchFairs();
-    fairs.data.map((fair) => {
+  const createFairs = async (fairs) => {
+    // const fairs = await fetchFairs();
+    fairs.map((fair) => {
       const {
         name,
         keyinfo,
@@ -183,17 +186,6 @@ function initMap() {
     showAllMarkers();
   };
 
-  createAdventures();
-  createFairs();
-
-  //   const clearMarkers = () => {
-  //     if (activeMarkers) {
-  //       activeMarkers = [];
-  //     }
-  //   };
-
-  let currentInfoWindow = null;
-
   const showAllMarkers = () => {
     locations.map((location) => {
       // console.log("location", location);
@@ -220,7 +212,16 @@ function initMap() {
     });
   };
 
-  // showAllMarkers();
+  createAdventures(adventures);
+  createFairs(fairs);
+
+  //   const clearMarkers = () => {
+  //     if (activeMarkers) {
+  //       activeMarkers = [];
+  //     }
+  //   };
+
+  let currentInfoWindow = null;
 
   // Functionality for showing your own location
 

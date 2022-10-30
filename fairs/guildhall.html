@@ -93,8 +93,8 @@
 
   <!-- our scripts -->
   <script src="./../scripts/main.js" type="module"></script>
-
-  <script src="./../scripts/fairs/guildhall.js" type="module"></script>
+  <script src="./../scripts/fairs/fairs.js" type="module"></script>
+  <!-- <script src="./../scripts/fairs/guildhall.js" type="module"></script> -->
   <title>Guildhall Fair</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -144,17 +144,249 @@
 
         <h3 class="location"> Guildhall
         </h3>
-        <div id="fairInfoMount"></div>
+        <div id="fairInfoMount">
+          <p id="fairDescription">All are welcome at the Fair of Topsy Turvy Power, where the City is reimagined,
+            London's young people take the seats of
+            power, and you are invited to build the streets of the Future City.
+            <br>
+            <br>
+            At the historic headquarters of the City of London’s government, discover unique, diverse and exciting
+            activities and
+            performances in every room. See stunning acrobatics displays around a giant key, stilt walkers, giant
+            puppets, brass
+            bands, cabaret, dance and inclusive art installations.
+            <br>
+            <br>
+            Then at sunset, a fire finale will take place in the yard, closing the day in a spectacular blaze of gold…
+            <br>
+            <br>
+            Check out the pop up street food & bars at the Fair or check out nearby restaurants & bars for special
+            offers for The
+            Golden Key.
+          </p>
+          <div id="fairTags"><span class="tag">Free, drop-in</span>
+            <span class="tag">Toilets available</span>
+          </div>
+        </div>
       </div>
     </section>
     <section>
       <div class="widget-wrapper"><img src="./../assets/img/widget/widget2.png" class="widget"
           alt="a pulsing yellow paint splodge which reads Free, Drop in"></div>
-      <div id="travelInfoMount"></div>
+      <div id="travelInfoMount">
+        <h3>When</h3>
+        <p>Sat 15 October, 12 - 7pm</p>
+        <h3>Where</h3>
+        <p>Guildhall,<br />
+          Aldermanbury, London <a href="https://goo.gl/maps/Ffgi5gCuEZBFgwx28" target="_blank" class="highlighted">EC2V
+            7HH</a>
+        </p>
+        <h3>Nearest station:</h3>
+        <p class="maintext"> Bank, Mansion House, St. Pauls, Moorgate, Cannon Street and Liverpool Street</p>
+      </div>
     </section>
     <section class="programme-container">
       <h3 class="subtitle">Programme</h3>
-      <div id="programmeInfoMount" class="programme-wrapper"></div>
+      <div id="programmeInfoMount" class="programme-wrapper">
+        <div class="programme-item stretch">
+          <h3 class="location">Guildhall Yard</h3>
+          <div class="show-item">
+            <a href="./../artists/walk-the-plank.html">
+              <img
+                src="https://res.cloudinary.com/dcwl3hold/image/upload/v1663760262/small_Walk_the_Plank_c_Pete_Carr_9a7f81b699.jpg"
+                class="show-image" loading="lazy" alt="Walk the Plank">
+            </a>
+            <div>
+              <h4 class="artist-name"> <a href="./../artists/walk-the-plank.html">Walk the Plank</a></h4>
+              <p>Circus performances</p>
+              <p>14.00-14.10, 15.30-15.40 & 17.00-17.10</p>
+              <p>Fire finale </p>
+              <p>18.30-18.50</p>
+            </div>
+          </div>
+          <div class="show-item">
+            <a href="./../artists/old-time-sailors.html">
+              <img
+                src="https://res.cloudinary.com/dcwl3hold/image/upload/v1663759656/small_Old_Time_Sailors_c_Old_Time_Sailors_4_bc380be68a.jpg"
+                class="show-image" loading="lazy" alt="The Old Time Sailors">
+            </a>
+            <div>
+              <h4 class="artist-name"><a href="./../artists/old-time-sailors.html">The Old Time Sailors</a></h4>
+              <p>Live Music</p>
+              <p>12.00-12.40 & 13.15-13.55</p>
+            </div>
+          </div>
+          <div class="show-item">
+            <a href="./../artists/chivaree-circus.html">
+              <img
+                src="https://res.cloudinary.com/dcwl3hold/image/upload/v1663758140/small_Chivaree_Circus_c31199d185.jpg"
+                class="show-image" loading="lazy" alt="Chivaree Circus">
+            </a>
+            <div>
+              <h4 class="artist-name"> <a href="./../artists/chivaree-circus.html">Chivaree Circus</a></h4>
+              <p>Stilt walkers</p>
+              <p>12.00-12.30, 13.30-14.00, 15.00-15.30 & 16.30-17.00</p>
+            </div>
+          </div>
+          <div class="show-item">
+            <a href="./../artists/little-bulb.html">
+              <img
+                src="https://res.cloudinary.com/dcwl3hold/image/upload/v1663759519/small_Little_Bulb_c_James_Allan_aee27dd742.jpg"
+                class="show-image" loading="lazy" alt="Little Bulb">
+            </a>
+            <div>
+              <h4 class="artist-name"><a href="./../artists/little-bulb.html">Little Bulb</a></h4>
+              <p>Live music</p>
+              <p>12.45-13.05, 14.15-14.35, 15.45-16.05 & 17.15-17.35</p>
+            </div>
+          </div>
+
+          <div class="show-item">
+            <a href="./../artists/judith-hope.html">
+              <img
+                src="https://res.cloudinary.com/dcwl3hold/image/upload/v1663759374/small_The_Keeper_s_Nests_by_Judith_Home_c_Rah_Petherbridge_1_dbdc648ffe.jpg"
+                class="show-image" loading="lazy" alt="Judith Hope">
+            </a>
+            <div>
+              <h4 class="artist-name"><a href="./../artists/judith-hope.html">Judith Hope</a></h4>
+              <p>Walkabout puppetry </p>
+              <p>12.30-13.00, 14.15-14.45, 15.30-16.00 & 17.00-17.30</p>
+            </div>
+          </div>
+
+          <div class="show-item">
+            <a href="./../artists/brass-volcanoes.html">
+              <img
+                src="https://res.cloudinary.com/dcwl3hold/image/upload/v1663758099/small_Brass_Volcanoes_29d4acaa8b.png"
+                class="show-image" loading="lazy" alt="Brass Volcanoes">
+            </a>
+            <div>
+              <h4 class="artist-name"><a href="./../artists/brass-volcanoes.html">Brass Volcanoes</a></h4>
+              <p>Live music </p>
+              <p>14.45-15.15, 16.15-16.45 & 17.45-18.15</p>
+            </div>
+          </div>
+          <div class="show-item">
+            <a href="./../artists/jelly-rollers.html">
+              <img
+                src="https://res.cloudinary.com/dcwl3hold/image/upload/v1663759320/small_Jelly_Roller_low_1ff3248c34.jpg"
+                class="show-image" loading="lazy" alt="Jelly Rollers">
+            </a>
+            <div>
+              <h4 class="artist-name"><a href="./../artists/jelly-rollers.html">Jelly Rollers</a></h4>
+              <p>Musical installation </p>
+              <p>13.00-13.30, 16.00-16.30 & 17.30-18.00</p>
+            </div>
+          </div>
+
+        </div>
+        <div class="programme-item narrow">
+          <h3 class="location"> Great Hall</h3>
+          <div class="show-item">
+            <a href="./../artists/home-sweet-home.html">
+              <img
+                src="https://res.cloudinary.com/dcwl3hold/image/upload/v1663759069/small_homesweethome_c_Clara_Moldenlow_cf0e79bfbf.jpg"
+                class="show-image" loading="lazy" alt="Coney & home sweet home">
+            </a>
+            <div>
+              <h4 class="artist-name"><a href="./../artists/home-sweet-home.html">Coney & home sweet home</a></h4>
+              <p>
+                Participative art installation - 12.00-17.00
+              </p>
+              <p> Participative performance - 17.00-18.00
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="programme-item narrow">
+          <h3 class="location"> Roman Amphitheatre</h3>
+          <div class="show-item">
+            <a href="./../artists/layla-rosa.html">
+              <img
+                src="https://res.cloudinary.com/dcwl3hold/image/upload/v1663759492/small_Layla_Rosa_low_6bcd97691f.jpg"
+                class="show-image" loading="lazy" alt="Layla Rosa">
+            </a>
+            <div>
+              <h4 class="artist-name"> <a href="./../artists/layla-rosa.html">Layla Rosa</a></h4>
+              <p>Circus performances</p>
+              <p>13.30-13.50, 15.00-15.20 & 16.30-16.50</p>
+            </div>
+          </div>
+        </div>
+        <div class="programme-item narrow">
+          <h3 class="location"> Guildhall Crypt</h3>
+          <div class="show-item">
+            <a href="./../artists/raze-collective.html">
+              <img
+                src="https://res.cloudinary.com/dcwl3hold/image/upload/v1663759892/small_Raze_BMWMC_Beau_Jangles_Photo_credit_Orlando_Callegaro_02d7da4e64.jpg"
+                class="show-image" loading="lazy" alt="The Raze Collective">
+            </a>
+            <div>
+              <h4 class="artist-name"> <a href="./../artists/raze-collective.html">The Raze Collective</a></h4>
+              <p>Drag & cabaret shows</p>
+              <p>12.45-13.15, 14.15-14.45, 15.45-16.15 & 17.15 - 17.45 </p>
+            </div>
+          </div>
+        </div>
+        <div class="programme-item narrow">
+          <h3 class="location">Livery Hall</h3>
+          <div class="show-item">
+            <a href="./../artists/spare-tyre.html">
+              <img
+                src="https://res.cloudinary.com/dcwl3hold/image/upload/v1663939830/small_Spare_Tyre_We_Will_Be_Happy_Here_e673a2661b.jpg"
+                class="show-image" loading="lazy" alt="Spare Tyre">
+            </a>
+            <div>
+              <h4 class="artist-name"> <a href="./../artists/spare-tyre.html">Spare Tyre</a></h4>
+              <p>
+                Interactive inclusive art</p>
+              <p>12.00-17.00</p>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="programme-item stretch">
+          <h3 class="location">Guildhall Art Gallery</h3>
+
+          <div class="show-item">
+            <a href="./../artists/fubunation.html">
+              <img
+                src="https://res.cloudinary.com/dcwl3hold/image/upload/v1664353614/small_Waddah_Sinada_32cc54b41e.jpg"
+                class="show-image" loading="lazy" alt="Fubunation">
+            </a>
+            <div>
+              <h4 class="artist-name"><a href="./../artists/fubunation.html">Fubunation</a></h4>
+              <p> Dance</p>
+              <p>13.45-14.05, 15.15-15.35 & 16.45-17.05</p>
+            </div>
+          </div>
+          <div class="show-item">
+            <a href="./../artists/artistry.html">
+              <img
+                src="https://res.cloudinary.com/dcwl3hold/image/upload/v1663758056/small_Artistry_Youth_Dance_c_Foteini_Christofilopoulou_34fdabef7e.jpg"
+                class="show-image" loading="lazy" alt="Artistry Youth Dance">
+            </a>
+            <div>
+              <h4 class="artist-name"><a href="./../artists/artistry.html">Artistry Youth Dance</a></h4>
+              <p> Dance</p>
+              <p>13.00-13.20, 14.30-14.50 & 16.00-16.20</p>
+            </div>
+          </div>
+          <div class="show-item">
+            <a href="./../artists/london-drawing.html">
+              <img
+                src="https://res.cloudinary.com/dcwl3hold/image/upload/v1663759578/small_London_Drawing_MOL_Feb14_3638_64d579048a.jpg"
+                class="show-image" loading="lazy" alt="London Drawing">
+            </a>
+            <div>
+              <h4 class="artist-name"><a href="./../artists/london-drawing.html">London Drawing</a></h4>
+              <p> Live drawing</p>
+              <p>12.00-14.00 & 15.00-17.00</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section>
