@@ -1,42 +1,6 @@
-// scripts/index.js
-// export const fetchArtists = () => {
-//   const artistsReq = new Request(
-//     "https://coney-golden-key.herokuapp.com/api/artists",
-//   );
-
-//   fetch(artistsReq)
-//     .then((response) => response.json())
-//     .then((artists) => {
-//       console.log(JSON.stringify(artists));
-//       return artists;
-//     })
-//     .catch((error) => {
-//       console.error("Error:", error);
-//     });
-// };
-
-import { artists } from "./data.js";
+import { artists } from "../artists/data.js";
 
 export const getArtist = (idToFind) => {
-  // const artistReq = new Request(
-  //   `https://coney-golden-key.herokuapp.com/api/artists/${id}?populate=*`,
-  // );
-
-  // fetch(artistReq)
-  //   .then((resp) => {
-  //     if (resp.ok) {
-  //       return resp.json();
-  //     } else {
-  //       throw new Error(resp.statusText);
-  //     }
-  //   })
-  //   // .then((artist) => {
-  //   //   console.log("artist", artist);
-  //   // })
-  //   .then(displayArtist)
-
-  //   .catch(showMissingArtistMsg);
-
   const artist = artists.find(({ id }) => id === idToFind);
 
   displayArtist(artist);
@@ -73,15 +37,6 @@ export const displayArtist = (artist) => {
   const imgMount = document.getElementById("artistImgMount");
   const fairMount = document.getElementById("fairMount");
 
-  // showInfoMount.innerHTML = `
-  //     <h3 class="subtitle" id="showName">${showname}</h3>
-  //     <p>Times: <span >${showtimes}</span></p>
-  //     <p class="maintext">Location: <span><a href="${fairGm}" target="_blank" class="highlighted">${showlocation} </a></span></p>
-  //     <p>Fair: <span><a href="./../fairs/${fairSlug}.html" class="highlighted">${fairName}</a> </span>
-  //     </p>
-  //     <p id="showDescription" class="maintext">${description}</p>
-  //     `;
-
   showInfoMount.innerHTML = `
       <h3 class="subtitle" id="showName">${showname}</h3>
       <p>Times: <span >${showtimes}</span></p>
@@ -111,9 +66,9 @@ export const displayArtist = (artist) => {
   //   });
   // }
 
-  // fairMount.innerHTML = ` <p>Back to <span><a href="./../fairs/${fairSlug}.html" class="highlighted">${fairName}</a>. </span>
+  // fairMount.innerHTML = ` <p>Back to <span><a href="/fairs/${fairSlug}.html" class="highlighted">${fairName}</a>. </span>
   //     </p>
-  //           <p>Back to the <a href="./../home.html" class="highlighted">homepage.</a></p>`;
+  //           <p>Back to the <a href="/home.html" class="highlighted">homepage.</a></p>`;
 
   // if (image.data === null) {
   //   imgMount.classList.add("hide");
@@ -134,9 +89,9 @@ export const displayArtist = (artist) => {
 
 const findId = (pathname) => {
   // debugger;
-  let artistSlug = pathname.replace("/artists/", "");
+  let artistSlug = pathname.replace("/thegoldenkey/artists/", "");
   artistSlug = artistSlug.replace(".html", "");
-  // console.log(artistSlug);
+  console.log("artist slug", artistSlug);
   const artists = [
     { slug: "little-bulb", id: 1 },
     { slug: "judith-hope", id: 2 },
@@ -189,6 +144,7 @@ const findId = (pathname) => {
     { slug: "we-are-londoners", id: 49 },
   ];
   const artist = artists.find(({ slug }) => slug === artistSlug);
+  console.log("artist id =", artist.id);
   return artist.id;
 };
 

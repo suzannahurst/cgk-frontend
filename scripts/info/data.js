@@ -16,7 +16,7 @@ const faqs = [
     attributes: {
       question: "Is this for me?",
       answer:
-        "The Golden Key has been designed to be enjoyable for everyone. \n<br/>\n<br/>\nThe Fairs’ programme has been designed for **audiences of all ages**, including plenty of activities for little ones.. \n<br/>\n<br/>\nThe <u>[Maze](./../maze.html)</u> and the [<u>Hunt </u>](https://thegoldenkey.london/hunt.html) are open to both adults and families, though some doors have a specific **age guidance**, and two doors are for adults only. Please refer to each event page to find out if that event is for you.   \n",
+        "The Golden Key has been designed to be enjoyable for everyone. \n<br/>\n<br/>\nThe Fairs’ programme has been designed for **audiences of all ages**, including plenty of activities for little ones.. \n<br/>\n<br/>\nThe <u>[Maze](./../maze.html)</u> and the [<u>Hunt </u>](https://www.youhavefoundconey.net/thegoldenkey/hunt.html) are open to both adults and families, though some doors have a specific **age guidance**, and two doors are for adults only. Please refer to each event page to find out if that event is for you.   \n",
       createdAt: "2022-09-01T17:35:00.284Z",
       updatedAt: "2022-09-25T11:42:45.808Z",
       publishedAt: "2022-09-01T17:35:01.153Z",
@@ -28,7 +28,7 @@ const faqs = [
     attributes: {
       question: "Can I drive to and around The Golden Key?",
       answer:
-        "It is strongly recommended that visitors leave their cars at home and walk or use public transport where possible. See the [<u>How to Get There </u>](https://thegoldenkey.london/info/how-to-get-there.html) page for details. \n",
+        "It is strongly recommended that visitors leave their cars at home and walk or use public transport where possible. See the [<u>How to Get There </u>](https://www.youhavefoundconey.net/thegoldenkey/info/how-to-get-there.html) page for details. \n",
       createdAt: "2022-09-21T22:43:08.798Z",
       updatedAt: "2022-09-25T11:46:31.770Z",
       publishedAt: "2022-09-21T22:43:10.856Z",
@@ -89,7 +89,7 @@ const faqs = [
     attributes: {
       question: "Is the event suitable for children? ",
       answer:
-        "Yes, the event can be enjoyed by all the family. The programme at the Fairs is family friendly. The Maze is for all ages with the exception of two adventures which are for adults only. There are two adventures on the route which have been specially created for families but can be enjoyed by all. Details of the Maze of Adventures can be found[<u> here.</u>](https://thegoldenkey.london/maze/maze-map.html) \n\nThe Golden Key event organisers cannot be responsible for children or vulnerable people whilst at the event. All children under the age of 12 should be accompanied by a responsible adult at all times. \n",
+        "Yes, the event can be enjoyed by all the family. The programme at the Fairs is family friendly. The Maze is for all ages with the exception of two adventures which are for adults only. There are two adventures on the route which have been specially created for families but can be enjoyed by all. Details of the Maze of Adventures can be found[<u> here.</u>](https://www.youhavefoundconey.net/thegoldenkey/maze/maze-map.html) \n\nThe Golden Key event organisers cannot be responsible for children or vulnerable people whilst at the event. All children under the age of 12 should be accompanied by a responsible adult at all times. \n",
       createdAt: "2022-09-21T22:45:49.495Z",
       updatedAt: "2022-09-23T16:52:18.935Z",
       publishedAt: "2022-09-21T22:45:52.118Z",
@@ -197,7 +197,7 @@ const faqs = [
     attributes: {
       question: "What time is the Golden Key?",
       answer:
-        "The event runs from midday onwards.\n\nTimings for the Fairs are: \n<br/>\n**St Paul’s Fair – 12 – 9.30pm\n<br/>\nGuildhall Fair – 12 – 7pm\n<br/>\nLondon Wall Fair – 12 – 7pm**\n\nDetails of the full Fair programmes can be found at the Fair pages for [<u>St Paul’s</u>](https://thegoldenkey.london/fairs/st-pauls.html), the [<u>Guildhall</u>](https://thegoldenkey.london/fairs/guildhall.html) and\n[<u>London Wall.</u>](https://thegoldenkey.london/fairs/london-wall.html)\n<br/>\nThe Maze of Adventures is open from 12 – 6pm, with last entry at 5pm. The adventure of Share Mile closes\nat 4pm.\n<br/>\nThe Hunt is open from 12 – 5pm, with last entry at 4pm.",
+        "The event runs from midday onwards.\n\nTimings for the Fairs are: \n<br/>\n**St Paul’s Fair – 12 – 9.30pm\n<br/>\nGuildhall Fair – 12 – 7pm\n<br/>\nLondon Wall Fair – 12 – 7pm**\n\nDetails of the full Fair programmes can be found at the Fair pages for [<u>St Paul’s</u>](https://www.youhavefoundconey.net/thegoldenkey/fairs/st-pauls.html), the [<u>Guildhall</u>](https://www.youhavefoundconey.net/thegoldenkey/fairs/guildhall.html) and\n[<u>London Wall.</u>](https://www.youhavefoundconey.net/thegoldenkey/fairs/london-wall.html)\n<br/>\nThe Maze of Adventures is open from 12 – 6pm, with last entry at 5pm. The adventure of Share Mile closes\nat 4pm.\n<br/>\nThe Hunt is open from 12 – 5pm, with last entry at 4pm.",
       createdAt: "2022-09-21T22:30:35.663Z",
       updatedAt: "2022-09-25T11:43:49.463Z",
       publishedAt: "2022-09-21T22:30:37.946Z",
@@ -209,7 +209,7 @@ const faqs = [
     attributes: {
       question: " Have access requirements been considered? ",
       answer:
-        "The three Fairs are wheelchair accessible with step-free access. \n\nThe Maze of Adventures has thre finale locations which do not have step-free access due to the historical nature of the building. The other remaining nine adventures are wheelchair accessible. Details of these can be found [<u>here</u>](https://thegoldenkey.london/maze/maze-map.html). The sound elements to the adventures include integrated captions. \n\nThe Hunt has step free access throughout. The digital adventure includes captions. \n",
+        "The three Fairs are wheelchair accessible with step-free access. \n\nThe Maze of Adventures has thre finale locations which do not have step-free access due to the historical nature of the building. The other remaining nine adventures are wheelchair accessible. Details of these can be found [<u>here</u>](https://www.youhavefoundconey.net/thegoldenkey/maze/maze-map.html). The sound elements to the adventures include integrated captions. \n\nThe Hunt has step free access throughout. The digital adventure includes captions. \n",
       createdAt: "2022-09-22T22:48:14.867Z",
       updatedAt: "2022-10-09T13:46:55.831Z",
       publishedAt: "2022-09-22T22:48:16.468Z",
@@ -257,7 +257,7 @@ const faqs = [
     attributes: {
       question: "How do I get into The Hunt?",
       answer:
-        "The start location of The Hunt will be revealed by solving a puzzle, keep an eye on [<u>The Hunt page</u>](https://thegoldenkey.london/hunt.html) for clues!",
+        "The start location of The Hunt will be revealed by solving a puzzle, keep an eye on [<u>The Hunt page</u>](https://www.youhavefoundconey.net/thegoldenkey/hunt.html) for clues!",
       createdAt: "2022-09-22T22:45:27.076Z",
       updatedAt: "2022-09-23T16:52:28.944Z",
       publishedAt: "2022-09-22T22:45:27.838Z",
@@ -269,7 +269,7 @@ const faqs = [
     attributes: {
       question: "How do I get into The Maze?",
       answer:
-        "Using our [<u>interactive map</u>](https://thegoldenkey.london/maze/maze-map.html), pick an adventure you’d like to do. Go to the start location for that adventure marked on the map. When you get there find a red door, ask the door keeper for the key. The key will provide you access to the adventure on your smartphone and away you go!\n\nOnce you reach the end of an adventure, you’ll find you are close to another door to start a new adventure or you can go to one of the Fairs to enjoy the rest of the programme or stop and have a break at one of the City fine restaurants, bars and cafes. How you play the game is up to you. \n",
+        "Using our [<u>interactive map</u>](https://www.youhavefoundconey.net/thegoldenkey/maze/maze-map.html), pick an adventure you’d like to do. Go to the start location for that adventure marked on the map. When you get there find a red door, ask the door keeper for the key. The key will provide you access to the adventure on your smartphone and away you go!\n\nOnce you reach the end of an adventure, you’ll find you are close to another door to start a new adventure or you can go to one of the Fairs to enjoy the rest of the programme or stop and have a break at one of the City fine restaurants, bars and cafes. How you play the game is up to you. \n",
       createdAt: "2022-09-22T22:42:39.640Z",
       updatedAt: "2022-09-23T16:52:33.661Z",
       publishedAt: "2022-09-22T22:42:40.468Z",
@@ -281,7 +281,7 @@ const faqs = [
     attributes: {
       question: "How do I get into the Fairs?",
       answer:
-        "The [<u>St Paul’s Fair</u>](https://thegoldenkey.london/fairs/st-pauls.html) is open access, you can entry from any direction with no specific entry point.  The Fire Finale in St Paul’s churchyard can be entered from one entrance point only, opposite Cannon Alley. \n\nThe [<u>London Wall Fair</u>](https://thegoldenkey.london/fairs/london-wall.html) is also open access, and you can enter from London Wall Place, The Museum of London or from the Bastion and Aston High walk.\n\nThe [<u>Guildhall Fair</u>](https://thegoldenkey.london/fairs/guildhall.html) has a dedicated entrance point on Aldermanbury, next to the West Wing Reception entrance.\n",
+        "The [<u>St Paul’s Fair</u>](https://www.youhavefoundconey.net/thegoldenkey/fairs/st-pauls.html) is open access, you can entry from any direction with no specific entry point.  The Fire Finale in St Paul’s churchyard can be entered from one entrance point only, opposite Cannon Alley. \n\nThe [<u>London Wall Fair</u>](https://www.youhavefoundconey.net/thegoldenkey/fairs/london-wall.html) is also open access, and you can enter from London Wall Place, The Museum of London or from the Bastion and Aston High walk.\n\nThe [<u>Guildhall Fair</u>](https://www.youhavefoundconey.net/thegoldenkey/fairs/guildhall.html) has a dedicated entrance point on Aldermanbury, next to the West Wing Reception entrance.\n",
       createdAt: "2022-09-22T22:41:21.424Z",
       updatedAt: "2022-09-23T16:52:43.867Z",
       publishedAt: "2022-09-22T22:41:22.253Z",
@@ -329,7 +329,7 @@ const faqs = [
     attributes: {
       question: "Can I bring… ",
       answer:
-        "**•\tBags** – we recommend limiting the number of bags you bring to the event if possible. The Guildhall Fair will have security checks in place, with all bags being scanned when you enter inside the Guildhall. Some of the Maze locations also have security checks in place, so you will have to queue to get in. \n\n\n\n**•\tBuggies**  – We are unable to provide specific buggy parking at the event. Please keep your buggy with you at all times. You are responsible for the safety of your buggy if left unattended. \n\n**•\tPhotography equipment** - The streets are likely to be busy with visitors, and it is recommended that you do not bring camera tripods to The Golden Key. If you do bring tripods or selfie sticks with you, please use them sensibly. \n\n\n**•\tFood and drink** – Food and drink is permitted, but please do not bring glass or alcohol with you. There will also be an array of food and drink options at the Fairs, with street food trucks and bars. There are many fantastic food and drink options across the City as well that will welcome you on the day. See the [<u>Eat, Drink and Shop</u>](https://thegoldenkey.london/eat-drink-shop.html) page for details. \n\n\n**•\tAlcohol** – please do not bring alcohol with you. There will be two bars where you can purchase alcohol at the Guildhall and St Paul’s Fair. \n\n",
+        "**•\tBags** – we recommend limiting the number of bags you bring to the event if possible. The Guildhall Fair will have security checks in place, with all bags being scanned when you enter inside the Guildhall. Some of the Maze locations also have security checks in place, so you will have to queue to get in. \n\n\n\n**•\tBuggies**  – We are unable to provide specific buggy parking at the event. Please keep your buggy with you at all times. You are responsible for the safety of your buggy if left unattended. \n\n**•\tPhotography equipment** - The streets are likely to be busy with visitors, and it is recommended that you do not bring camera tripods to The Golden Key. If you do bring tripods or selfie sticks with you, please use them sensibly. \n\n\n**•\tFood and drink** – Food and drink is permitted, but please do not bring glass or alcohol with you. There will also be an array of food and drink options at the Fairs, with street food trucks and bars. There are many fantastic food and drink options across the City as well that will welcome you on the day. See the [<u>Eat, Drink and Shop</u>](https://www.youhavefoundconey.net/thegoldenkey/eat-drink-shop.html) page for details. \n\n\n**•\tAlcohol** – please do not bring alcohol with you. There will be two bars where you can purchase alcohol at the Guildhall and St Paul’s Fair. \n\n",
       createdAt: "2022-09-22T23:04:03.888Z",
       updatedAt: "2022-09-25T11:54:05.385Z",
       publishedAt: "2022-09-22T23:04:05.266Z",
@@ -464,7 +464,7 @@ const faqs = [
     attributes: {
       question: "Will there be food and drink at the event? ",
       answer:
-        "There will be a dazzling array of hospitality businesses, retailers and leisure providers in the City opening their doors on a Saturday for the Golden Key. \n\nBars and pubs will be offering Golden Key themed cocktails; and dining options across the Square Mile will include bespoke menus offers.  Look out for mystical characters working in our shops & leisure outlets - and check out City hotels for competitive weekend packages.  \n\nIn addition, dozens of our venues will be throwing Golden Key After Parties from 6pm on 15th October, so you can continue to enjoy the best the City has to offer until late! You can check out who is taking part on our [<u>Eat, Drink & Shop </u> ](https://thegoldenkey.london/eat-drink-shop.html) page. \n\nSome of these Golden Key offers will require advance booking so do check out if an advance reservation is required.\n\nIf you are a City Business who would like to get involved in Golden Key, please email [<u>Destination.City@cityoflondon.gov.uk</u>](mailto:Destination.City@cityoflondon.gov.uk) for more information.\n\nThere will also be a variety of street food trucks and pop ups at the three Fairs, plus a bar at St Paul’s and Guildhall Fair, open from 12 – 6pm. \n",
+        "There will be a dazzling array of hospitality businesses, retailers and leisure providers in the City opening their doors on a Saturday for the Golden Key. \n\nBars and pubs will be offering Golden Key themed cocktails; and dining options across the Square Mile will include bespoke menus offers.  Look out for mystical characters working in our shops & leisure outlets - and check out City hotels for competitive weekend packages.  \n\nIn addition, dozens of our venues will be throwing Golden Key After Parties from 6pm on 15th October, so you can continue to enjoy the best the City has to offer until late! You can check out who is taking part on our [<u>Eat, Drink & Shop </u> ](https://www.youhavefoundconey.net/thegoldenkey/eat-drink-shop.html) page. \n\nSome of these Golden Key offers will require advance booking so do check out if an advance reservation is required.\n\nIf you are a City Business who would like to get involved in Golden Key, please email [<u>Destination.City@cityoflondon.gov.uk</u>](mailto:Destination.City@cityoflondon.gov.uk) for more information.\n\nThere will also be a variety of street food trucks and pop ups at the three Fairs, plus a bar at St Paul’s and Guildhall Fair, open from 12 – 6pm. \n",
       createdAt: "2022-09-22T23:12:15.809Z",
       updatedAt: "2022-09-26T08:53:48.333Z",
       publishedAt: "2022-09-22T23:12:16.656Z",

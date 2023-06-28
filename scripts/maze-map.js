@@ -5,7 +5,7 @@
 // failed.", it means you probably did not give permission for the browser to
 // locate you.
 
-import { adventures } from "./adventures/data.js";
+import { adventures } from "../scripts/adventures/data.js";
 
 const showMissingAdventureMsg = (msg) => {
   document.getElementById("not-found").style =
@@ -48,7 +48,7 @@ function initMap() {
     // fullscreenControl: false,
   });
 
-  let iconBase = "./../assets/img/markers/";
+  let iconBase = "../assets/img/markers/";
 
   const icons = {
     kids: {

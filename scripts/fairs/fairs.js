@@ -2,7 +2,7 @@
 const showdown = window.showdown;
 const converter = new showdown.Converter();
 
-// import { fetchArtists } from "../artists/artists.js";
+// import { fetchArtists } from "/artists/artists.js";
 
 export const fetchFairs = () => {
   const fairsReq = new Request(

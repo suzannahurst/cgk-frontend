@@ -1,7 +1,7 @@
 // TODO implement this version
 // const cookieConsent = new CookieConsent({
 //   contentUrl: "/node_modules/cookie-consent-js/cookie-consent-content", // location of the language files
-//   privacyPolicyUrl: "./../info/privacy-policy.html",
+//   privacyPolicyUrl: "/info/privacy-policy.html",
 // });
 
 // console.log(cookieConsent);

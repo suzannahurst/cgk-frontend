@@ -122,7 +122,7 @@ export const displayAdventure = (adventure) => {
 };
 
 const findId = (pathname) => {
-  let adventureslug = pathname.replace("/adventures/", "");
+  let adventureslug = pathname.replace("/thegoldenkey/adventures/", "");
   adventureslug = adventureslug.replace(".html", "");
   console.log(adventureslug);
   const adventures = [

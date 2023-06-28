@@ -5,7 +5,7 @@
 // failed.", it means you probably did not give permission for the browser to
 // locate you.
 
-import { aps } from "./ap-data.js";
+import { aps } from "../scripts/ap-data.js";
 
 const showMissingAPMsg = (msg) => {
   document.getElementById("not-found").style =
@@ -48,7 +48,7 @@ function initMap() {
     // fullscreenControl: false,
   });
 
-  let iconBase = "./../assets/img/markers/";
+  let iconBase = "../assets/img/markers/";
 
   const icons = {
     general: {

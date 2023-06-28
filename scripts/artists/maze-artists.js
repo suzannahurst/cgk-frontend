@@ -1,4 +1,4 @@
-import { artists } from "./data.js";
+import { artists } from "../artists/data.js";
 
 export const getArtist = (idToFind) => {
   // const artistReq = new Request(
@@ -48,41 +48,13 @@ export const displayArtist = (artist) => {
         description,
       )}</p>
       `;
-
-  // let tag;
-
-  // if (tags.data.length === 0) {
-  //   tagsSection.classList.add("hide");
-  // } else {
-  //   tags.data.map((tg) => {
-  //     console.log(tg);
-  //     if (tg.attributes.name) {
-  //       tag = document.createElement("span");
-  //       tag.classList.add("tag");
-  //       tag.innerHTML = tg.attributes.name;
-
-  //       tagsMount.appendChild(tag);
-  //     }
-  //   });
-  // }
-
-  // if (image.data === null) {
-  //   imgMount.classList.add("hide");
-  // } else {
-  //   const imgUrl = image.data.map((img) => {
-  //     return img.attributes.url;
-  //   });
-  //   imgMount.innerHTML = `<img id="artistImg" class="artist-img" src=${imgUrl}></img>`;
-  // }
 };
-
-// TODO best way to dynamically populate artists per page
 
 console.log(window.location.pathname);
 
 const findId = (pathname) => {
   // debugger;
-  let artistSlug = pathname.replace("/artists/", "");
+  let artistSlug = pathname.replace("/thegoldenkey/artists/", "");
   artistSlug = artistSlug.replace(".html", "");
   console.log(artistSlug);
   const artists = [

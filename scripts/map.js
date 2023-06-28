@@ -62,7 +62,7 @@ function initMap() {
     // fullscreenControl: false,
   });
 
-  let iconBase = "./../assets/img/markers/";
+  let iconBase = "../assets/img/markers/";
 
   const icons = {
     fair: {

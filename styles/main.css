@@ -5,7 +5,7 @@
 
 @font-face {
   font-family: "Big John";
-  src: url("/assets/fonts/bigjohn.otf") format("opentype");
+  src: url("../assets/fonts/bigjohn.otf") format("opentype");
 }
 
 :root {
@@ -124,7 +124,7 @@ a:active,
 a:focus,
 a:hover {
   color: #e8d7a4;
-  /* cursor: url("./../assets/img/fair.png"), pointer; */
+  /* cursor: url("/assets/img/fair.png"), pointer; */
 }
 
 img.hero {
@@ -286,7 +286,7 @@ footer {
   inset: 0px auto auto 0px;
   margin: 0px;
   transform: translate3d(0px, 55.5px, 0px);
-  /* background-image: url("./../assets/img/illustrations/londonwallfairtower.png");
+  /* background-image: url("/assets/img/illustrations/londonwallfairtower.png");
   background-size: cover; */
 }
 

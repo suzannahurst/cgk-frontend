@@ -1,6 +1,6 @@
 const showdown = window.showdown;
 const converter = new showdown.Converter();
-import { faqs } from "./data.js";
+import { faqs } from "../info/data.js";
 
 // export const fetchFaqs = () => {
 // const faqsReq = new Request(
